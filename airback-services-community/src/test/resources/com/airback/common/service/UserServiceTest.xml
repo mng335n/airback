@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dataset PUBLIC "-//airback/airback Database Schema//EN" "http://www.airback.com/airback.dtd">
+<dataset>
+    <s_account id="1" status="Active" createdTime="2013-08-08 00:00:00" subDomain="a"/>
+    <s_account id="2" status="Active" createdTime="2013-08-08 00:00:00" subDomain="b"/>
+    <s_user username="anhminh@airback.com" firstname="Anh"
+            lastname="Minh" email="anhminh@airback.com"/>
+
+    <s_user username="dieuha@airback.com" firstname="Dieu"
+            lastname="Ha" email="dieuha@airback.com"/>
+
+    <s_user username="anhle@airback.com" firstname="Le"
+            lastname="Anh" email="anhle@airback.com"/>
+
+    <s_user username="test@airback.com" firstname="Le"
+            lastname="Anh" email="anhle@airback.com"/>
+
+    <s_user username="a@airback.com" firstname="A"
+            lastname="A" email="a@airback.com" password="aa"/>
+
+
+    <s_roles rolename="Dev" sAccountId="1" id="1"/>
+    <s_roles rolename="Dev2" sAccountId="2" id="2"/>
+
+    <s_user_account id="1" username="anhminh@airback.com"
+                    accountId="1" isAccountOwner="1" roleId="1" registeredTime="2013-08-08 00:00:00"
+                    registerStatus="Active"/>
+
+    <s_user_account id="2" username="dieuha@airback.com"
+                    accountId="1" isAccountOwner="1" roleId="1" registeredTime="2013-08-08 20:00:00"
+                    registerStatus="Active"/>
+
+    <s_user_account id="3" isAccountOwner="1" roleId="1"
+                    registerStatus="Active" username="anhle@airback.com"
+                    accountId="1" registeredTime="2013-08-08 00:00:00"/>
+
+    <s_user_account id="4" username="test@airback.com"
+                    accountId="1" isAccountOwner="1" roleId="1" registeredTime="2013-08-08 20:00:00"
+                    registerStatus="Deleted"/>
+
+    <s_user_account id="5" username="a@airback.com"
+                    accountId="2" isAccountOwner="1" roleId="2" registeredTime="2013-08-08 20:00:00"
+                    registerStatus="Active"/>
+</dataset>

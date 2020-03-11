@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+    <context id="MySQL" targetRuntime="MyBatis3">
+
+        <plugin type="com.airback.mybatis.plugin.airbackModelFilePlugin" />
+        <plugin type="org.mybatis.generator.plugins.FluentBuilderMethodsPlugin" />
+        <plugin type="org.mybatis.generator.plugins.MapperAnnotationPlugin" />
+
+        <jdbcConnection connectionURL="jdbc:mysql://localhost:3306/airback?verifyServerCertificate=false"
+                        driverClass="com.mysql.cj.jdbc.Driver"
+                        password="airback123" userId="root" />
+
+        <javaTypeResolver>
+            <property name="useJSR310Types" value="true"/>
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="com.airback.form.domain" targetProject="src/main/java">
+            <property name="rootClass" value="com.airback.core.arguments.ValuedBean" />
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="." targetProject="src/main/resources/sqlMap/form" />
+
+        <javaClientGenerator targetPackage="com.airback.form.dao" targetProject="src/main/java" type="XMLMAPPER">
+            <property name="exampleMethodVisibility" value="public" />
+            <property name="rootInterface" value="com.airback.db.persistence.ICrudGenericDAO" />
+        </javaClientGenerator>
+
+        <table schema="airback" tableName="m_form_section" domainObjectName="FormSection"/>
+        <table schema="airback" tableName="m_form_section_field" domainObjectName="FormSectionField"/>
+        <table schema="airback" tableName="m_form_custom_field_value" domainObjectName="FormCustomFieldValue"/>
+    </context>
+
+</generatorConfiguration>

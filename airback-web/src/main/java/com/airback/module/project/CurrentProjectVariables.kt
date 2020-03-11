@@ -1,0 +1,286 @@
+/**
+ * Copyright © airback
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+package com.airback.module.project
+
+import com.google.common.base.MoreObjects
+import com.google.common.eventbus.AsyncEventBus
+import com.airback.core.SecureAccessException
+import com.airback.db.arguments.SetSearchField
+import com.airback.module.file.PathUtils
+import com.airback.module.project.dao.ProjectRolePermissionMapper
+import com.airback.module.project.domain.*
+import com.airback.module.project.esb.NewProjectMemberJoinEvent
+import com.airback.module.project.service.ProjectMemberService
+import com.airback.security.PermissionMap
+import com.airback.spring.AppContextUtil
+import com.airback.vaadin.AppUI
+import com.airback.vaadin.UserUIContext
+import com.airback.vaadin.ui.airbackSession
+import com.airback.vaadin.ui.airbackSession.CURRENT_PROJECT
+import com.airback.vaadin.ui.airbackSession.PROJECT_MEMBER
+import org.slf4j.LoggerFactory
+
+/**
+ * @author airback Ltd.
+ * @since 1.0
+ */
+object CurrentProjectVariables {
+    private val LOG = LoggerFactory.getLogger(CurrentProjectVariables::class.java)
+
+    private const val CURRENT_PAGE_VAR = "project_page"
+
+    // get member permission
+    @JvmStatic
+    var project: SimpleProject?
+        get() = airbackSession.getCurrentUIVariable(CURRENT_PROJECT) as? SimpleProject
+        set(project) {
+            airbackSession.putCurrentUIVariable(CURRENT_PROJECT, project)
+            val prjMemberService = AppContextUtil.getSpringBean(ProjectMemberService::class.java)
+            val prjMember = prjMemberService.findMemberByUsername(UserUIContext.getUsername(), project!!.id, AppUI.accountId)
+            if (prjMember != null) {
+                if (ProjectMemberStatusConstants.INACTIVE == prjMember.status) {
+                    throw UserNotBelongProjectException("You are not belong to this project")
+                }
+
+                if (prjMember.projectroleid == null) {
+                    throw UserNotBelongProjectException("You are not belong to this project")
+                }
+                val ex = ProjectRolePermissionExample()
+                ex.createCriteria().andRoleidEqualTo(prjMember.projectroleid).andProjectidEqualTo(CurrentProjectVariables.projectId)
+                val rolePermissionMapper = AppContextUtil.getSpringBean(ProjectRolePermissionMapper::class.java)
+                val rolePermissions = rolePermissionMapper.selectByExampleWithBLOBs(ex)
+                if (!rolePermissions.isEmpty()) {
+                    val rolePer = rolePermissions[0]
+                    val permissionMap = PermissionMap.fromJsonString(rolePer.roleval)
+                    prjMember.permissionMap = permissionMap
+                }
+
+                if (ProjectMemberStatusConstants.NOT_ACCESS_YET == prjMember.status) {
+                    prjMember.status = ProjectMemberStatusConstants.ACTIVE
+                    prjMemberService.updateSelectiveWithSession(prjMember, UserUIContext.getUsername())
+                    val asyncEventBus = AppContextUtil.getSpringBean(AsyncEventBus::class.java)
+                    asyncEventBus.post(NewProjectMemberJoinEvent(prjMember.username, prjMember.projectid, AppUI.accountId))
+                }
+                projectMember = prjMember
+            } else if (!UserUIContext.isAdmin()) {
+                throw SecureAccessException("You are not belong to this project")
+            }
+        }
+
+    private var projectMember: SimpleProjectMember?
+        get() = airbackSession.getCurrentUIVariable(PROJECT_MEMBER) as? SimpleProjectMember
+        set(prjMember) = airbackSession.putCurrentUIVariable(PROJECT_MEMBER, prjMember)
+
+    @JvmStatic
+    val isSuperUser: Boolean
+        get() {
+            if (UserUIContext.isAdmin()) {
+                return true
+            }
+            return false
+        }
+
+    @JvmStatic
+    val isProjectArchived: Boolean
+        get() = project!!.isProjectArchived
+
+    @JvmStatic
+    fun canRead(permissionItem: String): Boolean {
+        if (isSuperUser) {
+            return true
+        }
+
+        return try {
+            projectMember!!.canRead(permissionItem)
+        } catch (e: Exception) {
+            LOG.error("Error while checking permission", e)
+            false
+        }
+
+    }
+
+    @JvmStatic
+    fun canReadAssignments(): Boolean =
+            canRead(ProjectRolePermissionCollections.BUGS) || canRead(ProjectRolePermissionCollections.TASKS) ||
+                    canRead(ProjectRolePermissionCollections.RISKS) || canRead(ProjectRolePermissionCollections.MILESTONES)
+
+    @JvmStatic
+    fun canWrite(permissionItem: String): Boolean {
+        if (isProjectArchived) {
+            return false
+        }
+
+        if (isSuperUser) {
+            return true
+        }
+
+        return try {
+            projectMember!!.canWrite(permissionItem)
+        } catch (e: Exception) {
+            LOG.error("Error while checking permission", e)
+            false
+        }
+
+    }
+
+    @JvmStatic
+    fun canAccess(permissionItem: String): Boolean {
+        if (isProjectArchived) {
+            return false
+        }
+
+        if (isSuperUser) {
+            return true
+        }
+
+        return try {
+            projectMember!!.canAccess(permissionItem)
+        } catch (e: Exception) {
+            LOG.error("Error while checking permission", e)
+            false
+        }
+
+    }
+
+    @JvmStatic
+    val features: ProjectCustomizeView
+        get() {
+            var customizeView: ProjectCustomizeView? = project!!.customizeView
+            if (customizeView == null) {
+                customizeView = ProjectCustomizeView()
+                customizeView.projectid = CurrentProjectVariables.projectId
+                customizeView.displayticket = true
+                customizeView.displaymessage = true
+                customizeView.displaymilestone = true
+                customizeView.displaypage = true
+                customizeView.displayfile = true
+                customizeView.displaytimelogging = true
+                customizeView.displayinvoice = true
+            }
+            return customizeView
+        }
+
+    @JvmStatic
+    fun hasMessageFeature(): Boolean = features.displaymessage!!
+
+    @JvmStatic
+    fun hasPhaseFeature(): Boolean = features.displaymilestone!!
+
+    @JvmStatic
+    fun hasTicketFeature(): Boolean = MoreObjects.firstNonNull(features.displayticket, true)
+
+    @JvmStatic
+    fun hasFileFeature(): Boolean = features.displayfile!!
+
+    @JvmStatic
+    fun hasPageFeature(): Boolean = features.displaypage!!
+
+    @JvmStatic
+    fun hasTimeFeature(): Boolean = features.displaytimelogging!!
+
+    @JvmStatic
+    fun hasInvoiceFeature(): Boolean = features.displayinvoice!!
+
+    @JvmStatic
+    var currentPagePath: String
+        get() {
+            var path = airbackSession.getCurrentUIVariable(CURRENT_PAGE_VAR) as? String
+            if (path == null) {
+                path = PathUtils.getProjectDocumentPath(AppUI.accountId, projectId)
+                currentPagePath = path
+            }
+
+            return path
+        }
+        set(path) = airbackSession.putCurrentUIVariable(CURRENT_PAGE_VAR, path)
+
+    @JvmStatic
+    val projectId: Int
+        get() {
+            val project = project
+            return if (project != null) project.id else -1
+        }
+
+    @JvmStatic
+    val shortName: String
+        get() {
+            val project = project
+            return if (project != null) project.shortname else ""
+        }
+
+    @JvmStatic
+    fun canWriteTicket(ticket: ProjectTicket): Boolean = when {
+        ticket.isTask -> canWrite(ProjectRolePermissionCollections.TASKS)
+        ticket.isBug -> canWrite(ProjectRolePermissionCollections.BUGS)
+        ticket.isRisk -> canWrite(ProjectRolePermissionCollections.RISKS)
+        else -> false
+    }
+
+    @JvmStatic
+    fun canReadTicket(): Boolean =
+            (canRead(ProjectRolePermissionCollections.TASKS) || canRead(ProjectRolePermissionCollections.BUGS) ||
+                    canRead(ProjectRolePermissionCollections.RISKS) || canRead(ProjectRolePermissionCollections.SPIKE))
+
+    @JvmStatic
+    fun canWriteTicket(): Boolean =
+            (canWrite(ProjectRolePermissionCollections.TASKS) || canWrite(ProjectRolePermissionCollections.BUGS) ||
+                    canWrite(ProjectRolePermissionCollections.RISKS) || canWrite(ProjectRolePermissionCollections.SPIKE))
+
+    @JvmStatic
+    val restrictedItemTypes: SetSearchField<String>
+        get() {
+            val types = SetSearchField<String>()
+            if (canRead(ProjectRolePermissionCollections.MESSAGES)) {
+                types.addValue(ProjectTypeConstants.MESSAGE)
+            }
+            if (canRead(ProjectRolePermissionCollections.MILESTONES)) {
+                types.addValue(ProjectTypeConstants.MILESTONE)
+            }
+            if (canRead(ProjectRolePermissionCollections.TASKS)) {
+                types.addValue(ProjectTypeConstants.TASK)
+            }
+            if (canRead(ProjectRolePermissionCollections.BUGS)) {
+                types.addValue(ProjectTypeConstants.BUG)
+            }
+            if (canRead(ProjectRolePermissionCollections.RISKS)) {
+                types.addValue(ProjectTypeConstants.RISK)
+            }
+            if (canRead(ProjectRolePermissionCollections.COMPONENTS)) {
+                types.addValue(ProjectTypeConstants.COMPONENT)
+            }
+            if (canRead(ProjectRolePermissionCollections.VERSIONS)) {
+                types.addValue(ProjectTypeConstants.VERSION)
+            }
+            return types
+        }
+
+    @JvmStatic
+    val restrictedTicketTypes: SetSearchField<String>
+        get() {
+            val types = SetSearchField<String>()
+            if (canRead(ProjectRolePermissionCollections.TASKS)) {
+                types.addValue(ProjectTypeConstants.TASK)
+            }
+            if (canRead(ProjectRolePermissionCollections.BUGS)) {
+                types.addValue(ProjectTypeConstants.BUG)
+            }
+            if (canRead(ProjectRolePermissionCollections.RISKS)) {
+                types.addValue(ProjectTypeConstants.RISK)
+            }
+            return types
+        }
+}

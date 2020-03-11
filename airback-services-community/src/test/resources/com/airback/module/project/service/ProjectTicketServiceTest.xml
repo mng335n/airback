@@ -1,0 +1,44 @@
+<!DOCTYPE dataset PUBLIC "-//airback/airback Database Schema//EN" "http://www.airback.com/airback.dtd">
+<dataset>
+    <s_user username="anhminh79" firstname="Minh" lastname="" email="anhminh@airback.com"/>
+    <s_user username="dieuha" firstname="Ha" lastname="" email="dieuha@airback" avatarId="dieuha"/>
+
+    <s_account id="1" status="Active" paymentMethod="Credit" subDomain="a" createdTime="2013-04-10 00:00:00"/>
+    <s_account id="2" status="Active" paymentMethod="Credit" subDomain="b" createdTime="2013-04-10 00:00:00"/>
+
+    <s_user_account id="1" username="anhminh79" accountId="2" isAccountOwner="1" registeredTime="2013-04-10 00:00:00"
+                    registerStatus="Active"/>
+    <s_user_account id="2" username="dieuha" accountId="2" isAccountOwner="0" registeredTime="2013-04-10 00:00:00"
+                    registerStatus="Active"/>
+
+    <m_prj_project id="1" name="Project 1" shortName="1" status="Active" sAccountId="1"/>
+    <m_prj_project id="2" name="Project 2" shortName="2" status="Active" sAccountId="1"/>
+    <m_prj_project id="3" name="Project 3" shortName="3" status="Active" sAccountId="2"/>
+
+    <m_prj_member id="1" username="anhminh79" projectId="3" createdTime="2013-04-10 00:00:00" status="Active"
+                  sAccountId="1"/>
+    <m_prj_member id="2" username="dieuha" projectId="3" createdTime="2013-04-10 00:00:00" status="Active"
+                  sAccountId="1"/>
+
+    <m_prj_milestone id="1" name="Milestone 1" projectId="1" sAccountId="1" status="Closed" startDate="2018-12-28"
+                     endDate="2019-01-11"/>
+
+    <m_prj_task id="1" name="Task 1" percentagecomplete="10" projectId="1" sAccountId="1" dueDate="2013-04-10 00:00:00"
+                priority="Medium" description="AAA"/>
+
+    <m_prj_task id="2" name="Task 2" percentagecomplete="10" projectId="1" sAccountId="1" dueDate="2019-01-08"
+                priority="Medium" status="Open"/>
+
+    <m_prj_task id="3" name="Task 3" percentagecomplete="10" projectId="2" sAccountId="1" dueDate="2013-04-10 00:00:00"
+                priority="Medium"/>
+
+    <m_prj_task id="4" name="Task 4" percentagecomplete="10" projectId="3" sAccountId="2" priority="Medium"
+                dueDate="2013-04-10 00:00:00" status="InProgress" assignUser="dieuha"/>
+
+    <m_prj_bug id="1" name="Bug 1" status="Active" projectId="3" sAccountId="2" priority="Medium"
+                   dueDate="2013-04-10 00:00:00" assignUser="anhminh79" description="AAA"/>
+
+    <m_prj_risk id="1" name="Risk 1" projectId="3" sAccountId="2" status="Open" assignUser="anhminh79" priority="Medium"/>
+
+    <m_prj_ticket_key id="1" projectId="3" ticketId="1" ticketType="Project-Bug" ticketKey="1"/>
+</dataset>

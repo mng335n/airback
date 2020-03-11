@@ -1,0 +1,85 @@
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building airback-executor 1.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ airback-executor ---
+[INFO] Deleting /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ airback-executor ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ airback-executor ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/target/classes
+[INFO] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/Executor.java: /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/Executor.java uses unchecked or unsafe operations.
+[INFO] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/Executor.java: Recompile with -Xlint:unchecked for details.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[82,27] variable ex might not have been initialized
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[96,28] variable iterator might not have been initialized
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[55,17] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[56,17] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[57,17] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[59,21] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[62,21] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[64,17] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[72,21] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[79,17] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[85,21] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[86,33] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[86,21] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[87,26] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[87,53] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[87,67] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[88,45] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[88,25] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[90,54] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[94,21] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[97,25] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[101,21] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/Executor.java:[139,57] incompatible types: java.lang.Object cannot be converted to java.nio.file.Path
+[INFO] 23 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4.873 s
+[INFO] Finished at: 2020-03-04T08:49:09+07:00
+[INFO] Final Memory: 14M/131M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.3:compile (default-compile) on project airback-executor: Compilation failure: Compilation failure:
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[82,27] variable ex might not have been initialized
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[96,28] variable iterator might not have been initialized
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[55,17] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[56,17] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[57,17] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[59,21] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[62,21] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[64,17] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[72,21] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[79,17] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[85,21] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[86,33] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[86,21] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[87,26] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[87,53] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[87,67] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[88,45] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[88,25] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[90,54] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[94,21] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[97,25] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/AppProcess.java:[101,21] local variables referenced from a lambda expression must be final or effectively final
+[ERROR] /Users/robertnguyen/Workspace/airback-Release_9.0.9/airback-app-executor/src/main/java/com/airback/runner/Executor.java:[139,57] incompatible types: java.lang.Object cannot be converted to java.nio.file.Path
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

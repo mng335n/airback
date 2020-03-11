@@ -1,0 +1,84 @@
+/**
+ * Copyright © airback
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+package com.airback.module.project.view.ticket;
+
+import com.hp.gagawa.java.elements.Div;
+import com.hp.gagawa.java.elements.Img;
+import com.hp.gagawa.java.elements.Text;
+import com.airback.common.i18n.GenericI18Enum;
+import com.airback.core.utils.SortedArrayMap;
+import com.airback.html.DivLessFormatter;
+import com.airback.module.file.StorageUtils;
+import com.airback.module.project.domain.ProjectTicket;
+import com.airback.module.project.ui.components.TicketRowRender;
+import com.airback.vaadin.UserUIContext;
+import com.airback.vaadin.mvp.ViewComponent;
+import com.airback.vaadin.web.ui.WebThemes;
+
+import java.util.List;
+
+/**
+ * @author airback Ltd
+ * @since 5.2.9
+ */
+@ViewComponent
+public class UserOrderComponent extends TicketGroupOrderComponent {
+    private SortedArrayMap<String, DefaultTicketGroupComponent> userAvailables = new SortedArrayMap<>();
+    private DefaultTicketGroupComponent unspecifiedTasks;
+
+    public UserOrderComponent() {
+        super();
+    }
+
+    public UserOrderComponent(Class<? extends TicketRowRender> ticketRowRenderCls) {
+        super(ticketRowRenderCls);
+    }
+
+    @Override
+    public void insertTickets(List<ProjectTicket> tickets) {
+        for (ProjectTicket ticket : tickets) {
+            String assignUser = ticket.getAssignUser();
+            if (assignUser != null) {
+                if (userAvailables.containsKey(assignUser)) {
+                    DefaultTicketGroupComponent groupComponent = userAvailables.get(assignUser);
+                    groupComponent.insertTicketComp(buildRenderer(ticket));
+                } else {
+                    Img img = new Img("", StorageUtils.getAvatarPath(ticket.getAssignUserAvatarId(), 32))
+                            .setCSSClass((WebThemes.CIRCLE_BOX));
+                    Div userDiv = new DivLessFormatter().appendChild(img, new Text(ticket.getAssignUserFullName()));
+
+                    DefaultTicketGroupComponent groupComponent = new DefaultTicketGroupComponent(userDiv.write());
+                    userAvailables.put(assignUser, groupComponent);
+                    int index = userAvailables.getKeyIndex(assignUser);
+                    if (index > -1) {
+                        addComponent(groupComponent, index);
+                    } else {
+                        addComponent(groupComponent);
+                    }
+
+                    groupComponent.insertTicketComp(buildRenderer(ticket));
+                }
+            } else {
+                if (unspecifiedTasks == null) {
+                    unspecifiedTasks = new DefaultTicketGroupComponent(UserUIContext.getMessage(GenericI18Enum.OPT_UNDEFINED));
+                    addComponent(unspecifiedTasks, 0);
+                }
+                unspecifiedTasks.insertTicketComp(buildRenderer(ticket));
+            }
+        }
+    }
+}

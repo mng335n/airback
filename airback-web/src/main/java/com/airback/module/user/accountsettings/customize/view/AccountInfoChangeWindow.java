@@ -1,0 +1,184 @@
+/**
+ * Copyright © airback
+ * <p>
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * <p>
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * <p>
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+package com.airback.module.user.accountsettings.customize.view;
+
+import com.airback.common.i18n.GenericI18Enum;
+import com.airback.core.utils.BeanUtility;
+import com.airback.form.view.LayoutType;
+import com.airback.module.user.accountsettings.localization.AdminI18nEnum;
+import com.airback.module.user.domain.BillingAccount;
+import com.airback.module.user.domain.SimpleBillingAccount;
+import com.airback.module.user.service.BillingAccountService;
+import com.airback.module.user.ui.components.LanguageSelectionField;
+import com.airback.spring.AppContextUtil;
+import com.airback.vaadin.AppUI;
+import com.airback.vaadin.UserUIContext;
+import com.airback.vaadin.ui.AbstractBeanFieldGroupEditFieldFactory;
+import com.airback.vaadin.ui.AbstractFormLayoutFactory;
+import com.airback.vaadin.ui.AdvancedEditBeanForm;
+import com.airback.vaadin.ui.CurrencyComboBoxField;
+import com.airback.vaadin.ui.field.DateFormatField;
+import com.airback.vaadin.web.ui.TimeZoneSelectionField;
+import com.airback.vaadin.web.ui.WebThemes;
+import com.airback.vaadin.web.ui.grid.GridFormLayoutHelper;
+import com.vaadin.data.HasValue;
+import com.vaadin.event.ShortcutAction.KeyCode;
+import com.vaadin.icons.VaadinIcons;
+import com.vaadin.server.Page;
+import com.vaadin.ui.*;
+import org.vaadin.viritin.button.MButton;
+import org.vaadin.viritin.layouts.MHorizontalLayout;
+import org.vaadin.viritin.layouts.MVerticalLayout;
+import org.vaadin.viritin.layouts.MWindow;
+
+/**
+ * @author airback Ltd
+ * @since 5.0.10
+ */
+class AccountInfoChangeWindow extends MWindow {
+    private SimpleBillingAccount billingAccount;
+
+    private AdvancedEditBeanForm<SimpleBillingAccount> editForm;
+
+    AccountInfoChangeWindow() {
+        super(UserUIContext.getMessage(AdminI18nEnum.OPT_CHANGE_ACCOUNT_INFO));
+        MVerticalLayout content = new MVerticalLayout();
+        this.withModal(true).withResizable(false).withWidth("600px").withContent(content).withCenter();
+
+        billingAccount = BeanUtility.deepClone(AppUI.getBillingAccount());
+        editForm = new AdvancedEditBeanForm<>();
+        editForm.setFormLayoutFactory(new AbstractFormLayoutFactory() {
+            private GridFormLayoutHelper gridFormLayoutHelper = GridFormLayoutHelper.defaultFormLayoutHelper(LayoutType.ONE_COLUMN);
+
+            @Override
+            public AbstractComponent getLayout() {
+                return gridFormLayoutHelper.getLayout();
+            }
+
+            @Override
+            public HasValue<?> onAttachField(Object propertyId, HasValue<?> field) {
+                if (BillingAccount.Field.sitename.equalTo(propertyId)) {
+                    return gridFormLayoutHelper.addComponent(field, UserUIContext.getMessage(AdminI18nEnum.FORM_SITE_NAME), 0, 0);
+                } else if (BillingAccount.Field.subdomain.equalTo(propertyId)) {
+                    return gridFormLayoutHelper.addComponent(field, UserUIContext.getMessage(AdminI18nEnum.FORM_SITE_ADDRESS), 0, 1);
+                } else if (BillingAccount.Field.defaulttimezone.equalTo(propertyId)) {
+                    return gridFormLayoutHelper.addComponent(field, UserUIContext.getMessage(AdminI18nEnum.FORM_DEFAULT_TIMEZONE), 0, 2);
+                } else if (BillingAccount.Field.defaultcurrencyid.equalTo(propertyId)) {
+                    return gridFormLayoutHelper.addComponent(field, UserUIContext.getMessage(AdminI18nEnum.FORM_DEFAULT_CURRENCY), 0, 3);
+                } else if (BillingAccount.Field.defaultyymmddformat.equalTo(propertyId)) {
+                    return gridFormLayoutHelper.addComponent(field, UserUIContext.getMessage(AdminI18nEnum.FORM_DEFAULT_YYMMDD_FORMAT),
+                            UserUIContext.getMessage(GenericI18Enum.FORM_DATE_FORMAT_HELP), 0, 4);
+                } else if (BillingAccount.Field.defaultmmddformat.equalTo(propertyId)) {
+                    return gridFormLayoutHelper.addComponent(field, UserUIContext.getMessage(AdminI18nEnum.FORM_DEFAULT_MMDD_FORMAT),
+                            UserUIContext.getMessage(GenericI18Enum.FORM_DATE_FORMAT_HELP), 0, 5);
+                } else if (BillingAccount.Field.defaulthumandateformat.equalTo(propertyId)) {
+                    return gridFormLayoutHelper.addComponent(field, UserUIContext.getMessage(AdminI18nEnum.FORM_DEFAULT_HUMAN_DATE_FORMAT),
+                            UserUIContext.getMessage(GenericI18Enum.FORM_DATE_FORMAT_HELP), 0, 6);
+                } else if (BillingAccount.Field.defaultlanguagetag.equalTo(propertyId)) {
+                    return gridFormLayoutHelper.addComponent(field, UserUIContext.getMessage(AdminI18nEnum.FORM_DEFAULT_LANGUAGE), 0, 7);
+                } else if (BillingAccount.Field.displayemailpublicly.equalTo(propertyId)) {
+                    return gridFormLayoutHelper.addComponent(field, UserUIContext.getMessage(AdminI18nEnum.FORM_SHOW_EMAIL_PUBLICLY),
+                            UserUIContext.getMessage(AdminI18nEnum.FORM_SHOW_EMAIL_PUBLICLY_HELP), 0, 8);
+                }
+                return null;
+            }
+        });
+
+        editForm.setBeanFormFieldFactory(new AbstractBeanFieldGroupEditFieldFactory<SimpleBillingAccount>(editForm) {
+            @Override
+            protected HasValue<?> onCreateField(Object propertyId) {
+                if (BillingAccount.Field.subdomain.equalTo(propertyId)) {
+                    return new SubDomainField();
+                } else if (BillingAccount.Field.defaulttimezone.equalTo(propertyId)) {
+                    return new TimeZoneSelectionField(false);
+                } else if (BillingAccount.Field.defaultcurrencyid.equalTo(propertyId)) {
+                    return new CurrencyComboBoxField();
+                } else if (BillingAccount.Field.defaultyymmddformat.equalTo(propertyId)) {
+                    return new DateFormatField(billingAccount.getDateFormatInstance());
+                } else if (BillingAccount.Field.defaultmmddformat.equalTo(propertyId)) {
+                    return new DateFormatField(billingAccount.getShortDateFormatInstance());
+                } else if (BillingAccount.Field.defaulthumandateformat.equalTo(propertyId)) {
+                    return new DateFormatField(billingAccount.getLongDateFormatInstance());
+                } else if (BillingAccount.Field.defaultlanguagetag.equalTo(propertyId)) {
+                    return new LanguageSelectionField();
+                }
+                return null;
+            }
+
+        });
+
+        editForm.setBean(billingAccount);
+
+        MHorizontalLayout buttonControls = new MHorizontalLayout().withMargin(false);
+        MButton saveBtn = new MButton(UserUIContext.getMessage(GenericI18Enum.BUTTON_SAVE), clickEvent -> {
+            if (editForm.validateForm()) {
+                BillingAccountService billingAccountService = AppContextUtil.getSpringBean(BillingAccountService.class);
+                billingAccountService.updateSelectiveWithSession(billingAccount, UserUIContext.getUsername());
+                close();
+                String siteUrl = AppUI.getSiteUrl();
+                String assignExec = String.format("window.location.assign(\'%s\');", siteUrl);
+                Page.getCurrent().getJavaScript().execute(assignExec);
+            }
+        }).withIcon(VaadinIcons.CLIPBOARD).withStyleName(WebThemes.BUTTON_ACTION).withClickShortcut(KeyCode.ENTER);
+
+        MButton cancelBtn = new MButton(UserUIContext.getMessage(GenericI18Enum.BUTTON_CANCEL), clickEvent -> close())
+                .withStyleName(WebThemes.BUTTON_OPTION);
+        buttonControls.with(cancelBtn, saveBtn);
+
+        content.with(editForm, buttonControls).withAlign(buttonControls, Alignment.MIDDLE_RIGHT);
+    }
+
+    private static class SubDomainField extends CustomField<String> {
+        private TextField subDomainField = new TextField();
+
+        @Override
+        protected Component initContent() {
+            MHorizontalLayout layout = new MHorizontalLayout().withSpacing(false);
+            layout.setDefaultComponentAlignment(Alignment.MIDDLE_LEFT);
+            Label httpsLabel = new Label("https://");
+            Label domainLbl = new Label(".airback.com");
+            layout.with(httpsLabel, subDomainField, domainLbl);
+            return layout;
+        }
+
+//        @Override
+//        public void setPropertyDataSource(Property newDataSource) {
+//            String value = (String) newDataSource.getValue();
+//            if (value != null) {
+//                subDomainField.setValue(value);
+//            }
+//            super.setPropertyDataSource(newDataSource);
+//        }
+//
+//        @Override
+//        public void commit() throws SourceException, Validator.InvalidValueException {
+//            setInternalValue(subDomainField.getValue());
+//            super.commit();
+//        }
+
+
+        @Override
+        protected void doSetValue(String s) {
+
+        }
+
+        @Override
+        public String getValue() {
+            return null;
+        }
+    }
+}

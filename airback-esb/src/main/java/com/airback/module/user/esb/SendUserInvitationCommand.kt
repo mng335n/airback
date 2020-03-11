@@ -1,0 +1,74 @@
+/**
+ * Copyright © airback
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+package com.airback.module.user.esb
+
+import com.google.common.eventbus.AllowConcurrentEvents
+import com.google.common.eventbus.Subscribe
+import com.airback.common.GenericLinkUtils
+import com.airback.common.domain.MailRecipientField
+import com.airback.common.i18n.MailI18nEnum
+import com.airback.configuration.ApplicationConfiguration
+import com.airback.configuration.IDeploymentMode
+import com.airback.core.utils.DateTimeUtils
+import com.airback.i18n.LocalizationHelper
+import com.airback.module.esb.GenericCommand
+import com.airback.module.mail.service.ExtMailService
+import com.airback.module.mail.service.IContentGenerator
+import com.airback.module.user.accountsettings.localization.UserI18nEnum
+import com.airback.module.user.service.UserService
+import org.slf4j.LoggerFactory
+import org.springframework.stereotype.Component
+import org.springframework.transaction.event.TransactionPhase
+import org.springframework.transaction.event.TransactionalEventListener
+import java.util.*
+
+/**
+ * @author airback Ltd
+ * @since 6.0.0
+ */
+@Component
+class SendUserInvitationCommand(private val userService: UserService,
+                                private val contentGenerator: IContentGenerator,
+                                private val extMailService: ExtMailService,
+                                private val deploymentMode: IDeploymentMode,
+                                private val applicationConfiguration: ApplicationConfiguration) : GenericCommand() {
+    companion object {
+        val LOG = LoggerFactory.getLogger(SendUserInvitationCommand::class.java)
+    }
+
+    @AllowConcurrentEvents
+    @Subscribe
+    @TransactionalEventListener(phase = TransactionPhase.AFTER_COMMIT)
+    fun execute(event: SendUserInvitationEvent) {
+        // Trick to make sure the saving user successfully to database
+        Thread.sleep(5000)
+        val inviteeUser = userService.findUserInAccount(event.invitee, event.sAccountId)
+        if (inviteeUser != null) {
+            contentGenerator.putVariable("siteUrl", GenericLinkUtils.generateConfirmEmailLink(deploymentMode.getSiteUrl(inviteeUser.subDomain), event.invitee))
+            contentGenerator.putVariable("invitee", inviteeUser)
+            contentGenerator.putVariable("password", event.password)
+            contentGenerator.putVariable("copyRight", LocalizationHelper.getMessage(Locale.US, MailI18nEnum.Copyright,
+                    DateTimeUtils.getCurrentYear()))
+            extMailService.sendHTMLMail(applicationConfiguration.notifyEmail, applicationConfiguration.siteName,
+                    Collections.singletonList(MailRecipientField(event.invitee, event.invitee)),
+                    LocalizationHelper.getMessage(Locale.US, UserI18nEnum.MAIL_INVITE_USER_SUBJECT, applicationConfiguration.siteName),
+                    contentGenerator.parseFile("mailUserInvitationNotifier.ftl", Locale.US))
+        } else {
+            LOG.error("Can not find the user with username ${event.invitee} in account ${event.sAccountId}")
+        }
+    }
+}

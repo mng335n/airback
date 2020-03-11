@@ -1,0 +1,1459 @@
+15:45:26,128  INFO c.a.s.DefaultServerRunner:50 - Starting DefaultServerRunner on Mis-MacBook-Air.local with PID 18629 (/Users/robertnguyen/Workspace/airback-Release_8.0.8/airback-server-runner/target/classes started by robertnguyen in /Users/robertnguyen/Workspace/airback-Release_8.0.8)
+15:45:26,172  INFO c.a.s.DefaultServerRunner:675 - No active profile set, falling back to default profiles: default
+15:45:36,388  INFO o.s.c.a.ConfigurationClassPostProcessor:380 - Cannot enhance @Configuration bean definition 'com.vaadin.spring.VaadinConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+15:45:38,312  INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6734ec30] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:45:39,873  WARN i.u.w.jsr:68 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+15:45:40,023  INFO i.u.servlet:364 - Initializing Spring embedded WebApplicationContext
+15:45:40,024  INFO o.s.w.c.ContextLoader:296 - Root WebApplicationContext: initialization completed in 13371 ms
+15:45:40,230  INFO c.v.s.b.i.VaadinServletConfiguration:261 - Registering Vaadin servlet
+15:45:40,231  INFO c.v.s.b.i.VaadinServletConfiguration:263 - Servlet will be mapped to URLs [/vaadinServlet/*, /VAADIN/*]
+15:45:40,267  INFO c.v.s.b.i.VaadinServletConfiguration:282 - Setting servlet init parameters
+15:45:40,268  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [productionMode] = [false]
+15:45:40,268  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [resourceCacheTime] = [3600]
+15:45:40,269  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [heartbeatInterval] = [300]
+15:45:40,269  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [closeIdleSessions] = [false]
+15:45:41,257  INFO c.z.h.HikariDataSource:110 - HikariPool-1 - Starting...
+15:45:41,928  INFO c.z.h.HikariDataSource:123 - HikariPool-1 - Start completed.
+15:45:42,054  INFO o.f.c.i.l.VersionPrinter:49 - Flyway Community Edition 5.2.4 by Boxfuse
+15:45:42,122  INFO o.f.c.i.d.DatabaseFactory:49 - Database: jdbc:mysql://localhost:3306/airback (MySQL 8.0)
+15:45:42,934  INFO o.f.c.i.c.DbMigrate:49 - Current version of schema `airback`: 20190416.1
+15:45:42,936  WARN o.f.c.i.c.DbMigrate:53 - Schema `airback` has a version (20190416.1) that is newer than the latest available migration (20190406.1) !
+15:45:42,938  INFO o.f.c.i.c.DbMigrate:49 - Schema `airback` is up to date. No migration necessary.
+15:45:51,493  WARN o.a.j.c.u.RepositoryLock:134 - Existing lock file /Users/robertnguyen/Workspace/airback-Release_8.0.8/repo2/wiki-workspaces/.lock detected. Repository was not shut down properly.
+15:45:51,504  INFO o.a.j.c.RepositoryImpl:259 - Starting repository...
+15:45:52,611  INFO o.a.j.c.RepositoryImpl:2035 - initializing workspace 'wiki'...
+15:45:52,909  INFO o.a.j.c.RepositoryImpl:2039 - workspace 'wiki' initialized
+15:45:52,928  INFO o.a.j.c.RepositoryImpl:455 - SecurityManager = class org.apache.jackrabbit.core.security.simple.SimpleSecurityManager
+15:45:52,936  INFO o.a.j.c.s.s.SimpleSecurityManager:137 - init: using Repository LoginModule configuration for Jackrabbit
+15:45:52,956  INFO o.a.j.c.RepositoryImpl:367 - Repository started (1452ms)
+15:45:53,052  INFO c.a.m.p.PageSessionFactory:41 - Register node types
+15:45:53,133  INFO c.a.m.p.PageSessionFactory:66 - Register airback content type
+15:45:54,292  WARN o.a.j.c.u.RepositoryLock:134 - Existing lock file /Users/robertnguyen/Workspace/airback-Release_8.0.8/repo2/workspaces/.lock detected. Repository was not shut down properly.
+15:45:54,293  INFO o.a.j.c.RepositoryImpl:259 - Starting repository...
+15:45:54,438  INFO o.a.j.c.j.DatabaseJournal:374 - Initialized local revision to 304
+15:45:54,439  INFO o.a.j.c.j.DatabaseJournal:383 - Cluster revision janitor thread not started
+15:45:54,439  INFO o.a.j.c.j.DatabaseJournal:280 - DatabaseJournal initialized.
+15:45:54,463  INFO o.a.j.c.RepositoryImpl:2035 - initializing workspace 'ecm'...
+15:45:54,494  INFO o.a.j.c.RepositoryImpl:2039 - workspace 'ecm' initialized
+15:45:54,495  INFO o.a.j.c.RepositoryImpl:455 - SecurityManager = class org.apache.jackrabbit.core.security.simple.SimpleSecurityManager
+15:45:54,496  INFO o.a.j.c.RepositoryImpl:2035 - initializing workspace 'default2'...
+15:45:54,528  INFO o.a.j.c.RepositoryImpl:2039 - workspace 'default2' initialized
+15:45:54,529  INFO o.a.j.c.s.s.SimpleSecurityManager:137 - init: using Repository LoginModule configuration for Jackrabbit
+15:45:54,553  INFO o.a.j.c.c.ClusterNode:858 - Processing revision: 305
+15:45:54,584  INFO o.a.j.c.c.ClusterNode:858 - Processing revision: 306
+15:45:54,585  INFO o.a.j.c.c.ClusterNode:858 - Processing revision: 307
+15:45:54,601  INFO o.a.j.c.c.ClusterNode:858 - Processing revision: 308
+15:45:54,617  INFO o.a.j.c.RepositoryImpl:367 - Repository started (324ms)
+15:45:54,620  INFO c.a.m.e.ContentSessionFactory:40 - Register node types
+15:45:54,626  INFO c.a.m.e.ContentSessionFactory:66 - Register airback content type
+15:45:55,906  INFO c.a.v.m.s.ComponentScannerService:51 - Started resolving view and presenter classes
+15:46:00,249  INFO c.a.v.m.s.ComponentScannerService:61 - Resolved view and presenter classes com.airback.vaadin.mvp.service.ComponentScannerService@6a543e09 that has 65 view classes and 58 presenter classes
+15:46:02,126  INFO o.s.s.c.ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
+15:46:02,726  INFO c.v.s.b.i.VaadinServletConfiguration:121 - Checking the application context for Vaadin UI mappings
+15:46:02,740  INFO c.v.s.b.i.VaadinServletConfiguration:110 - Forwarding @SpringUI URLs from {}
+15:46:02,745  INFO c.v.s.b.i.VaadinServletConfiguration:206 - Registering Vaadin servlet of type [com.vaadin.spring.server.SpringVaadinServlet]
+15:46:03,649  INFO o.q.i.StdSchedulerFactory:1208 - Using default implementation for ThreadExecutor
+15:46:03,712  INFO o.q.c.SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+15:46:03,712  INFO o.q.c.QuartzScheduler:229 - Quartz Scheduler v.2.3.0 created.
+15:46:03,715  INFO o.q.s.RAMJobStore:155 - RAMJobStore initialized.
+15:46:03,717  INFO o.q.c.QuartzScheduler:294 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+15:46:03,717  INFO o.q.i.StdSchedulerFactory:1362 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+15:46:03,717  INFO o.q.i.StdSchedulerFactory:1366 - Quartz scheduler version: 2.3.0
+15:46:03,718  INFO o.q.c.QuartzScheduler:2287 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@69ab2d6a
+15:46:04,071  INFO o.s.s.q.SchedulerFactoryBean:726 - Starting Quartz Scheduler now
+15:46:04,073  INFO o.q.c.QuartzScheduler:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+15:46:04,076  INFO c.a.s.ContextStartedListener:44 - airback is ready for usage
+15:46:04,887  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler mapped to context-path: /*
+15:46:04,896  INFO o.a.c.AtmosphereFramework:588 - Installed the following AtmosphereInterceptor mapped to AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler
+15:46:05,248  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using org.atmosphere.util.VoidAnnotationProcessor for processing annotation
+15:46:05,299  INFO o.a.u.ForkJoinPool:588 - Using ForkJoinPool  java.util.concurrent.ForkJoinPool. Set the org.atmosphere.cpr.broadcaster.maxAsyncWriteThreads to -1 to fully use its power.
+15:46:05,318  INFO o.a.c.AtmosphereFramework:588 - Installed WebSocketProtocol org.atmosphere.websocket.protocol.SimpleHttpProtocol 
+15:46:05,346  INFO o.a.c.JSR356AsyncSupport:588 - JSR 356 Mapping path 
+15:46:05,361  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /
+15:46:05,374  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}
+15:46:05,377  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}
+15:46:05,378  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}/{path2}
+15:46:05,382  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}/{path2}/{path3}
+15:46:05,383  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}/{path2}/{path3}/{path4}
+15:46:05,384  INFO o.a.c.AtmosphereFramework:588 - Installing Default AtmosphereInterceptors
+15:46:05,388  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CorsInterceptor : CORS Interceptor Support
+15:46:05,389  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CacheHeadersInterceptor : Default Response's Headers Interceptor
+15:46:05,392  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.PaddingAtmosphereInterceptor : Browser Padding Interceptor Support
+15:46:05,394  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.AndroidAtmosphereInterceptor : Android Interceptor Support
+15:46:05,395  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.HeartbeatInterceptor : Heartbeat Interceptor Support
+15:46:05,397  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.SSEAtmosphereInterceptor : SSE Interceptor Support
+15:46:05,398  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JSONPAtmosphereInterceptor : JSONP Interceptor Support
+15:46:05,403  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JavaScriptProtocol : Atmosphere JavaScript Protocol
+15:46:05,404  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor : org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor
+15:46:05,405  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.OnDisconnectInterceptor : Browser disconnection detection
+15:46:05,406  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.IdleResourceInterceptor : org.atmosphere.interceptor.IdleResourceInterceptor
+15:46:05,407  INFO o.a.c.AtmosphereFramework:588 - Set org.atmosphere.cpr.AtmosphereInterceptor.disableDefaults to disable them.
+15:46:05,409  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor CORS Interceptor Support with priority FIRST_BEFORE_DEFAULT 
+15:46:05,431  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Default Response's Headers Interceptor with priority AFTER_DEFAULT 
+15:46:05,433  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser Padding Interceptor Support with priority AFTER_DEFAULT 
+15:46:05,434  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Android Interceptor Support with priority AFTER_DEFAULT 
+15:46:05,435  INFO o.a.i.HeartbeatInterceptor:588 - HeartbeatInterceptor configured with padding value 'X', client frequency 60 seconds and server frequency 0 seconds
+15:46:05,436  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Heartbeat Interceptor Support with priority AFTER_DEFAULT 
+15:46:05,437  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor SSE Interceptor Support with priority AFTER_DEFAULT 
+15:46:05,437  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor JSONP Interceptor Support with priority AFTER_DEFAULT 
+15:46:05,438  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Atmosphere JavaScript Protocol with priority AFTER_DEFAULT 
+15:46:05,439  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor with priority AFTER_DEFAULT 
+15:46:05,440  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser disconnection detection with priority AFTER_DEFAULT 
+15:46:05,440  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.IdleResourceInterceptor with priority BEFORE_DEFAULT 
+15:46:05,441  INFO o.a.c.AtmosphereFramework:588 - Using EndpointMapper class org.atmosphere.util.DefaultEndpointMapper
+15:46:05,442  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterCache: org.atmosphere.cache.UUIDBroadcasterCache
+15:46:05,443  INFO o.a.c.AtmosphereFramework:588 - Default Broadcaster Class: org.atmosphere.cpr.DefaultBroadcaster
+15:46:05,443  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Shared List Resources: false
+15:46:05,444  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Polling Wait Time 100
+15:46:05,445  INFO o.a.c.AtmosphereFramework:588 - Shared ExecutorService supported: true
+15:46:05,445  INFO o.a.c.AtmosphereFramework:588 - Messaging ExecutorService Pool Size unavailable - Not instance of ThreadPoolExecutor
+15:46:05,446  INFO o.a.c.AtmosphereFramework:588 - Async I/O Thread Pool Size: 200
+15:46:05,446  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterFactory: org.atmosphere.cpr.DefaultBroadcasterFactory
+15:46:05,447  INFO o.a.c.AtmosphereFramework:588 - Using AtmosphereResurceFactory: org.atmosphere.cpr.DefaultAtmosphereResourceFactory
+15:46:05,448  INFO o.a.c.AtmosphereFramework:588 - Using WebSocketProcessor: org.atmosphere.websocket.DefaultWebSocketProcessor
+15:46:05,467  INFO o.a.c.AtmosphereFramework:588 - Invoke AtmosphereInterceptor on WebSocket message true
+15:46:05,468  INFO o.a.c.AtmosphereFramework:588 - HttpSession supported: true
+15:46:05,469  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using DefaultAtmosphereObjectFactory for dependency injection and object creation
+15:46:05,474  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using async support: org.atmosphere.container.JSR356AsyncSupport running under container: Undertow - 2.0.17.Final using javax.servlet/3.0 and jsr356/WebSocket API
+15:46:05,475  INFO o.a.c.AtmosphereFramework:588 - Atmosphere Framework 2.4.30.vaadin1 started.
+15:46:05,505  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor  Track Message Size Interceptor using | with priority BEFORE_DEFAULT 
+15:46:05,619  INFO o.xnio:104 - XNIO version 3.3.8.Final
+15:46:05,696  INFO o.x.nio:55 - XNIO NIO Implementation Version 3.3.8.Final
+15:46:06,034  INFO o.s.b.a.l.ConditionEvaluationReportLoggingListener:142 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+15:46:06,041 ERROR o.s.b.d.LoggingFailureAnalysisReporter:42 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 59000 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 59000 or configure this application to listen on another port.
+
+15:46:06,057  INFO o.q.c.QuartzScheduler:585 - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+15:46:06,058  INFO o.s.s.q.SchedulerFactoryBean:844 - Shutting down Quartz Scheduler
+15:46:06,059  INFO o.q.c.QuartzScheduler:666 - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+15:46:06,059  INFO o.q.c.QuartzScheduler:585 - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+15:46:06,061  INFO o.q.c.QuartzScheduler:740 - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+15:46:06,066  INFO o.s.s.c.ThreadPoolTaskExecutor:208 - Shutting down ExecutorService 'applicationTaskExecutor'
+15:46:06,075  INFO o.a.j.c.RepositoryImpl:1087 - Shutting down repository...
+15:46:06,076  INFO o.a.j.c.RepositoryImpl:2196 - shutting down workspace 'default2'...
+15:46:06,081  INFO o.a.j.c.o.ObservationDispatcher:121 - Notification of EventListeners stopped.
+15:46:06,085  INFO o.a.j.c.RepositoryImpl:2203 - workspace 'default2' has been shutdown
+15:46:06,085  INFO o.a.j.c.RepositoryImpl:2196 - shutting down workspace 'ecm'...
+15:46:06,087  INFO o.a.j.c.o.ObservationDispatcher:121 - Notification of EventListeners stopped.
+15:46:06,108  INFO o.a.j.c.RepositoryImpl:2203 - workspace 'ecm' has been shutdown
+15:46:06,119  INFO o.a.j.c.RepositoryImpl:1192 - Repository has been shutdown
+15:46:06,121  INFO o.a.j.c.RepositoryImpl:1087 - Shutting down repository...
+15:46:06,121  INFO o.a.j.c.RepositoryImpl:2196 - shutting down workspace 'wiki'...
+15:46:06,121  INFO o.a.j.c.o.ObservationDispatcher:121 - Notification of EventListeners stopped.
+15:46:06,136  INFO o.a.j.c.RepositoryImpl:2203 - workspace 'wiki' has been shutdown
+15:46:06,142  INFO o.a.j.c.RepositoryImpl:1192 - Repository has been shutdown
+15:46:06,149  INFO c.z.h.HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+15:46:06,167  INFO c.z.h.HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+15:46:51,973  INFO c.a.s.DefaultServerRunner:50 - Starting DefaultServerRunner on Mis-MacBook-Air.local with PID 18848 (/Users/robertnguyen/Workspace/airback-Release_8.0.8/airback-server-runner/target/classes started by robertnguyen in /Users/robertnguyen/Workspace/airback-Release_8.0.8)
+15:46:51,986  INFO c.a.s.DefaultServerRunner:675 - No active profile set, falling back to default profiles: default
+15:46:58,907  INFO o.s.c.a.ConfigurationClassPostProcessor:380 - Cannot enhance @Configuration bean definition 'com.vaadin.spring.VaadinConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+15:47:00,154  INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1a67f934] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15:47:01,221  WARN i.u.w.jsr:68 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+15:47:01,271  INFO i.u.servlet:364 - Initializing Spring embedded WebApplicationContext
+15:47:01,272  INFO o.s.w.c.ContextLoader:296 - Root WebApplicationContext: initialization completed in 8937 ms
+15:47:01,423  INFO c.v.s.b.i.VaadinServletConfiguration:261 - Registering Vaadin servlet
+15:47:01,423  INFO c.v.s.b.i.VaadinServletConfiguration:263 - Servlet will be mapped to URLs [/vaadinServlet/*, /VAADIN/*]
+15:47:01,479  INFO c.v.s.b.i.VaadinServletConfiguration:282 - Setting servlet init parameters
+15:47:01,480  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [productionMode] = [false]
+15:47:01,481  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [resourceCacheTime] = [3600]
+15:47:01,482  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [heartbeatInterval] = [300]
+15:47:01,483  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [closeIdleSessions] = [false]
+15:47:02,045  INFO c.z.h.HikariDataSource:110 - HikariPool-1 - Starting...
+15:47:02,387  INFO c.z.h.HikariDataSource:123 - HikariPool-1 - Start completed.
+15:47:02,422  INFO o.f.c.i.l.VersionPrinter:49 - Flyway Community Edition 5.2.4 by Boxfuse
+15:47:02,443  INFO o.f.c.i.d.DatabaseFactory:49 - Database: jdbc:mysql://localhost:3306/airback (MySQL 8.0)
+15:47:03,138  INFO o.f.c.i.c.DbMigrate:49 - Current version of schema `airback`: 20190416.1
+15:47:03,140  WARN o.f.c.i.c.DbMigrate:53 - Schema `airback` has a version (20190416.1) that is newer than the latest available migration (20190406.1) !
+15:47:03,142  INFO o.f.c.i.c.DbMigrate:49 - Schema `airback` is up to date. No migration necessary.
+15:47:09,478  INFO o.a.j.c.RepositoryImpl:259 - Starting repository...
+15:47:09,958  INFO o.a.j.c.RepositoryImpl:2035 - initializing workspace 'wiki'...
+15:47:10,134  INFO o.a.j.c.RepositoryImpl:2039 - workspace 'wiki' initialized
+15:47:10,140  INFO o.a.j.c.RepositoryImpl:455 - SecurityManager = class org.apache.jackrabbit.core.security.simple.SimpleSecurityManager
+15:47:10,142  INFO o.a.j.c.s.s.SimpleSecurityManager:137 - init: using Repository LoginModule configuration for Jackrabbit
+15:47:10,153  INFO o.a.j.c.RepositoryImpl:367 - Repository started (675ms)
+15:47:10,232  INFO c.a.m.p.PageSessionFactory:41 - Register node types
+15:47:10,290  INFO c.a.m.p.PageSessionFactory:66 - Register airback content type
+15:47:10,905  INFO o.a.j.c.RepositoryImpl:259 - Starting repository...
+15:47:10,986  INFO o.a.j.c.j.DatabaseJournal:374 - Initialized local revision to 312
+15:47:10,987  INFO o.a.j.c.j.DatabaseJournal:383 - Cluster revision janitor thread not started
+15:47:10,987  INFO o.a.j.c.j.DatabaseJournal:280 - DatabaseJournal initialized.
+15:47:11,008  INFO o.a.j.c.RepositoryImpl:2035 - initializing workspace 'ecm'...
+15:47:11,031  INFO o.a.j.c.RepositoryImpl:2039 - workspace 'ecm' initialized
+15:47:11,032  INFO o.a.j.c.RepositoryImpl:455 - SecurityManager = class org.apache.jackrabbit.core.security.simple.SimpleSecurityManager
+15:47:11,033  INFO o.a.j.c.RepositoryImpl:2035 - initializing workspace 'default2'...
+15:47:11,049  INFO o.a.j.c.RepositoryImpl:2039 - workspace 'default2' initialized
+15:47:11,050  INFO o.a.j.c.s.s.SimpleSecurityManager:137 - init: using Repository LoginModule configuration for Jackrabbit
+15:47:11,057  INFO o.a.j.c.RepositoryImpl:367 - Repository started (152ms)
+15:47:11,060  INFO c.a.m.e.ContentSessionFactory:40 - Register node types
+15:47:11,066  INFO c.a.m.e.ContentSessionFactory:66 - Register airback content type
+15:47:12,607  INFO c.a.v.m.s.ComponentScannerService:51 - Started resolving view and presenter classes
+15:47:16,042  INFO c.a.v.m.s.ComponentScannerService:61 - Resolved view and presenter classes com.airback.vaadin.mvp.service.ComponentScannerService@5599dc60 that has 65 view classes and 58 presenter classes
+15:47:17,260  INFO o.s.s.c.ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
+15:47:17,776  INFO c.v.s.b.i.VaadinServletConfiguration:121 - Checking the application context for Vaadin UI mappings
+15:47:17,789  INFO c.v.s.b.i.VaadinServletConfiguration:110 - Forwarding @SpringUI URLs from {}
+15:47:17,793  INFO c.v.s.b.i.VaadinServletConfiguration:206 - Registering Vaadin servlet of type [com.vaadin.spring.server.SpringVaadinServlet]
+15:47:18,759  INFO o.q.i.StdSchedulerFactory:1208 - Using default implementation for ThreadExecutor
+15:47:18,799  INFO o.q.c.SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+15:47:18,799  INFO o.q.c.QuartzScheduler:229 - Quartz Scheduler v.2.3.0 created.
+15:47:18,801  INFO o.q.s.RAMJobStore:155 - RAMJobStore initialized.
+15:47:18,804  INFO o.q.c.QuartzScheduler:294 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+15:47:18,805  INFO o.q.i.StdSchedulerFactory:1362 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+15:47:18,805  INFO o.q.i.StdSchedulerFactory:1366 - Quartz scheduler version: 2.3.0
+15:47:18,805  INFO o.q.c.QuartzScheduler:2287 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@674ed201
+15:47:19,201  INFO o.s.s.q.SchedulerFactoryBean:726 - Starting Quartz Scheduler now
+15:47:19,204  INFO o.q.c.QuartzScheduler:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+15:47:19,206  INFO c.a.s.ContextStartedListener:44 - airback is ready for usage
+15:47:19,389  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler mapped to context-path: /*
+15:47:19,390  INFO o.a.c.AtmosphereFramework:588 - Installed the following AtmosphereInterceptor mapped to AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler
+15:47:19,479  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using org.atmosphere.util.VoidAnnotationProcessor for processing annotation
+15:47:19,507  INFO o.a.u.ForkJoinPool:588 - Using ForkJoinPool  java.util.concurrent.ForkJoinPool. Set the org.atmosphere.cpr.broadcaster.maxAsyncWriteThreads to -1 to fully use its power.
+15:47:19,519  INFO o.a.c.AtmosphereFramework:588 - Installed WebSocketProtocol org.atmosphere.websocket.protocol.SimpleHttpProtocol 
+15:47:19,533  INFO o.a.c.JSR356AsyncSupport:588 - JSR 356 Mapping path 
+15:47:19,539  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /
+15:47:19,546  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}
+15:47:19,547  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}
+15:47:19,548  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}/{path2}
+15:47:19,549  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}/{path2}/{path3}
+15:47:19,550  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}/{path2}/{path3}/{path4}
+15:47:19,550  INFO o.a.c.AtmosphereFramework:588 - Installing Default AtmosphereInterceptors
+15:47:19,553  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CorsInterceptor : CORS Interceptor Support
+15:47:19,553  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CacheHeadersInterceptor : Default Response's Headers Interceptor
+15:47:19,556  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.PaddingAtmosphereInterceptor : Browser Padding Interceptor Support
+15:47:19,557  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.AndroidAtmosphereInterceptor : Android Interceptor Support
+15:47:19,559  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.HeartbeatInterceptor : Heartbeat Interceptor Support
+15:47:19,560  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.SSEAtmosphereInterceptor : SSE Interceptor Support
+15:47:19,561  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JSONPAtmosphereInterceptor : JSONP Interceptor Support
+15:47:19,565  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JavaScriptProtocol : Atmosphere JavaScript Protocol
+15:47:19,566  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor : org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor
+15:47:19,567  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.OnDisconnectInterceptor : Browser disconnection detection
+15:47:19,568  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.IdleResourceInterceptor : org.atmosphere.interceptor.IdleResourceInterceptor
+15:47:19,569  INFO o.a.c.AtmosphereFramework:588 - Set org.atmosphere.cpr.AtmosphereInterceptor.disableDefaults to disable them.
+15:47:19,571  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor CORS Interceptor Support with priority FIRST_BEFORE_DEFAULT 
+15:47:19,583  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Default Response's Headers Interceptor with priority AFTER_DEFAULT 
+15:47:19,589  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser Padding Interceptor Support with priority AFTER_DEFAULT 
+15:47:19,590  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Android Interceptor Support with priority AFTER_DEFAULT 
+15:47:19,591  INFO o.a.i.HeartbeatInterceptor:588 - HeartbeatInterceptor configured with padding value 'X', client frequency 60 seconds and server frequency 0 seconds
+15:47:19,592  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Heartbeat Interceptor Support with priority AFTER_DEFAULT 
+15:47:19,593  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor SSE Interceptor Support with priority AFTER_DEFAULT 
+15:47:19,594  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor JSONP Interceptor Support with priority AFTER_DEFAULT 
+15:47:19,595  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Atmosphere JavaScript Protocol with priority AFTER_DEFAULT 
+15:47:19,595  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor with priority AFTER_DEFAULT 
+15:47:19,596  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser disconnection detection with priority AFTER_DEFAULT 
+15:47:19,597  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.IdleResourceInterceptor with priority BEFORE_DEFAULT 
+15:47:19,598  INFO o.a.c.AtmosphereFramework:588 - Using EndpointMapper class org.atmosphere.util.DefaultEndpointMapper
+15:47:19,600  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterCache: org.atmosphere.cache.UUIDBroadcasterCache
+15:47:19,601  INFO o.a.c.AtmosphereFramework:588 - Default Broadcaster Class: org.atmosphere.cpr.DefaultBroadcaster
+15:47:19,602  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Shared List Resources: false
+15:47:19,602  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Polling Wait Time 100
+15:47:19,603  INFO o.a.c.AtmosphereFramework:588 - Shared ExecutorService supported: true
+15:47:19,603  INFO o.a.c.AtmosphereFramework:588 - Messaging ExecutorService Pool Size unavailable - Not instance of ThreadPoolExecutor
+15:47:19,604  INFO o.a.c.AtmosphereFramework:588 - Async I/O Thread Pool Size: 200
+15:47:19,604  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterFactory: org.atmosphere.cpr.DefaultBroadcasterFactory
+15:47:19,605  INFO o.a.c.AtmosphereFramework:588 - Using AtmosphereResurceFactory: org.atmosphere.cpr.DefaultAtmosphereResourceFactory
+15:47:19,605  INFO o.a.c.AtmosphereFramework:588 - Using WebSocketProcessor: org.atmosphere.websocket.DefaultWebSocketProcessor
+15:47:19,616  INFO o.a.c.AtmosphereFramework:588 - Invoke AtmosphereInterceptor on WebSocket message true
+15:47:19,617  INFO o.a.c.AtmosphereFramework:588 - HttpSession supported: true
+15:47:19,617  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using DefaultAtmosphereObjectFactory for dependency injection and object creation
+15:47:19,621  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using async support: org.atmosphere.container.JSR356AsyncSupport running under container: Undertow - 2.0.17.Final using javax.servlet/3.0 and jsr356/WebSocket API
+15:47:19,621  INFO o.a.c.AtmosphereFramework:588 - Atmosphere Framework 2.4.30.vaadin1 started.
+15:47:19,634  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor  Track Message Size Interceptor using | with priority BEFORE_DEFAULT 
+15:47:19,723  INFO o.xnio:104 - XNIO version 3.3.8.Final
+15:47:19,782  INFO o.x.nio:55 - XNIO NIO Implementation Version 3.3.8.Final
+15:47:20,003  INFO o.s.b.w.e.u.UndertowServletWebServer:148 - Undertow started on port(s) 60000 (http) with context path ''
+15:47:20,014  INFO c.a.s.DefaultServerRunner:59 - Started DefaultServerRunner in 30.227 seconds (JVM running for 31.816)
+15:47:37,805  WARN c.v.s.DefaultDeploymentConfiguration:274 - 
+=================================================================
+Vaadin is running in DEBUG MODE.
+Add productionMode=true to web.xml to disable debug features.
+To show debug window, add ?debug to your application URL.
+=================================================================
+15:47:37,850  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler mapped to context-path: /*
+15:47:37,851  INFO o.a.c.AtmosphereFramework:588 - Installed the following AtmosphereInterceptor mapped to AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler
+15:47:37,900  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using org.atmosphere.util.VoidAnnotationProcessor for processing annotation
+15:47:37,923  INFO o.a.u.ForkJoinPool:588 - Using ForkJoinPool  java.util.concurrent.ForkJoinPool. Set the org.atmosphere.cpr.broadcaster.maxAsyncWriteThreads to -1 to fully use its power.
+15:47:37,929  INFO o.a.c.AtmosphereFramework:588 - Installed WebSocketProtocol org.atmosphere.websocket.protocol.SimpleHttpProtocol 
+15:47:37,934  WARN o.a.u.IOUtils:588 - More than one Servlet Mapping defined. WebSocket may not work io.undertow.servlet.spec.ServletRegistrationImpl@6fd2f17c
+15:47:37,956  INFO o.a.c.JSR356AsyncSupport:588 - JSR 356 Mapping path /vaadinServlet
+15:47:37,996  WARN o.a.c.DefaultAsyncSupportResolver:588 - Failed to create AsyncSupport class: class org.atmosphere.container.JSR356AsyncSupport, error: java.lang.reflect.InvocationTargetException
+15:47:38,023 ERROR o.a.c.DefaultAsyncSupportResolver:588 - Real error: UT003017: Cannot add endpoint after deployment
+java.lang.IllegalStateException: UT003017: Cannot add endpoint after deployment
+	at io.undertow.websockets.jsr.ServerWebSocketContainer.addEndpoint(ServerWebSocketContainer.java:745)
+	at org.atmosphere.container.JSR356AsyncSupport.<init>(JSR356AsyncSupport.java:99)
+	at org.atmosphere.container.JSR356AsyncSupport.<init>(JSR356AsyncSupport.java:42)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.atmosphere.cpr.DefaultAsyncSupportResolver.newCometSupport(DefaultAsyncSupportResolver.java:237)
+	at org.atmosphere.cpr.DefaultAsyncSupportResolver.resolveWebSocket(DefaultAsyncSupportResolver.java:308)
+	at org.atmosphere.cpr.DefaultAsyncSupportResolver.resolve(DefaultAsyncSupportResolver.java:294)
+	at org.atmosphere.cpr.AtmosphereFramework.autoDetectContainer(AtmosphereFramework.java:2092)
+	at org.atmosphere.cpr.AtmosphereFramework.init(AtmosphereFramework.java:914)
+	at org.atmosphere.cpr.AtmosphereFramework.init(AtmosphereFramework.java:838)
+	at com.vaadin.server.communication.PushRequestHandler.initAtmosphere(PushRequestHandler.java:206)
+	at com.vaadin.server.communication.PushRequestHandler.<init>(PushRequestHandler.java:79)
+	at com.vaadin.server.VaadinServletService.createRequestHandlers(VaadinServletService.java:68)
+	at com.vaadin.spring.server.SpringVaadinServletService.createRequestHandlers(SpringVaadinServletService.java:63)
+	at com.vaadin.server.VaadinService.init(VaadinService.java:217)
+	at com.vaadin.spring.server.SpringVaadinServlet.createServletService(SpringVaadinServlet.java:151)
+	at com.vaadin.server.VaadinServlet.createServletService(VaadinServlet.java:377)
+	at com.vaadin.server.VaadinServlet.init(VaadinServlet.java:207)
+	at io.undertow.servlet.core.LifecyleInterceptorInvocation.proceed(LifecyleInterceptorInvocation.java:117)
+	at io.undertow.servlet.core.ManagedServlet$DefaultInstanceStrategy.start(ManagedServlet.java:303)
+	at io.undertow.servlet.core.ManagedServlet.forceInit(ManagedServlet.java:210)
+	at io.undertow.servlet.handlers.ServletChain.forceInit(ServletChain.java:130)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:63)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:364)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+15:47:38,080  INFO o.a.c.AtmosphereFramework:588 - Installing Default AtmosphereInterceptors
+15:47:38,085  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CorsInterceptor : CORS Interceptor Support
+15:47:38,086  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CacheHeadersInterceptor : Default Response's Headers Interceptor
+15:47:38,087  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.PaddingAtmosphereInterceptor : Browser Padding Interceptor Support
+15:47:38,088  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.AndroidAtmosphereInterceptor : Android Interceptor Support
+15:47:38,089  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.HeartbeatInterceptor : Heartbeat Interceptor Support
+15:47:38,090  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.SSEAtmosphereInterceptor : SSE Interceptor Support
+15:47:38,091  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JSONPAtmosphereInterceptor : JSONP Interceptor Support
+15:47:38,091  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JavaScriptProtocol : Atmosphere JavaScript Protocol
+15:47:38,092  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor : org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor
+15:47:38,093  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.OnDisconnectInterceptor : Browser disconnection detection
+15:47:38,093  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.IdleResourceInterceptor : org.atmosphere.interceptor.IdleResourceInterceptor
+15:47:38,094  INFO o.a.c.AtmosphereFramework:588 - Set org.atmosphere.cpr.AtmosphereInterceptor.disableDefaults to disable them.
+15:47:38,102  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor CORS Interceptor Support with priority FIRST_BEFORE_DEFAULT 
+15:47:38,104  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Default Response's Headers Interceptor with priority AFTER_DEFAULT 
+15:47:38,104  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser Padding Interceptor Support with priority AFTER_DEFAULT 
+15:47:38,105  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Android Interceptor Support with priority AFTER_DEFAULT 
+15:47:38,106  INFO o.a.i.HeartbeatInterceptor:588 - HeartbeatInterceptor configured with padding value 'X', client frequency 60 seconds and server frequency 0 seconds
+15:47:38,107  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Heartbeat Interceptor Support with priority AFTER_DEFAULT 
+15:47:38,107  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor SSE Interceptor Support with priority AFTER_DEFAULT 
+15:47:38,108  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor JSONP Interceptor Support with priority AFTER_DEFAULT 
+15:47:38,108  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Atmosphere JavaScript Protocol with priority AFTER_DEFAULT 
+15:47:38,109  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor with priority AFTER_DEFAULT 
+15:47:38,110  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser disconnection detection with priority AFTER_DEFAULT 
+15:47:38,110  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.IdleResourceInterceptor with priority BEFORE_DEFAULT 
+15:47:38,111  INFO o.a.c.AtmosphereFramework:588 - Using EndpointMapper class org.atmosphere.util.DefaultEndpointMapper
+15:47:38,112  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterCache: org.atmosphere.cache.UUIDBroadcasterCache
+15:47:38,113  INFO o.a.c.AtmosphereFramework:588 - Default Broadcaster Class: org.atmosphere.cpr.DefaultBroadcaster
+15:47:38,113  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Shared List Resources: false
+15:47:38,114  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Polling Wait Time 100
+15:47:38,114  INFO o.a.c.AtmosphereFramework:588 - Shared ExecutorService supported: true
+15:47:38,115  INFO o.a.c.AtmosphereFramework:588 - Messaging ExecutorService Pool Size unavailable - Not instance of ThreadPoolExecutor
+15:47:38,116  INFO o.a.c.AtmosphereFramework:588 - Async I/O Thread Pool Size: 200
+15:47:38,116  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterFactory: org.atmosphere.cpr.DefaultBroadcasterFactory
+15:47:38,117  INFO o.a.c.AtmosphereFramework:588 - Using AtmosphereResurceFactory: org.atmosphere.cpr.DefaultAtmosphereResourceFactory
+15:47:38,117  INFO o.a.c.AtmosphereFramework:588 - Using WebSocketProcessor: org.atmosphere.websocket.DefaultWebSocketProcessor
+15:47:38,156  INFO o.a.c.AtmosphereFramework:588 - Invoke AtmosphereInterceptor on WebSocket message true
+15:47:38,157  INFO o.a.c.AtmosphereFramework:588 - HttpSession supported: true
+15:47:38,158  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using DefaultAtmosphereObjectFactory for dependency injection and object creation
+15:47:38,158  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using async support: org.atmosphere.container.Servlet30CometSupport running under container: Undertow - 2.0.17.Final using javax.servlet/3.0
+15:47:38,159  INFO o.a.c.AtmosphereFramework:588 - Atmosphere Framework 2.4.30.vaadin1 started.
+15:47:38,160  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor  Track Message Size Interceptor using | with priority BEFORE_DEFAULT 
+15:47:38,697  INFO c.v.s.VaadinServlet:825 - Requested resource [/VAADIN/themes/airback_20190414/styles.css] not found from filesystem or through class loader. Add widgetset and/or theme JAR to your classpath or add files to WebContent/VAADIN folder.
+15:47:38,697  INFO c.v.s.VaadinServlet:825 - Requested resource [/VAADIN/widgetsets/com.airback.widgetset.airbackWidgetSet/com.airback.widgetset.airbackWidgetSet.nocache.js] not found from filesystem or through class loader. Add widgetset and/or theme JAR to your classpath or add files to WebContent/VAADIN folder.
+15:47:39,057  INFO c.a.v.AppUI:59 - Load account info of sub-domain localhost from localhost
+15:47:39,068  INFO c.a.v.AppUI:65 - Billing account info 
+15:48:05,814  INFO c.v.s.VaadinServlet:825 - Requested resource [/VAADIN/themes/airback_20190414/styles.css] not found from filesystem or through class loader. Add widgetset and/or theme JAR to your classpath or add files to WebContent/VAADIN folder.
+15:48:23,472  INFO c.v.s.VaadinServlet:825 - Requested resource [/VAADIN/widgetsets/com.airback.widgetset.airbackWidgetSet/com.airback.widgetset.airbackWidgetSet.nocache.js] not found from filesystem or through class loader. Add widgetset and/or theme JAR to your classpath or add files to WebContent/VAADIN folder.
+15:48:37,333  INFO c.v.s.VaadinServlet:825 - Requested resource [/VAADIN/widgetsets/com.airback.widgetset.airbackWidgetSet/com.airback.widgetset.airbackWidgetSet.nocache.js] not found from filesystem or through class loader. Add widgetset and/or theme JAR to your classpath or add files to WebContent/VAADIN folder.
+15:48:55,725  INFO c.v.s.VaadinServlet:825 - Requested resource [/VAADIN/widgetsets/com.airback.widgetset.airbackWidgetSet/com.airback.widgetset.airbackWidgetSet.nocache.js] not found from filesystem or through class loader. Add widgetset and/or theme JAR to your classpath or add files to WebContent/VAADIN folder.
+15:50:28,839  INFO c.v.s.VaadinServlet:825 - Requested resource [/VAADIN/widgetsets/com.airback.widgetset.airbackWidgetSet/com.airback.widgetset.airbackWidgetSet.nocache.js] not found from filesystem or through class loader. Add widgetset and/or theme JAR to your classpath or add files to WebContent/VAADIN folder.
+15:51:32,416  INFO c.v.s.VaadinServlet:825 - Requested resource [/VAADIN/themes/airback_20190414/styles.css] not found from filesystem or through class loader. Add widgetset and/or theme JAR to your classpath or add files to WebContent/VAADIN folder.
+15:51:32,416  INFO c.v.s.VaadinServlet:825 - Requested resource [/VAADIN/widgetsets/com.airback.widgetset.airbackWidgetSet/com.airback.widgetset.airbackWidgetSet.nocache.js] not found from filesystem or through class loader. Add widgetset and/or theme JAR to your classpath or add files to WebContent/VAADIN folder.
+15:51:32,474  INFO c.a.v.AppUI:59 - Load account info of sub-domain localhost from localhost
+15:51:32,483  INFO c.a.v.AppUI:65 - Billing account info 
+16:32:59,234 ERROR o.a.j.c.u.d.ConnectionHelper:556 - Failed to execute SQL (stacktrace on DEBUG log level): com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 5,054 milliseconds ago.  The last packet sent successfully to the server was 5,055 milliseconds ago.
+16:33:00,027  WARN c.z.h.p.PoolBase:176 - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6f587c00 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+16:33:00,032  WARN c.z.h.p.PoolBase:176 - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4d0e2723 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+16:33:00,036  WARN c.z.h.p.PoolBase:176 - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6bc419ac (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+16:33:00,041  WARN c.z.h.p.PoolBase:176 - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@47d0c0a8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+16:33:00,045  WARN c.z.h.p.PoolBase:176 - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1af97930 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+16:33:00,049  WARN c.z.h.p.PoolBase:176 - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@26726273 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+16:33:00,053  WARN c.z.h.p.PoolBase:176 - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6db01668 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+16:33:00,058  WARN c.z.h.p.PoolBase:176 - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2ca45ef6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+16:33:00,064  WARN c.z.h.p.PoolBase:176 - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7dc592ab (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+16:33:00,228  INFO o.q.c.QuartzScheduler:585 - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+16:33:00,230  INFO o.s.s.q.SchedulerFactoryBean:844 - Shutting down Quartz Scheduler
+16:33:00,231  INFO o.q.c.QuartzScheduler:666 - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+16:33:00,231  INFO o.q.c.QuartzScheduler:585 - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+16:33:00,233  INFO o.q.c.QuartzScheduler:740 - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+16:33:00,238  INFO o.s.s.c.ThreadPoolTaskExecutor:208 - Shutting down ExecutorService 'applicationTaskExecutor'
+16:33:00,247  INFO o.a.j.c.RepositoryImpl:1087 - Shutting down repository...
+17:56:42,501  INFO c.a.s.DefaultServerRunner:50 - Starting DefaultServerRunner on Mis-MacBook-Air.local with PID 1726 (/Users/robertnguyen/Workspace/airback-Release_8.0.8/airback-server-runner/target/classes started by robertnguyen in /Users/robertnguyen/Workspace/airback-Release_8.0.8)
+17:56:42,508  INFO c.a.s.DefaultServerRunner:675 - No active profile set, falling back to default profiles: default
+17:56:53,377  INFO o.s.c.a.ConfigurationClassPostProcessor:380 - Cannot enhance @Configuration bean definition 'com.vaadin.spring.VaadinConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+17:56:56,284  INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9f31f7db] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:56:59,171  WARN i.u.w.jsr:68 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+17:56:59,320  INFO i.u.servlet:364 - Initializing Spring embedded WebApplicationContext
+17:56:59,320  INFO o.s.w.c.ContextLoader:296 - Root WebApplicationContext: initialization completed in 16566 ms
+17:56:59,793  INFO c.v.s.b.i.VaadinServletConfiguration:261 - Registering Vaadin servlet
+17:56:59,796  INFO c.v.s.b.i.VaadinServletConfiguration:263 - Servlet will be mapped to URLs [/vaadinServlet/*, /VAADIN/*]
+17:56:59,857  INFO c.v.s.b.i.VaadinServletConfiguration:282 - Setting servlet init parameters
+17:56:59,857  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [productionMode] = [false]
+17:56:59,858  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [resourceCacheTime] = [3600]
+17:56:59,858  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [heartbeatInterval] = [300]
+17:56:59,859  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [closeIdleSessions] = [false]
+17:57:01,694  INFO c.z.h.HikariDataSource:110 - HikariPool-1 - Starting...
+17:57:03,586  INFO c.z.h.HikariDataSource:123 - HikariPool-1 - Start completed.
+17:57:03,802  INFO o.f.c.i.l.VersionPrinter:49 - Flyway Community Edition 5.2.4 by Boxfuse
+17:57:04,002  INFO o.f.c.i.d.DatabaseFactory:49 - Database: jdbc:mysql://localhost:3306/airback (MySQL 8.0)
+17:57:05,471  INFO o.f.c.i.c.DbMigrate:49 - Current version of schema `airback`: 20190416.1
+17:57:05,480  WARN o.f.c.i.c.DbMigrate:53 - Schema `airback` has a version (20190416.1) that is newer than the latest available migration (20190406.1) !
+17:57:05,484  INFO o.f.c.i.c.DbMigrate:49 - Schema `airback` is up to date. No migration necessary.
+17:57:20,084  WARN o.a.j.c.u.RepositoryLock:134 - Existing lock file /Users/robertnguyen/Workspace/airback-Release_8.0.8/repo2/wiki-workspaces/.lock detected. Repository was not shut down properly.
+17:57:20,105  INFO o.a.j.c.RepositoryImpl:259 - Starting repository...
+17:57:21,205  INFO o.a.j.c.RepositoryImpl:2035 - initializing workspace 'wiki'...
+17:57:21,554  INFO o.a.j.c.RepositoryImpl:2039 - workspace 'wiki' initialized
+17:57:21,576  INFO o.a.j.c.RepositoryImpl:455 - SecurityManager = class org.apache.jackrabbit.core.security.simple.SimpleSecurityManager
+17:57:21,584  INFO o.a.j.c.s.s.SimpleSecurityManager:137 - init: using Repository LoginModule configuration for Jackrabbit
+17:57:21,604  INFO o.a.j.c.RepositoryImpl:367 - Repository started (1499ms)
+17:57:21,696  INFO c.a.m.p.PageSessionFactory:41 - Register node types
+17:57:21,821  INFO c.a.m.p.PageSessionFactory:66 - Register airback content type
+17:57:23,835  WARN o.a.j.c.u.RepositoryLock:134 - Existing lock file /Users/robertnguyen/Workspace/airback-Release_8.0.8/repo2/workspaces/.lock detected. Repository was not shut down properly.
+17:57:23,837  INFO o.a.j.c.RepositoryImpl:259 - Starting repository...
+17:57:24,135  INFO o.a.j.c.j.DatabaseJournal:374 - Initialized local revision to 316
+17:57:24,136  INFO o.a.j.c.j.DatabaseJournal:383 - Cluster revision janitor thread not started
+17:57:24,137  INFO o.a.j.c.j.DatabaseJournal:280 - DatabaseJournal initialized.
+17:57:24,174  INFO o.a.j.c.RepositoryImpl:2035 - initializing workspace 'ecm'...
+17:57:24,214  INFO o.a.j.c.RepositoryImpl:2039 - workspace 'ecm' initialized
+17:57:24,215  INFO o.a.j.c.RepositoryImpl:455 - SecurityManager = class org.apache.jackrabbit.core.security.simple.SimpleSecurityManager
+17:57:24,216  INFO o.a.j.c.RepositoryImpl:2035 - initializing workspace 'default2'...
+17:57:24,238  INFO o.a.j.c.RepositoryImpl:2039 - workspace 'default2' initialized
+17:57:24,239  INFO o.a.j.c.s.s.SimpleSecurityManager:137 - init: using Repository LoginModule configuration for Jackrabbit
+17:57:24,256  INFO o.a.j.c.RepositoryImpl:367 - Repository started (419ms)
+17:57:24,261  INFO c.a.m.e.ContentSessionFactory:40 - Register node types
+17:57:24,269  INFO c.a.m.e.ContentSessionFactory:66 - Register airback content type
+17:57:26,158  INFO c.a.v.m.s.ComponentScannerService:51 - Started resolving view and presenter classes
+17:57:31,297  INFO c.a.v.m.s.ComponentScannerService:61 - Resolved view and presenter classes com.airback.vaadin.mvp.service.ComponentScannerService@76ffd052 that has 65 view classes and 58 presenter classes
+17:57:34,104  INFO o.s.s.c.ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
+17:57:34,623  INFO c.v.s.b.i.VaadinServletConfiguration:121 - Checking the application context for Vaadin UI mappings
+17:57:34,634  INFO c.v.s.b.i.VaadinServletConfiguration:110 - Forwarding @SpringUI URLs from {}
+17:57:34,640  INFO c.v.s.b.i.VaadinServletConfiguration:206 - Registering Vaadin servlet of type [com.vaadin.spring.server.SpringVaadinServlet]
+17:57:35,483  INFO o.q.i.StdSchedulerFactory:1208 - Using default implementation for ThreadExecutor
+17:57:35,541  INFO o.q.c.SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+17:57:35,541  INFO o.q.c.QuartzScheduler:229 - Quartz Scheduler v.2.3.0 created.
+17:57:35,544  INFO o.q.s.RAMJobStore:155 - RAMJobStore initialized.
+17:57:35,546  INFO o.q.c.QuartzScheduler:294 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+17:57:35,546  INFO o.q.i.StdSchedulerFactory:1362 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+17:57:35,547  INFO o.q.i.StdSchedulerFactory:1366 - Quartz scheduler version: 2.3.0
+17:57:35,547  INFO o.q.c.QuartzScheduler:2287 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@3f523dae
+17:57:35,857  INFO o.s.s.q.SchedulerFactoryBean:726 - Starting Quartz Scheduler now
+17:57:35,858  INFO o.q.c.QuartzScheduler:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+17:57:35,859  INFO c.a.s.ContextStartedListener:44 - airback is ready for usage
+17:57:36,366  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler mapped to context-path: /*
+17:57:36,367  INFO o.a.c.AtmosphereFramework:588 - Installed the following AtmosphereInterceptor mapped to AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler
+17:57:36,484  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using org.atmosphere.util.VoidAnnotationProcessor for processing annotation
+17:57:36,530  INFO o.a.u.ForkJoinPool:588 - Using ForkJoinPool  java.util.concurrent.ForkJoinPool. Set the org.atmosphere.cpr.broadcaster.maxAsyncWriteThreads to -1 to fully use its power.
+17:57:36,545  INFO o.a.c.AtmosphereFramework:588 - Installed WebSocketProtocol org.atmosphere.websocket.protocol.SimpleHttpProtocol 
+17:57:36,573  INFO o.a.c.JSR356AsyncSupport:588 - JSR 356 Mapping path 
+17:57:36,589  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /
+17:57:36,603  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}
+17:57:36,605  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}
+17:57:36,606  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}/{path2}
+17:57:36,606  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}/{path2}/{path3}
+17:57:36,607  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}/{path2}/{path3}/{path4}
+17:57:36,608  INFO o.a.c.AtmosphereFramework:588 - Installing Default AtmosphereInterceptors
+17:57:36,612  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CorsInterceptor : CORS Interceptor Support
+17:57:36,613  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CacheHeadersInterceptor : Default Response's Headers Interceptor
+17:57:36,615  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.PaddingAtmosphereInterceptor : Browser Padding Interceptor Support
+17:57:36,617  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.AndroidAtmosphereInterceptor : Android Interceptor Support
+17:57:36,618  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.HeartbeatInterceptor : Heartbeat Interceptor Support
+17:57:36,620  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.SSEAtmosphereInterceptor : SSE Interceptor Support
+17:57:36,621  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JSONPAtmosphereInterceptor : JSONP Interceptor Support
+17:57:36,625  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JavaScriptProtocol : Atmosphere JavaScript Protocol
+17:57:36,626  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor : org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor
+17:57:36,627  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.OnDisconnectInterceptor : Browser disconnection detection
+17:57:36,629  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.IdleResourceInterceptor : org.atmosphere.interceptor.IdleResourceInterceptor
+17:57:36,629  INFO o.a.c.AtmosphereFramework:588 - Set org.atmosphere.cpr.AtmosphereInterceptor.disableDefaults to disable them.
+17:57:36,632  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor CORS Interceptor Support with priority FIRST_BEFORE_DEFAULT 
+17:57:36,654  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Default Response's Headers Interceptor with priority AFTER_DEFAULT 
+17:57:36,656  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser Padding Interceptor Support with priority AFTER_DEFAULT 
+17:57:36,657  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Android Interceptor Support with priority AFTER_DEFAULT 
+17:57:36,658  INFO o.a.i.HeartbeatInterceptor:588 - HeartbeatInterceptor configured with padding value 'X', client frequency 60 seconds and server frequency 0 seconds
+17:57:36,659  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Heartbeat Interceptor Support with priority AFTER_DEFAULT 
+17:57:36,659  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor SSE Interceptor Support with priority AFTER_DEFAULT 
+17:57:36,660  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor JSONP Interceptor Support with priority AFTER_DEFAULT 
+17:57:36,660  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Atmosphere JavaScript Protocol with priority AFTER_DEFAULT 
+17:57:36,661  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor with priority AFTER_DEFAULT 
+17:57:36,661  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser disconnection detection with priority AFTER_DEFAULT 
+17:57:36,662  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.IdleResourceInterceptor with priority BEFORE_DEFAULT 
+17:57:36,663  INFO o.a.c.AtmosphereFramework:588 - Using EndpointMapper class org.atmosphere.util.DefaultEndpointMapper
+17:57:36,663  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterCache: org.atmosphere.cache.UUIDBroadcasterCache
+17:57:36,664  INFO o.a.c.AtmosphereFramework:588 - Default Broadcaster Class: org.atmosphere.cpr.DefaultBroadcaster
+17:57:36,664  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Shared List Resources: false
+17:57:36,665  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Polling Wait Time 100
+17:57:36,667  INFO o.a.c.AtmosphereFramework:588 - Shared ExecutorService supported: true
+17:57:36,667  INFO o.a.c.AtmosphereFramework:588 - Messaging ExecutorService Pool Size unavailable - Not instance of ThreadPoolExecutor
+17:57:36,667  INFO o.a.c.AtmosphereFramework:588 - Async I/O Thread Pool Size: 200
+17:57:36,668  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterFactory: org.atmosphere.cpr.DefaultBroadcasterFactory
+17:57:36,668  INFO o.a.c.AtmosphereFramework:588 - Using AtmosphereResurceFactory: org.atmosphere.cpr.DefaultAtmosphereResourceFactory
+17:57:36,669  INFO o.a.c.AtmosphereFramework:588 - Using WebSocketProcessor: org.atmosphere.websocket.DefaultWebSocketProcessor
+17:57:36,683  INFO o.a.c.AtmosphereFramework:588 - Invoke AtmosphereInterceptor on WebSocket message true
+17:57:36,684  INFO o.a.c.AtmosphereFramework:588 - HttpSession supported: true
+17:57:36,684  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using DefaultAtmosphereObjectFactory for dependency injection and object creation
+17:57:36,688  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using async support: org.atmosphere.container.JSR356AsyncSupport running under container: Undertow - 2.0.17.Final using javax.servlet/3.0 and jsr356/WebSocket API
+17:57:36,689  INFO o.a.c.AtmosphereFramework:588 - Atmosphere Framework 2.4.30.vaadin1 started.
+17:57:36,712  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor  Track Message Size Interceptor using | with priority BEFORE_DEFAULT 
+17:57:36,822  INFO o.xnio:104 - XNIO version 3.3.8.Final
+17:57:36,881  INFO o.x.nio:55 - XNIO NIO Implementation Version 3.3.8.Final
+17:57:37,222  INFO o.s.b.w.e.u.UndertowServletWebServer:148 - Undertow started on port(s) 60000 (http) with context path ''
+17:57:37,236  INFO c.a.s.DefaultServerRunner:59 - Started DefaultServerRunner in 57.575 seconds (JVM running for 75.229)
+18:22:34,523  WARN c.v.s.DefaultDeploymentConfiguration:274 - 
+=================================================================
+Vaadin is running in DEBUG MODE.
+Add productionMode=true to web.xml to disable debug features.
+To show debug window, add ?debug to your application URL.
+=================================================================
+18:22:34,530  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler mapped to context-path: /*
+18:22:34,532  INFO o.a.c.AtmosphereFramework:588 - Installed the following AtmosphereInterceptor mapped to AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler
+18:22:34,561  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using org.atmosphere.util.VoidAnnotationProcessor for processing annotation
+18:22:34,580  INFO o.a.u.ForkJoinPool:588 - Using ForkJoinPool  java.util.concurrent.ForkJoinPool. Set the org.atmosphere.cpr.broadcaster.maxAsyncWriteThreads to -1 to fully use its power.
+18:22:34,582  INFO o.a.c.AtmosphereFramework:588 - Installed WebSocketProtocol org.atmosphere.websocket.protocol.SimpleHttpProtocol 
+18:22:34,583  WARN o.a.u.IOUtils:588 - More than one Servlet Mapping defined. WebSocket may not work io.undertow.servlet.spec.ServletRegistrationImpl@4d98767f
+18:22:34,584  INFO o.a.c.JSR356AsyncSupport:588 - JSR 356 Mapping path /vaadinServlet
+18:22:34,612  WARN o.a.c.DefaultAsyncSupportResolver:588 - Failed to create AsyncSupport class: class org.atmosphere.container.JSR356AsyncSupport, error: java.lang.reflect.InvocationTargetException
+18:22:34,629 ERROR o.a.c.DefaultAsyncSupportResolver:588 - Real error: UT003017: Cannot add endpoint after deployment
+java.lang.IllegalStateException: UT003017: Cannot add endpoint after deployment
+	at io.undertow.websockets.jsr.ServerWebSocketContainer.addEndpoint(ServerWebSocketContainer.java:745)
+	at org.atmosphere.container.JSR356AsyncSupport.<init>(JSR356AsyncSupport.java:99)
+	at org.atmosphere.container.JSR356AsyncSupport.<init>(JSR356AsyncSupport.java:42)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.atmosphere.cpr.DefaultAsyncSupportResolver.newCometSupport(DefaultAsyncSupportResolver.java:237)
+	at org.atmosphere.cpr.DefaultAsyncSupportResolver.resolveWebSocket(DefaultAsyncSupportResolver.java:308)
+	at org.atmosphere.cpr.DefaultAsyncSupportResolver.resolve(DefaultAsyncSupportResolver.java:294)
+	at org.atmosphere.cpr.AtmosphereFramework.autoDetectContainer(AtmosphereFramework.java:2092)
+	at org.atmosphere.cpr.AtmosphereFramework.init(AtmosphereFramework.java:914)
+	at org.atmosphere.cpr.AtmosphereFramework.init(AtmosphereFramework.java:838)
+	at com.vaadin.server.communication.PushRequestHandler.initAtmosphere(PushRequestHandler.java:206)
+	at com.vaadin.server.communication.PushRequestHandler.<init>(PushRequestHandler.java:79)
+	at com.vaadin.server.VaadinServletService.createRequestHandlers(VaadinServletService.java:68)
+	at com.vaadin.spring.server.SpringVaadinServletService.createRequestHandlers(SpringVaadinServletService.java:63)
+	at com.vaadin.server.VaadinService.init(VaadinService.java:217)
+	at com.vaadin.spring.server.SpringVaadinServlet.createServletService(SpringVaadinServlet.java:151)
+	at com.vaadin.server.VaadinServlet.createServletService(VaadinServlet.java:377)
+	at com.vaadin.server.VaadinServlet.init(VaadinServlet.java:207)
+	at io.undertow.servlet.core.LifecyleInterceptorInvocation.proceed(LifecyleInterceptorInvocation.java:117)
+	at io.undertow.servlet.core.ManagedServlet$DefaultInstanceStrategy.start(ManagedServlet.java:303)
+	at io.undertow.servlet.core.ManagedServlet.forceInit(ManagedServlet.java:210)
+	at io.undertow.servlet.handlers.ServletChain.forceInit(ServletChain.java:130)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:63)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:364)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+18:22:34,672  INFO o.a.c.AtmosphereFramework:588 - Installing Default AtmosphereInterceptors
+18:22:34,672  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CorsInterceptor : CORS Interceptor Support
+18:22:34,673  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CacheHeadersInterceptor : Default Response's Headers Interceptor
+18:22:34,674  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.PaddingAtmosphereInterceptor : Browser Padding Interceptor Support
+18:22:34,675  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.AndroidAtmosphereInterceptor : Android Interceptor Support
+18:22:34,675  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.HeartbeatInterceptor : Heartbeat Interceptor Support
+18:22:34,677  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.SSEAtmosphereInterceptor : SSE Interceptor Support
+18:22:34,678  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JSONPAtmosphereInterceptor : JSONP Interceptor Support
+18:22:34,679  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JavaScriptProtocol : Atmosphere JavaScript Protocol
+18:22:34,679  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor : org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor
+18:22:34,680  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.OnDisconnectInterceptor : Browser disconnection detection
+18:22:34,680  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.IdleResourceInterceptor : org.atmosphere.interceptor.IdleResourceInterceptor
+18:22:34,681  INFO o.a.c.AtmosphereFramework:588 - Set org.atmosphere.cpr.AtmosphereInterceptor.disableDefaults to disable them.
+18:22:34,682  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor CORS Interceptor Support with priority FIRST_BEFORE_DEFAULT 
+18:22:34,683  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Default Response's Headers Interceptor with priority AFTER_DEFAULT 
+18:22:34,683  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser Padding Interceptor Support with priority AFTER_DEFAULT 
+18:22:34,684  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Android Interceptor Support with priority AFTER_DEFAULT 
+18:22:34,685  INFO o.a.i.HeartbeatInterceptor:588 - HeartbeatInterceptor configured with padding value 'X', client frequency 60 seconds and server frequency 0 seconds
+18:22:34,685  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Heartbeat Interceptor Support with priority AFTER_DEFAULT 
+18:22:34,686  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor SSE Interceptor Support with priority AFTER_DEFAULT 
+18:22:34,686  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor JSONP Interceptor Support with priority AFTER_DEFAULT 
+18:22:34,687  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Atmosphere JavaScript Protocol with priority AFTER_DEFAULT 
+18:22:34,688  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor with priority AFTER_DEFAULT 
+18:22:34,688  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser disconnection detection with priority AFTER_DEFAULT 
+18:22:34,689  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.IdleResourceInterceptor with priority BEFORE_DEFAULT 
+18:22:34,690  INFO o.a.c.AtmosphereFramework:588 - Using EndpointMapper class org.atmosphere.util.DefaultEndpointMapper
+18:22:34,691  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterCache: org.atmosphere.cache.UUIDBroadcasterCache
+18:22:34,691  INFO o.a.c.AtmosphereFramework:588 - Default Broadcaster Class: org.atmosphere.cpr.DefaultBroadcaster
+18:22:34,692  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Shared List Resources: false
+18:22:34,693  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Polling Wait Time 100
+18:22:34,693  INFO o.a.c.AtmosphereFramework:588 - Shared ExecutorService supported: true
+18:22:34,694  INFO o.a.c.AtmosphereFramework:588 - Messaging ExecutorService Pool Size unavailable - Not instance of ThreadPoolExecutor
+18:22:34,694  INFO o.a.c.AtmosphereFramework:588 - Async I/O Thread Pool Size: 200
+18:22:34,695  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterFactory: org.atmosphere.cpr.DefaultBroadcasterFactory
+18:22:34,696  INFO o.a.c.AtmosphereFramework:588 - Using AtmosphereResurceFactory: org.atmosphere.cpr.DefaultAtmosphereResourceFactory
+18:22:34,696  INFO o.a.c.AtmosphereFramework:588 - Using WebSocketProcessor: org.atmosphere.websocket.DefaultWebSocketProcessor
+18:22:34,697  INFO o.a.c.AtmosphereFramework:588 - Invoke AtmosphereInterceptor on WebSocket message true
+18:22:34,698  INFO o.a.c.AtmosphereFramework:588 - HttpSession supported: true
+18:22:34,698  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using DefaultAtmosphereObjectFactory for dependency injection and object creation
+18:22:34,699  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using async support: org.atmosphere.container.Servlet30CometSupport running under container: Undertow - 2.0.17.Final using javax.servlet/3.0
+18:22:34,699  INFO o.a.c.AtmosphereFramework:588 - Atmosphere Framework 2.4.30.vaadin1 started.
+18:22:34,700  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor  Track Message Size Interceptor using | with priority BEFORE_DEFAULT 
+18:22:34,953  INFO c.v.s.VaadinServlet:825 - Requested resource [/VAADIN/themes/airback_20190414/styles.css] not found from filesystem or through class loader. Add widgetset and/or theme JAR to your classpath or add files to WebContent/VAADIN folder.
+18:22:34,953  INFO c.v.s.VaadinServlet:825 - Requested resource [/VAADIN/widgetsets/com.airback.widgetset.airbackWidgetSet/com.airback.widgetset.airbackWidgetSet.nocache.js] not found from filesystem or through class loader. Add widgetset and/or theme JAR to your classpath or add files to WebContent/VAADIN folder.
+18:22:35,286  INFO c.a.v.AppUI:59 - Load account info of sub-domain localhost from localhost
+18:22:35,290  INFO c.a.v.AppUI:65 - Billing account info 
+18:43:07,189  INFO o.q.c.QuartzScheduler:585 - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+18:43:07,202  INFO o.s.s.q.SchedulerFactoryBean:844 - Shutting down Quartz Scheduler
+18:43:07,204  INFO o.q.c.QuartzScheduler:666 - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+18:43:07,204  INFO o.q.c.QuartzScheduler:585 - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+18:43:07,207  INFO o.q.c.QuartzScheduler:740 - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+18:43:07,214  INFO o.s.s.c.ThreadPoolTaskExecutor:208 - Shutting down ExecutorService 'applicationTaskExecutor'
+18:43:07,231  INFO o.a.j.c.RepositoryImpl:1087 - Shutting down repository...
+18:43:07,234  INFO o.a.j.c.RepositoryImpl:2196 - shutting down workspace 'default2'...
+18:43:07,235  INFO o.a.j.c.o.ObservationDispatcher:121 - Notification of EventListeners stopped.
+18:43:07,240  INFO o.a.j.c.RepositoryImpl:2203 - workspace 'default2' has been shutdown
+18:43:07,240  INFO o.a.j.c.RepositoryImpl:2196 - shutting down workspace 'ecm'...
+18:43:07,241  INFO o.a.j.c.o.ObservationDispatcher:121 - Notification of EventListeners stopped.
+18:43:07,322 ERROR o.a.j.c.u.d.ConnectionHelper:556 - Failed to execute SQL (stacktrace on DEBUG log level): com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 4,958 milliseconds ago.  The last packet sent successfully to the server was 4,959 milliseconds ago.
+20:19:16,611  INFO c.a.s.DefaultServerRunner:50 - Starting DefaultServerRunner on Mis-MacBook-Air.local with PID 3409 (/Users/robertnguyen/Workspace/airback-Release_8.0.8/airback-server-runner/target/classes started by robertnguyen in /Users/robertnguyen/Workspace/airback-Release_8.0.8)
+20:19:16,622  INFO c.a.s.DefaultServerRunner:675 - No active profile set, falling back to default profiles: default
+20:19:25,793  INFO o.s.c.a.ConfigurationClassPostProcessor:380 - Cannot enhance @Configuration bean definition 'com.vaadin.spring.VaadinConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+20:19:28,175  INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2e38a952] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:19:29,993  WARN i.u.w.jsr:68 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+20:19:30,150  INFO i.u.servlet:364 - Initializing Spring embedded WebApplicationContext
+20:19:30,151  INFO o.s.w.c.ContextLoader:296 - Root WebApplicationContext: initialization completed in 13280 ms
+20:19:30,466  INFO c.v.s.b.i.VaadinServletConfiguration:261 - Registering Vaadin servlet
+20:19:30,467  INFO c.v.s.b.i.VaadinServletConfiguration:263 - Servlet will be mapped to URLs [/vaadinServlet/*, /VAADIN/*]
+20:19:30,535  INFO c.v.s.b.i.VaadinServletConfiguration:282 - Setting servlet init parameters
+20:19:30,536  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [productionMode] = [false]
+20:19:30,537  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [resourceCacheTime] = [3600]
+20:19:30,538  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [heartbeatInterval] = [300]
+20:19:30,539  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [closeIdleSessions] = [false]
+20:19:31,757  INFO c.z.h.HikariDataSource:110 - HikariPool-1 - Starting...
+20:19:33,707  INFO c.z.h.HikariDataSource:123 - HikariPool-1 - Start completed.
+20:19:33,859  INFO o.f.c.i.l.VersionPrinter:49 - Flyway Community Edition 5.2.4 by Boxfuse
+20:19:33,937  INFO o.f.c.i.d.DatabaseFactory:49 - Database: jdbc:mysql://localhost:3306/airback (MySQL 8.0)
+20:19:35,212  INFO o.f.c.i.c.DbMigrate:49 - Current version of schema `airback`: 20190416.1
+20:19:35,213  WARN o.f.c.i.c.DbMigrate:53 - Schema `airback` has a version (20190416.1) that is newer than the latest available migration (20190406.1) !
+20:19:35,219  INFO o.f.c.i.c.DbMigrate:49 - Schema `airback` is up to date. No migration necessary.
+20:19:49,233  WARN o.a.j.c.u.RepositoryLock:134 - Existing lock file /Users/robertnguyen/Workspace/airback-Release_8.0.8/repo2/wiki-workspaces/.lock detected. Repository was not shut down properly.
+20:19:49,258  INFO o.a.j.c.RepositoryImpl:259 - Starting repository...
+20:19:50,405  INFO o.a.j.c.RepositoryImpl:2035 - initializing workspace 'wiki'...
+20:19:50,798  INFO o.a.j.c.RepositoryImpl:2039 - workspace 'wiki' initialized
+20:19:50,819  INFO o.a.j.c.RepositoryImpl:455 - SecurityManager = class org.apache.jackrabbit.core.security.simple.SimpleSecurityManager
+20:19:50,836  INFO o.a.j.c.s.s.SimpleSecurityManager:137 - init: using Repository LoginModule configuration for Jackrabbit
+20:19:50,868  INFO o.a.j.c.RepositoryImpl:367 - Repository started (1610ms)
+20:19:50,954  INFO c.a.m.p.PageSessionFactory:41 - Register node types
+20:19:51,149  INFO c.a.m.p.PageSessionFactory:66 - Register airback content type
+20:19:52,484  WARN o.a.j.c.u.RepositoryLock:134 - Existing lock file /Users/robertnguyen/Workspace/airback-Release_8.0.8/repo2/workspaces/.lock detected. Repository was not shut down properly.
+20:19:52,485  INFO o.a.j.c.RepositoryImpl:259 - Starting repository...
+20:19:52,663  INFO o.a.j.c.j.DatabaseJournal:374 - Initialized local revision to 320
+20:19:52,672  INFO o.a.j.c.j.DatabaseJournal:383 - Cluster revision janitor thread not started
+20:19:52,672  INFO o.a.j.c.j.DatabaseJournal:280 - DatabaseJournal initialized.
+20:19:52,742  INFO o.a.j.c.RepositoryImpl:2035 - initializing workspace 'ecm'...
+20:19:52,790  INFO o.a.j.c.RepositoryImpl:2039 - workspace 'ecm' initialized
+20:19:52,791  INFO o.a.j.c.RepositoryImpl:455 - SecurityManager = class org.apache.jackrabbit.core.security.simple.SimpleSecurityManager
+20:19:52,791  INFO o.a.j.c.RepositoryImpl:2035 - initializing workspace 'default2'...
+20:19:52,814  INFO o.a.j.c.RepositoryImpl:2039 - workspace 'default2' initialized
+20:19:52,815  INFO o.a.j.c.s.s.SimpleSecurityManager:137 - init: using Repository LoginModule configuration for Jackrabbit
+20:19:52,841  INFO o.a.j.c.RepositoryImpl:367 - Repository started (356ms)
+20:19:52,844  INFO c.a.m.e.ContentSessionFactory:40 - Register node types
+20:19:52,851  INFO c.a.m.e.ContentSessionFactory:66 - Register airback content type
+20:19:54,471  INFO c.a.v.m.s.ComponentScannerService:51 - Started resolving view and presenter classes
+20:19:58,632  INFO c.a.v.m.s.ComponentScannerService:61 - Resolved view and presenter classes com.airback.vaadin.mvp.service.ComponentScannerService@91c11b6 that has 65 view classes and 58 presenter classes
+20:20:00,605  INFO o.s.s.c.ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
+20:20:01,178  INFO c.v.s.b.i.VaadinServletConfiguration:121 - Checking the application context for Vaadin UI mappings
+20:20:01,190  INFO c.v.s.b.i.VaadinServletConfiguration:110 - Forwarding @SpringUI URLs from {}
+20:20:01,194  INFO c.v.s.b.i.VaadinServletConfiguration:206 - Registering Vaadin servlet of type [com.vaadin.spring.server.SpringVaadinServlet]
+20:20:02,055  INFO o.q.i.StdSchedulerFactory:1208 - Using default implementation for ThreadExecutor
+20:20:02,129  INFO o.q.c.SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+20:20:02,129  INFO o.q.c.QuartzScheduler:229 - Quartz Scheduler v.2.3.0 created.
+20:20:02,131  INFO o.q.s.RAMJobStore:155 - RAMJobStore initialized.
+20:20:02,133  INFO o.q.c.QuartzScheduler:294 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+20:20:02,134  INFO o.q.i.StdSchedulerFactory:1362 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+20:20:02,134  INFO o.q.i.StdSchedulerFactory:1366 - Quartz scheduler version: 2.3.0
+20:20:02,135  INFO o.q.c.QuartzScheduler:2287 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7ecf4608
+20:20:02,487  INFO o.s.s.q.SchedulerFactoryBean:726 - Starting Quartz Scheduler now
+20:20:02,488  INFO o.q.c.QuartzScheduler:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+20:20:02,490  INFO c.a.s.ContextStartedListener:44 - airback is ready for usage
+20:20:03,139  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler mapped to context-path: /*
+20:20:03,140  INFO o.a.c.AtmosphereFramework:588 - Installed the following AtmosphereInterceptor mapped to AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler
+20:20:03,312  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using org.atmosphere.util.VoidAnnotationProcessor for processing annotation
+20:20:03,371  INFO o.a.u.ForkJoinPool:588 - Using ForkJoinPool  java.util.concurrent.ForkJoinPool. Set the org.atmosphere.cpr.broadcaster.maxAsyncWriteThreads to -1 to fully use its power.
+20:20:03,387  INFO o.a.c.AtmosphereFramework:588 - Installed WebSocketProtocol org.atmosphere.websocket.protocol.SimpleHttpProtocol 
+20:20:03,417  INFO o.a.c.JSR356AsyncSupport:588 - JSR 356 Mapping path 
+20:20:03,433  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /
+20:20:03,445  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}
+20:20:03,448  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}
+20:20:03,451  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}/{path2}
+20:20:03,451  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}/{path2}/{path3}
+20:20:03,452  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}/{path2}/{path3}/{path4}
+20:20:03,454  INFO o.a.c.AtmosphereFramework:588 - Installing Default AtmosphereInterceptors
+20:20:03,459  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CorsInterceptor : CORS Interceptor Support
+20:20:03,461  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CacheHeadersInterceptor : Default Response's Headers Interceptor
+20:20:03,463  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.PaddingAtmosphereInterceptor : Browser Padding Interceptor Support
+20:20:03,465  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.AndroidAtmosphereInterceptor : Android Interceptor Support
+20:20:03,466  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.HeartbeatInterceptor : Heartbeat Interceptor Support
+20:20:03,468  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.SSEAtmosphereInterceptor : SSE Interceptor Support
+20:20:03,469  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JSONPAtmosphereInterceptor : JSONP Interceptor Support
+20:20:03,486  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JavaScriptProtocol : Atmosphere JavaScript Protocol
+20:20:03,487  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor : org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor
+20:20:03,488  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.OnDisconnectInterceptor : Browser disconnection detection
+20:20:03,489  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.IdleResourceInterceptor : org.atmosphere.interceptor.IdleResourceInterceptor
+20:20:03,489  INFO o.a.c.AtmosphereFramework:588 - Set org.atmosphere.cpr.AtmosphereInterceptor.disableDefaults to disable them.
+20:20:03,492  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor CORS Interceptor Support with priority FIRST_BEFORE_DEFAULT 
+20:20:03,514  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Default Response's Headers Interceptor with priority AFTER_DEFAULT 
+20:20:03,519  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser Padding Interceptor Support with priority AFTER_DEFAULT 
+20:20:03,519  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Android Interceptor Support with priority AFTER_DEFAULT 
+20:20:03,520  INFO o.a.i.HeartbeatInterceptor:588 - HeartbeatInterceptor configured with padding value 'X', client frequency 60 seconds and server frequency 0 seconds
+20:20:03,520  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Heartbeat Interceptor Support with priority AFTER_DEFAULT 
+20:20:03,520  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor SSE Interceptor Support with priority AFTER_DEFAULT 
+20:20:03,521  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor JSONP Interceptor Support with priority AFTER_DEFAULT 
+20:20:03,521  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Atmosphere JavaScript Protocol with priority AFTER_DEFAULT 
+20:20:03,522  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor with priority AFTER_DEFAULT 
+20:20:03,522  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser disconnection detection with priority AFTER_DEFAULT 
+20:20:03,523  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.IdleResourceInterceptor with priority BEFORE_DEFAULT 
+20:20:03,524  INFO o.a.c.AtmosphereFramework:588 - Using EndpointMapper class org.atmosphere.util.DefaultEndpointMapper
+20:20:03,525  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterCache: org.atmosphere.cache.UUIDBroadcasterCache
+20:20:03,525  INFO o.a.c.AtmosphereFramework:588 - Default Broadcaster Class: org.atmosphere.cpr.DefaultBroadcaster
+20:20:03,526  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Shared List Resources: false
+20:20:03,526  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Polling Wait Time 100
+20:20:03,527  INFO o.a.c.AtmosphereFramework:588 - Shared ExecutorService supported: true
+20:20:03,527  INFO o.a.c.AtmosphereFramework:588 - Messaging ExecutorService Pool Size unavailable - Not instance of ThreadPoolExecutor
+20:20:03,528  INFO o.a.c.AtmosphereFramework:588 - Async I/O Thread Pool Size: 200
+20:20:03,528  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterFactory: org.atmosphere.cpr.DefaultBroadcasterFactory
+20:20:03,531  INFO o.a.c.AtmosphereFramework:588 - Using AtmosphereResurceFactory: org.atmosphere.cpr.DefaultAtmosphereResourceFactory
+20:20:03,532  INFO o.a.c.AtmosphereFramework:588 - Using WebSocketProcessor: org.atmosphere.websocket.DefaultWebSocketProcessor
+20:20:03,548  INFO o.a.c.AtmosphereFramework:588 - Invoke AtmosphereInterceptor on WebSocket message true
+20:20:03,549  INFO o.a.c.AtmosphereFramework:588 - HttpSession supported: true
+20:20:03,549  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using DefaultAtmosphereObjectFactory for dependency injection and object creation
+20:20:03,554  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using async support: org.atmosphere.container.JSR356AsyncSupport running under container: Undertow - 2.0.17.Final using javax.servlet/3.0 and jsr356/WebSocket API
+20:20:03,554  INFO o.a.c.AtmosphereFramework:588 - Atmosphere Framework 2.4.30.vaadin1 started.
+20:20:03,574  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor  Track Message Size Interceptor using | with priority BEFORE_DEFAULT 
+20:20:03,751  INFO o.xnio:104 - XNIO version 3.3.8.Final
+20:20:03,822  INFO o.x.nio:55 - XNIO NIO Implementation Version 3.3.8.Final
+20:20:04,179  INFO o.s.b.w.e.u.UndertowServletWebServer:148 - Undertow started on port(s) 60000 (http) with context path ''
+20:20:04,189  INFO c.a.s.DefaultServerRunner:59 - Started DefaultServerRunner in 50.473 seconds (JVM running for 68.345)
+20:20:47,081  WARN c.v.s.DefaultDeploymentConfiguration:274 - 
+=================================================================
+Vaadin is running in DEBUG MODE.
+Add productionMode=true to web.xml to disable debug features.
+To show debug window, add ?debug to your application URL.
+=================================================================
+20:20:47,098  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler mapped to context-path: /*
+20:20:47,098  INFO o.a.c.AtmosphereFramework:588 - Installed the following AtmosphereInterceptor mapped to AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler
+20:20:47,148  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using org.atmosphere.util.VoidAnnotationProcessor for processing annotation
+20:20:47,168  INFO o.a.u.ForkJoinPool:588 - Using ForkJoinPool  java.util.concurrent.ForkJoinPool. Set the org.atmosphere.cpr.broadcaster.maxAsyncWriteThreads to -1 to fully use its power.
+20:20:47,172  INFO o.a.c.AtmosphereFramework:588 - Installed WebSocketProtocol org.atmosphere.websocket.protocol.SimpleHttpProtocol 
+20:20:47,174  WARN o.a.u.IOUtils:588 - More than one Servlet Mapping defined. WebSocket may not work io.undertow.servlet.spec.ServletRegistrationImpl@203cb1f2
+20:20:47,175  INFO o.a.c.JSR356AsyncSupport:588 - JSR 356 Mapping path /vaadinServlet
+20:20:47,198  WARN o.a.c.DefaultAsyncSupportResolver:588 - Failed to create AsyncSupport class: class org.atmosphere.container.JSR356AsyncSupport, error: java.lang.reflect.InvocationTargetException
+20:20:47,213 ERROR o.a.c.DefaultAsyncSupportResolver:588 - Real error: UT003017: Cannot add endpoint after deployment
+java.lang.IllegalStateException: UT003017: Cannot add endpoint after deployment
+	at io.undertow.websockets.jsr.ServerWebSocketContainer.addEndpoint(ServerWebSocketContainer.java:745)
+	at org.atmosphere.container.JSR356AsyncSupport.<init>(JSR356AsyncSupport.java:99)
+	at org.atmosphere.container.JSR356AsyncSupport.<init>(JSR356AsyncSupport.java:42)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.atmosphere.cpr.DefaultAsyncSupportResolver.newCometSupport(DefaultAsyncSupportResolver.java:237)
+	at org.atmosphere.cpr.DefaultAsyncSupportResolver.resolveWebSocket(DefaultAsyncSupportResolver.java:308)
+	at org.atmosphere.cpr.DefaultAsyncSupportResolver.resolve(DefaultAsyncSupportResolver.java:294)
+	at org.atmosphere.cpr.AtmosphereFramework.autoDetectContainer(AtmosphereFramework.java:2092)
+	at org.atmosphere.cpr.AtmosphereFramework.init(AtmosphereFramework.java:914)
+	at org.atmosphere.cpr.AtmosphereFramework.init(AtmosphereFramework.java:838)
+	at com.vaadin.server.communication.PushRequestHandler.initAtmosphere(PushRequestHandler.java:206)
+	at com.vaadin.server.communication.PushRequestHandler.<init>(PushRequestHandler.java:79)
+	at com.vaadin.server.VaadinServletService.createRequestHandlers(VaadinServletService.java:68)
+	at com.vaadin.spring.server.SpringVaadinServletService.createRequestHandlers(SpringVaadinServletService.java:63)
+	at com.vaadin.server.VaadinService.init(VaadinService.java:217)
+	at com.vaadin.spring.server.SpringVaadinServlet.createServletService(SpringVaadinServlet.java:151)
+	at com.vaadin.server.VaadinServlet.createServletService(VaadinServlet.java:377)
+	at com.vaadin.server.VaadinServlet.init(VaadinServlet.java:207)
+	at io.undertow.servlet.core.LifecyleInterceptorInvocation.proceed(LifecyleInterceptorInvocation.java:117)
+	at io.undertow.servlet.core.ManagedServlet$DefaultInstanceStrategy.start(ManagedServlet.java:303)
+	at io.undertow.servlet.core.ManagedServlet.forceInit(ManagedServlet.java:210)
+	at io.undertow.servlet.handlers.ServletChain.forceInit(ServletChain.java:130)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:63)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:364)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+20:20:47,765  INFO o.a.c.AtmosphereFramework:588 - Installing Default AtmosphereInterceptors
+20:20:47,768  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CorsInterceptor : CORS Interceptor Support
+20:20:47,769  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CacheHeadersInterceptor : Default Response's Headers Interceptor
+20:20:47,769  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.PaddingAtmosphereInterceptor : Browser Padding Interceptor Support
+20:20:47,770  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.AndroidAtmosphereInterceptor : Android Interceptor Support
+20:20:47,771  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.HeartbeatInterceptor : Heartbeat Interceptor Support
+20:20:47,772  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.SSEAtmosphereInterceptor : SSE Interceptor Support
+20:20:47,772  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JSONPAtmosphereInterceptor : JSONP Interceptor Support
+20:20:47,773  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JavaScriptProtocol : Atmosphere JavaScript Protocol
+20:20:47,774  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor : org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor
+20:20:47,783  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.OnDisconnectInterceptor : Browser disconnection detection
+20:20:47,784  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.IdleResourceInterceptor : org.atmosphere.interceptor.IdleResourceInterceptor
+20:20:47,785  INFO o.a.c.AtmosphereFramework:588 - Set org.atmosphere.cpr.AtmosphereInterceptor.disableDefaults to disable them.
+20:20:47,788  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor CORS Interceptor Support with priority FIRST_BEFORE_DEFAULT 
+20:20:47,790  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Default Response's Headers Interceptor with priority AFTER_DEFAULT 
+20:20:47,791  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser Padding Interceptor Support with priority AFTER_DEFAULT 
+20:20:47,791  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Android Interceptor Support with priority AFTER_DEFAULT 
+20:20:47,792  INFO o.a.i.HeartbeatInterceptor:588 - HeartbeatInterceptor configured with padding value 'X', client frequency 60 seconds and server frequency 0 seconds
+20:20:47,793  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Heartbeat Interceptor Support with priority AFTER_DEFAULT 
+20:20:47,794  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor SSE Interceptor Support with priority AFTER_DEFAULT 
+20:20:47,795  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor JSONP Interceptor Support with priority AFTER_DEFAULT 
+20:20:47,795  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Atmosphere JavaScript Protocol with priority AFTER_DEFAULT 
+20:20:47,796  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor with priority AFTER_DEFAULT 
+20:20:47,797  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser disconnection detection with priority AFTER_DEFAULT 
+20:20:47,797  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.IdleResourceInterceptor with priority BEFORE_DEFAULT 
+20:20:47,798  INFO o.a.c.AtmosphereFramework:588 - Using EndpointMapper class org.atmosphere.util.DefaultEndpointMapper
+20:20:47,798  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterCache: org.atmosphere.cache.UUIDBroadcasterCache
+20:20:47,799  INFO o.a.c.AtmosphereFramework:588 - Default Broadcaster Class: org.atmosphere.cpr.DefaultBroadcaster
+20:20:47,799  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Shared List Resources: false
+20:20:47,800  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Polling Wait Time 100
+20:20:47,800  INFO o.a.c.AtmosphereFramework:588 - Shared ExecutorService supported: true
+20:20:47,801  INFO o.a.c.AtmosphereFramework:588 - Messaging ExecutorService Pool Size unavailable - Not instance of ThreadPoolExecutor
+20:20:47,801  INFO o.a.c.AtmosphereFramework:588 - Async I/O Thread Pool Size: 200
+20:20:47,802  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterFactory: org.atmosphere.cpr.DefaultBroadcasterFactory
+20:20:47,807  INFO o.a.c.AtmosphereFramework:588 - Using AtmosphereResurceFactory: org.atmosphere.cpr.DefaultAtmosphereResourceFactory
+20:20:47,812  INFO o.a.c.AtmosphereFramework:588 - Using WebSocketProcessor: org.atmosphere.websocket.DefaultWebSocketProcessor
+20:20:47,814  INFO o.a.c.AtmosphereFramework:588 - Invoke AtmosphereInterceptor on WebSocket message true
+20:20:47,816  INFO o.a.c.AtmosphereFramework:588 - HttpSession supported: true
+20:20:47,816  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using DefaultAtmosphereObjectFactory for dependency injection and object creation
+20:20:47,817  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using async support: org.atmosphere.container.Servlet30CometSupport running under container: Undertow - 2.0.17.Final using javax.servlet/3.0
+20:20:47,818  INFO o.a.c.AtmosphereFramework:588 - Atmosphere Framework 2.4.30.vaadin1 started.
+20:20:47,818  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor  Track Message Size Interceptor using | with priority BEFORE_DEFAULT 
+20:20:48,537  INFO c.v.s.VaadinServlet:825 - Requested resource [/VAADIN/widgetsets/com.airback.widgetset.airbackWidgetSet/com.airback.widgetset.airbackWidgetSet.nocache.js] not found from filesystem or through class loader. Add widgetset and/or theme JAR to your classpath or add files to WebContent/VAADIN folder.
+20:20:48,537  INFO c.v.s.VaadinServlet:825 - Requested resource [/VAADIN/themes/airback_20200304/styles.css] not found from filesystem or through class loader. Add widgetset and/or theme JAR to your classpath or add files to WebContent/VAADIN folder.
+20:20:49,129  INFO c.a.v.AppUI:59 - Load account info of sub-domain localhost from localhost
+20:20:49,165  INFO c.a.v.AppUI:65 - Billing account info 
+20:20:56,815  INFO c.v.s.VaadinServlet:825 - Requested resource [/VAADIN/themes/airback_20200304/styles.css] not found from filesystem or through class loader. Add widgetset and/or theme JAR to your classpath or add files to WebContent/VAADIN folder.
+20:42:48,189  INFO o.q.c.QuartzScheduler:585 - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+20:42:48,244  INFO o.s.s.q.SchedulerFactoryBean:844 - Shutting down Quartz Scheduler
+20:42:48,249  INFO o.q.c.QuartzScheduler:666 - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+20:42:48,249  INFO o.q.c.QuartzScheduler:585 - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+20:42:48,250  INFO o.q.c.QuartzScheduler:740 - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+20:42:48,314  INFO o.s.s.c.ThreadPoolTaskExecutor:208 - Shutting down ExecutorService 'applicationTaskExecutor'
+20:42:48,458  INFO o.a.j.c.RepositoryImpl:1087 - Shutting down repository...
+20:42:48,501  INFO o.a.j.c.RepositoryImpl:2196 - shutting down workspace 'default2'...
+20:42:48,506  INFO o.a.j.c.o.ObservationDispatcher:121 - Notification of EventListeners stopped.
+20:42:48,563  INFO o.a.j.c.RepositoryImpl:2203 - workspace 'default2' has been shutdown
+20:42:48,564  INFO o.a.j.c.RepositoryImpl:2196 - shutting down workspace 'ecm'...
+20:42:48,568  INFO o.a.j.c.o.ObservationDispatcher:121 - Notification of EventListeners stopped.
+20:42:48,726  INFO o.a.j.c.RepositoryImpl:2203 - workspace 'ecm' has been shutdown
+20:42:48,750  INFO o.a.j.c.RepositoryImpl:1192 - Repository has been shutdown
+20:42:48,756  INFO o.a.j.c.RepositoryImpl:1087 - Shutting down repository...
+20:42:48,758  INFO o.a.j.c.RepositoryImpl:2196 - shutting down workspace 'wiki'...
+20:42:48,759  INFO o.a.j.c.o.ObservationDispatcher:121 - Notification of EventListeners stopped.
+20:42:49,052  INFO o.a.j.c.RepositoryImpl:2203 - workspace 'wiki' has been shutdown
+20:42:49,065  INFO o.a.j.c.RepositoryImpl:1192 - Repository has been shutdown
+20:42:49,080  INFO c.z.h.HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+20:42:49,142  INFO c.z.h.HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+20:43:05,118  INFO c.a.s.DefaultServerRunner:50 - Starting DefaultServerRunner on Mis-MacBook-Air.local with PID 7258 (/Users/robertnguyen/Workspace/airback-Release_8.0.8/airback-server-runner/target/classes started by robertnguyen in /Users/robertnguyen/Workspace/airback-Release_8.0.8)
+20:43:05,129  INFO c.a.s.DefaultServerRunner:675 - No active profile set, falling back to default profiles: default
+20:43:15,100  INFO o.s.c.a.ConfigurationClassPostProcessor:380 - Cannot enhance @Configuration bean definition 'com.vaadin.spring.VaadinConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+20:43:17,493  INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5891227a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:43:19,255  WARN i.u.w.jsr:68 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+20:43:19,425  INFO i.u.servlet:364 - Initializing Spring embedded WebApplicationContext
+20:43:19,432  INFO o.s.w.c.ContextLoader:296 - Root WebApplicationContext: initialization completed in 13957 ms
+20:43:19,651  INFO c.v.s.b.i.VaadinServletConfiguration:261 - Registering Vaadin servlet
+20:43:19,652  INFO c.v.s.b.i.VaadinServletConfiguration:263 - Servlet will be mapped to URLs [/vaadinServlet/*, /VAADIN/*]
+20:43:19,697  INFO c.v.s.b.i.VaadinServletConfiguration:282 - Setting servlet init parameters
+20:43:19,698  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [productionMode] = [false]
+20:43:19,698  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [resourceCacheTime] = [3600]
+20:43:19,699  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [heartbeatInterval] = [300]
+20:43:19,699  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [closeIdleSessions] = [false]
+20:43:20,824  INFO c.z.h.HikariDataSource:110 - HikariPool-1 - Starting...
+20:43:21,652  INFO c.z.h.HikariDataSource:123 - HikariPool-1 - Start completed.
+20:43:21,772  INFO o.f.c.i.l.VersionPrinter:49 - Flyway Community Edition 5.2.4 by Boxfuse
+20:43:21,829  INFO o.f.c.i.d.DatabaseFactory:49 - Database: jdbc:mysql://localhost:3306/airback (MySQL 8.0)
+20:43:22,858  INFO o.f.c.i.c.DbMigrate:49 - Current version of schema `airback`: 20190416.1
+20:43:22,859  WARN o.f.c.i.c.DbMigrate:53 - Schema `airback` has a version (20190416.1) that is newer than the latest available migration (20190406.1) !
+20:43:22,863  INFO o.f.c.i.c.DbMigrate:49 - Schema `airback` is up to date. No migration necessary.
+20:43:34,999  INFO o.a.j.c.RepositoryImpl:259 - Starting repository...
+20:43:36,063  INFO o.a.j.c.RepositoryImpl:2035 - initializing workspace 'wiki'...
+20:43:36,376  INFO o.a.j.c.RepositoryImpl:2039 - workspace 'wiki' initialized
+20:43:36,392  INFO o.a.j.c.RepositoryImpl:455 - SecurityManager = class org.apache.jackrabbit.core.security.simple.SimpleSecurityManager
+20:43:36,396  INFO o.a.j.c.s.s.SimpleSecurityManager:137 - init: using Repository LoginModule configuration for Jackrabbit
+20:43:36,416  INFO o.a.j.c.RepositoryImpl:367 - Repository started (1417ms)
+20:43:36,490  INFO c.a.m.p.PageSessionFactory:41 - Register node types
+20:43:36,583  INFO c.a.m.p.PageSessionFactory:66 - Register airback content type
+20:43:37,854  INFO o.a.j.c.RepositoryImpl:259 - Starting repository...
+20:43:38,003  INFO o.a.j.c.j.DatabaseJournal:374 - Initialized local revision to 324
+20:43:38,003  INFO o.a.j.c.j.DatabaseJournal:383 - Cluster revision janitor thread not started
+20:43:38,004  INFO o.a.j.c.j.DatabaseJournal:280 - DatabaseJournal initialized.
+20:43:38,044  INFO o.a.j.c.RepositoryImpl:2035 - initializing workspace 'ecm'...
+20:43:38,084  INFO o.a.j.c.RepositoryImpl:2039 - workspace 'ecm' initialized
+20:43:38,085  INFO o.a.j.c.RepositoryImpl:455 - SecurityManager = class org.apache.jackrabbit.core.security.simple.SimpleSecurityManager
+20:43:38,085  INFO o.a.j.c.RepositoryImpl:2035 - initializing workspace 'default2'...
+20:43:38,111  INFO o.a.j.c.RepositoryImpl:2039 - workspace 'default2' initialized
+20:43:38,112  INFO o.a.j.c.s.s.SimpleSecurityManager:137 - init: using Repository LoginModule configuration for Jackrabbit
+20:43:38,121  INFO o.a.j.c.RepositoryImpl:367 - Repository started (267ms)
+20:43:38,124  INFO c.a.m.e.ContentSessionFactory:40 - Register node types
+20:43:38,131  INFO c.a.m.e.ContentSessionFactory:66 - Register airback content type
+20:43:39,784  INFO c.a.v.m.s.ComponentScannerService:51 - Started resolving view and presenter classes
+20:43:44,042  INFO c.a.v.m.s.ComponentScannerService:61 - Resolved view and presenter classes com.airback.vaadin.mvp.service.ComponentScannerService@357e7113 that has 65 view classes and 58 presenter classes
+20:43:45,941  INFO o.s.s.c.ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
+20:43:46,622  INFO c.v.s.b.i.VaadinServletConfiguration:121 - Checking the application context for Vaadin UI mappings
+20:43:46,639  INFO c.v.s.b.i.VaadinServletConfiguration:110 - Forwarding @SpringUI URLs from {}
+20:43:46,644  INFO c.v.s.b.i.VaadinServletConfiguration:206 - Registering Vaadin servlet of type [com.vaadin.spring.server.SpringVaadinServlet]
+20:43:47,707  INFO o.q.i.StdSchedulerFactory:1208 - Using default implementation for ThreadExecutor
+20:43:47,792  INFO o.q.c.SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+20:43:47,793  INFO o.q.c.QuartzScheduler:229 - Quartz Scheduler v.2.3.0 created.
+20:43:47,795  INFO o.q.s.RAMJobStore:155 - RAMJobStore initialized.
+20:43:47,797  INFO o.q.c.QuartzScheduler:294 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+20:43:47,798  INFO o.q.i.StdSchedulerFactory:1362 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+20:43:47,798  INFO o.q.i.StdSchedulerFactory:1366 - Quartz scheduler version: 2.3.0
+20:43:47,799  INFO o.q.c.QuartzScheduler:2287 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@2284058a
+20:43:48,457  INFO o.s.s.q.SchedulerFactoryBean:726 - Starting Quartz Scheduler now
+20:43:48,462  INFO o.q.c.QuartzScheduler:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+20:43:48,465  INFO c.a.s.ContextStartedListener:44 - airback is ready for usage
+20:43:49,124  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler mapped to context-path: /*
+20:43:49,125  INFO o.a.c.AtmosphereFramework:588 - Installed the following AtmosphereInterceptor mapped to AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler
+20:43:49,339  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using org.atmosphere.util.VoidAnnotationProcessor for processing annotation
+20:43:49,390  INFO o.a.u.ForkJoinPool:588 - Using ForkJoinPool  java.util.concurrent.ForkJoinPool. Set the org.atmosphere.cpr.broadcaster.maxAsyncWriteThreads to -1 to fully use its power.
+20:43:49,406  INFO o.a.c.AtmosphereFramework:588 - Installed WebSocketProtocol org.atmosphere.websocket.protocol.SimpleHttpProtocol 
+20:43:49,457  INFO o.a.c.JSR356AsyncSupport:588 - JSR 356 Mapping path 
+20:43:49,470  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /
+20:43:49,485  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}
+20:43:49,487  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}
+20:43:49,488  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}/{path2}
+20:43:49,488  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}/{path2}/{path3}
+20:43:49,489  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}/{path2}/{path3}/{path4}
+20:43:49,490  INFO o.a.c.AtmosphereFramework:588 - Installing Default AtmosphereInterceptors
+20:43:49,500  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CorsInterceptor : CORS Interceptor Support
+20:43:49,501  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CacheHeadersInterceptor : Default Response's Headers Interceptor
+20:43:49,504  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.PaddingAtmosphereInterceptor : Browser Padding Interceptor Support
+20:43:49,508  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.AndroidAtmosphereInterceptor : Android Interceptor Support
+20:43:49,509  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.HeartbeatInterceptor : Heartbeat Interceptor Support
+20:43:49,512  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.SSEAtmosphereInterceptor : SSE Interceptor Support
+20:43:49,513  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JSONPAtmosphereInterceptor : JSONP Interceptor Support
+20:43:49,516  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JavaScriptProtocol : Atmosphere JavaScript Protocol
+20:43:49,517  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor : org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor
+20:43:49,519  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.OnDisconnectInterceptor : Browser disconnection detection
+20:43:49,521  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.IdleResourceInterceptor : org.atmosphere.interceptor.IdleResourceInterceptor
+20:43:49,521  INFO o.a.c.AtmosphereFramework:588 - Set org.atmosphere.cpr.AtmosphereInterceptor.disableDefaults to disable them.
+20:43:49,529  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor CORS Interceptor Support with priority FIRST_BEFORE_DEFAULT 
+20:43:49,585  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Default Response's Headers Interceptor with priority AFTER_DEFAULT 
+20:43:49,592  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser Padding Interceptor Support with priority AFTER_DEFAULT 
+20:43:49,593  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Android Interceptor Support with priority AFTER_DEFAULT 
+20:43:49,595  INFO o.a.i.HeartbeatInterceptor:588 - HeartbeatInterceptor configured with padding value 'X', client frequency 60 seconds and server frequency 0 seconds
+20:43:49,596  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Heartbeat Interceptor Support with priority AFTER_DEFAULT 
+20:43:49,598  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor SSE Interceptor Support with priority AFTER_DEFAULT 
+20:43:49,612  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor JSONP Interceptor Support with priority AFTER_DEFAULT 
+20:43:49,619  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Atmosphere JavaScript Protocol with priority AFTER_DEFAULT 
+20:43:49,620  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor with priority AFTER_DEFAULT 
+20:43:49,621  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser disconnection detection with priority AFTER_DEFAULT 
+20:43:49,622  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.IdleResourceInterceptor with priority BEFORE_DEFAULT 
+20:43:49,623  INFO o.a.c.AtmosphereFramework:588 - Using EndpointMapper class org.atmosphere.util.DefaultEndpointMapper
+20:43:49,623  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterCache: org.atmosphere.cache.UUIDBroadcasterCache
+20:43:49,624  INFO o.a.c.AtmosphereFramework:588 - Default Broadcaster Class: org.atmosphere.cpr.DefaultBroadcaster
+20:43:49,625  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Shared List Resources: false
+20:43:49,626  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Polling Wait Time 100
+20:43:49,628  INFO o.a.c.AtmosphereFramework:588 - Shared ExecutorService supported: true
+20:43:49,629  INFO o.a.c.AtmosphereFramework:588 - Messaging ExecutorService Pool Size unavailable - Not instance of ThreadPoolExecutor
+20:43:49,629  INFO o.a.c.AtmosphereFramework:588 - Async I/O Thread Pool Size: 200
+20:43:49,630  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterFactory: org.atmosphere.cpr.DefaultBroadcasterFactory
+20:43:49,630  INFO o.a.c.AtmosphereFramework:588 - Using AtmosphereResurceFactory: org.atmosphere.cpr.DefaultAtmosphereResourceFactory
+20:43:49,631  INFO o.a.c.AtmosphereFramework:588 - Using WebSocketProcessor: org.atmosphere.websocket.DefaultWebSocketProcessor
+20:43:49,657  INFO o.a.c.AtmosphereFramework:588 - Invoke AtmosphereInterceptor on WebSocket message true
+20:43:49,660  INFO o.a.c.AtmosphereFramework:588 - HttpSession supported: true
+20:43:49,661  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using DefaultAtmosphereObjectFactory for dependency injection and object creation
+20:43:49,666  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using async support: org.atmosphere.container.JSR356AsyncSupport running under container: Undertow - 2.0.17.Final using javax.servlet/3.0 and jsr356/WebSocket API
+20:43:49,667  INFO o.a.c.AtmosphereFramework:588 - Atmosphere Framework 2.4.30.vaadin1 started.
+20:43:49,696  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor  Track Message Size Interceptor using | with priority BEFORE_DEFAULT 
+20:43:49,949  INFO o.xnio:104 - XNIO version 3.3.8.Final
+20:43:50,046  INFO o.x.nio:55 - XNIO NIO Implementation Version 3.3.8.Final
+20:43:50,451  INFO o.s.b.w.e.u.UndertowServletWebServer:148 - Undertow started on port(s) 60000 (http) with context path ''
+20:43:50,484  INFO c.a.s.DefaultServerRunner:59 - Started DefaultServerRunner in 49.364 seconds (JVM running for 56.094)
+20:44:24,194  WARN c.v.s.DefaultDeploymentConfiguration:274 - 
+=================================================================
+Vaadin is running in DEBUG MODE.
+Add productionMode=true to web.xml to disable debug features.
+To show debug window, add ?debug to your application URL.
+=================================================================
+20:44:24,203  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler mapped to context-path: /*
+20:44:24,204  INFO o.a.c.AtmosphereFramework:588 - Installed the following AtmosphereInterceptor mapped to AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler
+20:44:24,227  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using org.atmosphere.util.VoidAnnotationProcessor for processing annotation
+20:44:24,239  INFO o.a.u.ForkJoinPool:588 - Using ForkJoinPool  java.util.concurrent.ForkJoinPool. Set the org.atmosphere.cpr.broadcaster.maxAsyncWriteThreads to -1 to fully use its power.
+20:44:24,243  INFO o.a.c.AtmosphereFramework:588 - Installed WebSocketProtocol org.atmosphere.websocket.protocol.SimpleHttpProtocol 
+20:44:24,244  WARN o.a.u.IOUtils:588 - More than one Servlet Mapping defined. WebSocket may not work io.undertow.servlet.spec.ServletRegistrationImpl@1fcba321
+20:44:24,246  INFO o.a.c.JSR356AsyncSupport:588 - JSR 356 Mapping path /vaadinServlet
+20:44:24,260  WARN o.a.c.DefaultAsyncSupportResolver:588 - Failed to create AsyncSupport class: class org.atmosphere.container.JSR356AsyncSupport, error: java.lang.reflect.InvocationTargetException
+20:44:24,271 ERROR o.a.c.DefaultAsyncSupportResolver:588 - Real error: UT003017: Cannot add endpoint after deployment
+java.lang.IllegalStateException: UT003017: Cannot add endpoint after deployment
+	at io.undertow.websockets.jsr.ServerWebSocketContainer.addEndpoint(ServerWebSocketContainer.java:745)
+	at org.atmosphere.container.JSR356AsyncSupport.<init>(JSR356AsyncSupport.java:99)
+	at org.atmosphere.container.JSR356AsyncSupport.<init>(JSR356AsyncSupport.java:42)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.atmosphere.cpr.DefaultAsyncSupportResolver.newCometSupport(DefaultAsyncSupportResolver.java:237)
+	at org.atmosphere.cpr.DefaultAsyncSupportResolver.resolveWebSocket(DefaultAsyncSupportResolver.java:308)
+	at org.atmosphere.cpr.DefaultAsyncSupportResolver.resolve(DefaultAsyncSupportResolver.java:294)
+	at org.atmosphere.cpr.AtmosphereFramework.autoDetectContainer(AtmosphereFramework.java:2092)
+	at org.atmosphere.cpr.AtmosphereFramework.init(AtmosphereFramework.java:914)
+	at org.atmosphere.cpr.AtmosphereFramework.init(AtmosphereFramework.java:838)
+	at com.vaadin.server.communication.PushRequestHandler.initAtmosphere(PushRequestHandler.java:206)
+	at com.vaadin.server.communication.PushRequestHandler.<init>(PushRequestHandler.java:79)
+	at com.vaadin.server.VaadinServletService.createRequestHandlers(VaadinServletService.java:68)
+	at com.vaadin.spring.server.SpringVaadinServletService.createRequestHandlers(SpringVaadinServletService.java:63)
+	at com.vaadin.server.VaadinService.init(VaadinService.java:217)
+	at com.vaadin.spring.server.SpringVaadinServlet.createServletService(SpringVaadinServlet.java:151)
+	at com.vaadin.server.VaadinServlet.createServletService(VaadinServlet.java:377)
+	at com.vaadin.server.VaadinServlet.init(VaadinServlet.java:207)
+	at io.undertow.servlet.core.LifecyleInterceptorInvocation.proceed(LifecyleInterceptorInvocation.java:117)
+	at io.undertow.servlet.core.ManagedServlet$DefaultInstanceStrategy.start(ManagedServlet.java:303)
+	at io.undertow.servlet.core.ManagedServlet.forceInit(ManagedServlet.java:210)
+	at io.undertow.servlet.handlers.ServletChain.forceInit(ServletChain.java:130)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:63)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:364)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+20:44:24,319  INFO o.a.c.AtmosphereFramework:588 - Installing Default AtmosphereInterceptors
+20:44:24,323  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CorsInterceptor : CORS Interceptor Support
+20:44:24,324  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CacheHeadersInterceptor : Default Response's Headers Interceptor
+20:44:24,325  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.PaddingAtmosphereInterceptor : Browser Padding Interceptor Support
+20:44:24,326  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.AndroidAtmosphereInterceptor : Android Interceptor Support
+20:44:24,327  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.HeartbeatInterceptor : Heartbeat Interceptor Support
+20:44:24,328  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.SSEAtmosphereInterceptor : SSE Interceptor Support
+20:44:24,328  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JSONPAtmosphereInterceptor : JSONP Interceptor Support
+20:44:24,330  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JavaScriptProtocol : Atmosphere JavaScript Protocol
+20:44:24,331  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor : org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor
+20:44:24,332  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.OnDisconnectInterceptor : Browser disconnection detection
+20:44:24,333  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.IdleResourceInterceptor : org.atmosphere.interceptor.IdleResourceInterceptor
+20:44:24,334  INFO o.a.c.AtmosphereFramework:588 - Set org.atmosphere.cpr.AtmosphereInterceptor.disableDefaults to disable them.
+20:44:24,335  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor CORS Interceptor Support with priority FIRST_BEFORE_DEFAULT 
+20:44:24,336  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Default Response's Headers Interceptor with priority AFTER_DEFAULT 
+20:44:24,338  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser Padding Interceptor Support with priority AFTER_DEFAULT 
+20:44:24,341  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Android Interceptor Support with priority AFTER_DEFAULT 
+20:44:24,342  INFO o.a.i.HeartbeatInterceptor:588 - HeartbeatInterceptor configured with padding value 'X', client frequency 60 seconds and server frequency 0 seconds
+20:44:24,343  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Heartbeat Interceptor Support with priority AFTER_DEFAULT 
+20:44:24,343  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor SSE Interceptor Support with priority AFTER_DEFAULT 
+20:44:24,345  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor JSONP Interceptor Support with priority AFTER_DEFAULT 
+20:44:24,346  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Atmosphere JavaScript Protocol with priority AFTER_DEFAULT 
+20:44:24,347  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor with priority AFTER_DEFAULT 
+20:44:24,348  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser disconnection detection with priority AFTER_DEFAULT 
+20:44:24,348  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.IdleResourceInterceptor with priority BEFORE_DEFAULT 
+20:44:24,349  INFO o.a.c.AtmosphereFramework:588 - Using EndpointMapper class org.atmosphere.util.DefaultEndpointMapper
+20:44:24,351  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterCache: org.atmosphere.cache.UUIDBroadcasterCache
+20:44:24,353  INFO o.a.c.AtmosphereFramework:588 - Default Broadcaster Class: org.atmosphere.cpr.DefaultBroadcaster
+20:44:24,353  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Shared List Resources: false
+20:44:24,354  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Polling Wait Time 100
+20:44:24,355  INFO o.a.c.AtmosphereFramework:588 - Shared ExecutorService supported: true
+20:44:24,355  INFO o.a.c.AtmosphereFramework:588 - Messaging ExecutorService Pool Size unavailable - Not instance of ThreadPoolExecutor
+20:44:24,356  INFO o.a.c.AtmosphereFramework:588 - Async I/O Thread Pool Size: 200
+20:44:24,357  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterFactory: org.atmosphere.cpr.DefaultBroadcasterFactory
+20:44:24,358  INFO o.a.c.AtmosphereFramework:588 - Using AtmosphereResurceFactory: org.atmosphere.cpr.DefaultAtmosphereResourceFactory
+20:44:24,359  INFO o.a.c.AtmosphereFramework:588 - Using WebSocketProcessor: org.atmosphere.websocket.DefaultWebSocketProcessor
+20:44:24,360  INFO o.a.c.AtmosphereFramework:588 - Invoke AtmosphereInterceptor on WebSocket message true
+20:44:24,360  INFO o.a.c.AtmosphereFramework:588 - HttpSession supported: true
+20:44:24,361  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using DefaultAtmosphereObjectFactory for dependency injection and object creation
+20:44:24,362  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using async support: org.atmosphere.container.Servlet30CometSupport running under container: Undertow - 2.0.17.Final using javax.servlet/3.0
+20:44:24,363  INFO o.a.c.AtmosphereFramework:588 - Atmosphere Framework 2.4.30.vaadin1 started.
+20:44:24,364  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor  Track Message Size Interceptor using | with priority BEFORE_DEFAULT 
+20:44:24,399  INFO c.v.s.VaadinServlet:825 - Requested resource [/VAADIN/widgetsets/com.airback.widgetset.airbackWidgetSet/com.airback.widgetset.airbackWidgetSet.nocache.js] not found from filesystem or through class loader. Add widgetset and/or theme JAR to your classpath or add files to WebContent/VAADIN folder.
+20:44:25,008  INFO c.a.v.AppUI:59 - Load account info of sub-domain localhost from localhost
+20:44:25,032  INFO c.a.v.AppUI:65 - Billing account info 
+20:50:35,081  INFO o.q.c.QuartzScheduler:585 - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+20:50:35,117  INFO o.s.s.q.SchedulerFactoryBean:844 - Shutting down Quartz Scheduler
+20:50:35,122  INFO o.q.c.QuartzScheduler:666 - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+20:50:35,123  INFO o.q.c.QuartzScheduler:585 - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+20:50:35,127  INFO o.q.c.QuartzScheduler:740 - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+20:50:35,215  INFO o.s.s.c.ThreadPoolTaskExecutor:208 - Shutting down ExecutorService 'applicationTaskExecutor'
+20:50:35,294  INFO o.a.j.c.RepositoryImpl:1087 - Shutting down repository...
+20:50:35,314  INFO o.a.j.c.RepositoryImpl:2196 - shutting down workspace 'default2'...
+20:50:35,315  INFO o.a.j.c.o.ObservationDispatcher:121 - Notification of EventListeners stopped.
+20:50:35,339  INFO o.a.j.c.RepositoryImpl:2203 - workspace 'default2' has been shutdown
+20:50:35,340  INFO o.a.j.c.RepositoryImpl:2196 - shutting down workspace 'ecm'...
+20:50:35,341  INFO o.a.j.c.o.ObservationDispatcher:121 - Notification of EventListeners stopped.
+20:50:35,427  INFO o.a.j.c.RepositoryImpl:2203 - workspace 'ecm' has been shutdown
+20:50:35,454  INFO o.a.j.c.RepositoryImpl:1192 - Repository has been shutdown
+20:50:35,456  INFO o.a.j.c.RepositoryImpl:1087 - Shutting down repository...
+20:50:35,458  INFO o.a.j.c.RepositoryImpl:2196 - shutting down workspace 'wiki'...
+20:50:35,459  INFO o.a.j.c.o.ObservationDispatcher:121 - Notification of EventListeners stopped.
+20:50:35,503  INFO o.a.j.c.RepositoryImpl:2203 - workspace 'wiki' has been shutdown
+20:50:35,511  INFO o.a.j.c.RepositoryImpl:1192 - Repository has been shutdown
+20:50:35,522  INFO c.z.h.HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+20:50:35,588  INFO c.z.h.HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+20:50:48,780  INFO c.a.s.DefaultServerRunner:50 - Starting DefaultServerRunner on Mis-MacBook-Air.local with PID 8606 (/Users/robertnguyen/Workspace/airback-Release_8.0.8/airback-server-runner/target/classes started by robertnguyen in /Users/robertnguyen/Workspace/airback-Release_8.0.8)
+20:50:48,794  INFO c.a.s.DefaultServerRunner:675 - No active profile set, falling back to default profiles: default
+20:51:01,577  INFO o.s.c.a.ConfigurationClassPostProcessor:380 - Cannot enhance @Configuration bean definition 'com.vaadin.spring.VaadinConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+20:51:04,509  INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7645af0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:51:06,268  WARN i.u.w.jsr:68 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+20:51:06,400  INFO i.u.servlet:364 - Initializing Spring embedded WebApplicationContext
+20:51:06,401  INFO o.s.w.c.ContextLoader:296 - Root WebApplicationContext: initialization completed in 17381 ms
+20:51:06,650  INFO c.v.s.b.i.VaadinServletConfiguration:261 - Registering Vaadin servlet
+20:51:06,659  INFO c.v.s.b.i.VaadinServletConfiguration:263 - Servlet will be mapped to URLs [/vaadinServlet/*, /VAADIN/*]
+20:51:06,711  INFO c.v.s.b.i.VaadinServletConfiguration:282 - Setting servlet init parameters
+20:51:06,712  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [productionMode] = [false]
+20:51:06,713  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [resourceCacheTime] = [3600]
+20:51:06,714  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [heartbeatInterval] = [300]
+20:51:06,715  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [closeIdleSessions] = [false]
+20:51:08,266  INFO c.z.h.HikariDataSource:110 - HikariPool-1 - Starting...
+20:51:09,120  INFO c.z.h.HikariDataSource:123 - HikariPool-1 - Start completed.
+20:51:09,284  INFO o.f.c.i.l.VersionPrinter:49 - Flyway Community Edition 5.2.4 by Boxfuse
+20:51:09,384  INFO o.f.c.i.d.DatabaseFactory:49 - Database: jdbc:mysql://localhost:3306/airback (MySQL 8.0)
+20:51:10,248  INFO o.f.c.i.c.DbMigrate:49 - Current version of schema `airback`: 20190416.1
+20:51:10,248  WARN o.f.c.i.c.DbMigrate:53 - Schema `airback` has a version (20190416.1) that is newer than the latest available migration (20190406.1) !
+20:51:10,250  INFO o.f.c.i.c.DbMigrate:49 - Schema `airback` is up to date. No migration necessary.
+20:51:24,044  INFO o.a.j.c.RepositoryImpl:259 - Starting repository...
+20:51:25,094  INFO o.a.j.c.RepositoryImpl:2035 - initializing workspace 'wiki'...
+20:51:25,471  INFO o.a.j.c.RepositoryImpl:2039 - workspace 'wiki' initialized
+20:51:25,487  INFO o.a.j.c.RepositoryImpl:455 - SecurityManager = class org.apache.jackrabbit.core.security.simple.SimpleSecurityManager
+20:51:25,497  INFO o.a.j.c.s.s.SimpleSecurityManager:137 - init: using Repository LoginModule configuration for Jackrabbit
+20:51:25,516  INFO o.a.j.c.RepositoryImpl:367 - Repository started (1472ms)
+20:51:25,588  INFO c.a.m.p.PageSessionFactory:41 - Register node types
+20:51:25,691  INFO c.a.m.p.PageSessionFactory:66 - Register airback content type
+20:51:26,945  INFO o.a.j.c.RepositoryImpl:259 - Starting repository...
+20:51:27,099  INFO o.a.j.c.j.DatabaseJournal:374 - Initialized local revision to 328
+20:51:27,100  INFO o.a.j.c.j.DatabaseJournal:383 - Cluster revision janitor thread not started
+20:51:27,100  INFO o.a.j.c.j.DatabaseJournal:280 - DatabaseJournal initialized.
+20:51:27,128  INFO o.a.j.c.RepositoryImpl:2035 - initializing workspace 'ecm'...
+20:51:27,155  INFO o.a.j.c.RepositoryImpl:2039 - workspace 'ecm' initialized
+20:51:27,156  INFO o.a.j.c.RepositoryImpl:455 - SecurityManager = class org.apache.jackrabbit.core.security.simple.SimpleSecurityManager
+20:51:27,157  INFO o.a.j.c.RepositoryImpl:2035 - initializing workspace 'default2'...
+20:51:27,179  INFO o.a.j.c.RepositoryImpl:2039 - workspace 'default2' initialized
+20:51:27,180  INFO o.a.j.c.s.s.SimpleSecurityManager:137 - init: using Repository LoginModule configuration for Jackrabbit
+20:51:27,188  INFO o.a.j.c.RepositoryImpl:367 - Repository started (243ms)
+20:51:27,192  INFO c.a.m.e.ContentSessionFactory:40 - Register node types
+20:51:27,200  INFO c.a.m.e.ContentSessionFactory:66 - Register airback content type
+20:51:28,592  INFO c.a.v.m.s.ComponentScannerService:51 - Started resolving view and presenter classes
+20:51:32,038  INFO c.a.v.m.s.ComponentScannerService:61 - Resolved view and presenter classes com.airback.vaadin.mvp.service.ComponentScannerService@7f39ad3f that has 65 view classes and 58 presenter classes
+20:51:33,732  INFO o.s.s.c.ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
+20:51:34,252  INFO c.v.s.b.i.VaadinServletConfiguration:121 - Checking the application context for Vaadin UI mappings
+20:51:34,262  INFO c.v.s.b.i.VaadinServletConfiguration:110 - Forwarding @SpringUI URLs from {}
+20:51:34,267  INFO c.v.s.b.i.VaadinServletConfiguration:206 - Registering Vaadin servlet of type [com.vaadin.spring.server.SpringVaadinServlet]
+20:51:35,154  INFO o.q.i.StdSchedulerFactory:1208 - Using default implementation for ThreadExecutor
+20:51:35,211  INFO o.q.c.SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+20:51:35,212  INFO o.q.c.QuartzScheduler:229 - Quartz Scheduler v.2.3.0 created.
+20:51:35,214  INFO o.q.s.RAMJobStore:155 - RAMJobStore initialized.
+20:51:35,216  INFO o.q.c.QuartzScheduler:294 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+20:51:35,217  INFO o.q.i.StdSchedulerFactory:1362 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+20:51:35,217  INFO o.q.i.StdSchedulerFactory:1366 - Quartz scheduler version: 2.3.0
+20:51:35,220  INFO o.q.c.QuartzScheduler:2287 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@76c2d002
+20:51:35,497  INFO o.s.s.q.SchedulerFactoryBean:726 - Starting Quartz Scheduler now
+20:51:35,498  INFO o.q.c.QuartzScheduler:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+20:51:35,500  INFO c.a.s.ContextStartedListener:44 - airback is ready for usage
+20:51:35,878  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler mapped to context-path: /*
+20:51:35,879  INFO o.a.c.AtmosphereFramework:588 - Installed the following AtmosphereInterceptor mapped to AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler
+20:51:35,996  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using org.atmosphere.util.VoidAnnotationProcessor for processing annotation
+20:51:36,032  INFO o.a.u.ForkJoinPool:588 - Using ForkJoinPool  java.util.concurrent.ForkJoinPool. Set the org.atmosphere.cpr.broadcaster.maxAsyncWriteThreads to -1 to fully use its power.
+20:51:36,046  INFO o.a.c.AtmosphereFramework:588 - Installed WebSocketProtocol org.atmosphere.websocket.protocol.SimpleHttpProtocol 
+20:51:36,073  INFO o.a.c.JSR356AsyncSupport:588 - JSR 356 Mapping path 
+20:51:36,083  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /
+20:51:36,096  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}
+20:51:36,099  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}
+20:51:36,100  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}/{path2}
+20:51:36,101  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}/{path2}/{path3}
+20:51:36,101  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}/{path2}/{path3}/{path4}
+20:51:36,102  INFO o.a.c.AtmosphereFramework:588 - Installing Default AtmosphereInterceptors
+20:51:36,108  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CorsInterceptor : CORS Interceptor Support
+20:51:36,111  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CacheHeadersInterceptor : Default Response's Headers Interceptor
+20:51:36,116  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.PaddingAtmosphereInterceptor : Browser Padding Interceptor Support
+20:51:36,118  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.AndroidAtmosphereInterceptor : Android Interceptor Support
+20:51:36,121  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.HeartbeatInterceptor : Heartbeat Interceptor Support
+20:51:36,128  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.SSEAtmosphereInterceptor : SSE Interceptor Support
+20:51:36,133  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JSONPAtmosphereInterceptor : JSONP Interceptor Support
+20:51:36,138  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JavaScriptProtocol : Atmosphere JavaScript Protocol
+20:51:36,139  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor : org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor
+20:51:36,140  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.OnDisconnectInterceptor : Browser disconnection detection
+20:51:36,141  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.IdleResourceInterceptor : org.atmosphere.interceptor.IdleResourceInterceptor
+20:51:36,142  INFO o.a.c.AtmosphereFramework:588 - Set org.atmosphere.cpr.AtmosphereInterceptor.disableDefaults to disable them.
+20:51:36,143  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor CORS Interceptor Support with priority FIRST_BEFORE_DEFAULT 
+20:51:36,160  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Default Response's Headers Interceptor with priority AFTER_DEFAULT 
+20:51:36,161  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser Padding Interceptor Support with priority AFTER_DEFAULT 
+20:51:36,162  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Android Interceptor Support with priority AFTER_DEFAULT 
+20:51:36,163  INFO o.a.i.HeartbeatInterceptor:588 - HeartbeatInterceptor configured with padding value 'X', client frequency 60 seconds and server frequency 0 seconds
+20:51:36,163  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Heartbeat Interceptor Support with priority AFTER_DEFAULT 
+20:51:36,164  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor SSE Interceptor Support with priority AFTER_DEFAULT 
+20:51:36,164  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor JSONP Interceptor Support with priority AFTER_DEFAULT 
+20:51:36,165  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Atmosphere JavaScript Protocol with priority AFTER_DEFAULT 
+20:51:36,165  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor with priority AFTER_DEFAULT 
+20:51:36,166  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser disconnection detection with priority AFTER_DEFAULT 
+20:51:36,166  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.IdleResourceInterceptor with priority BEFORE_DEFAULT 
+20:51:36,167  INFO o.a.c.AtmosphereFramework:588 - Using EndpointMapper class org.atmosphere.util.DefaultEndpointMapper
+20:51:36,168  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterCache: org.atmosphere.cache.UUIDBroadcasterCache
+20:51:36,168  INFO o.a.c.AtmosphereFramework:588 - Default Broadcaster Class: org.atmosphere.cpr.DefaultBroadcaster
+20:51:36,169  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Shared List Resources: false
+20:51:36,169  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Polling Wait Time 100
+20:51:36,170  INFO o.a.c.AtmosphereFramework:588 - Shared ExecutorService supported: true
+20:51:36,170  INFO o.a.c.AtmosphereFramework:588 - Messaging ExecutorService Pool Size unavailable - Not instance of ThreadPoolExecutor
+20:51:36,171  INFO o.a.c.AtmosphereFramework:588 - Async I/O Thread Pool Size: 200
+20:51:36,171  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterFactory: org.atmosphere.cpr.DefaultBroadcasterFactory
+20:51:36,171  INFO o.a.c.AtmosphereFramework:588 - Using AtmosphereResurceFactory: org.atmosphere.cpr.DefaultAtmosphereResourceFactory
+20:51:36,172  INFO o.a.c.AtmosphereFramework:588 - Using WebSocketProcessor: org.atmosphere.websocket.DefaultWebSocketProcessor
+20:51:36,183  INFO o.a.c.AtmosphereFramework:588 - Invoke AtmosphereInterceptor on WebSocket message true
+20:51:36,184  INFO o.a.c.AtmosphereFramework:588 - HttpSession supported: true
+20:51:36,184  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using DefaultAtmosphereObjectFactory for dependency injection and object creation
+20:51:36,188  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using async support: org.atmosphere.container.JSR356AsyncSupport running under container: Undertow - 2.0.17.Final using javax.servlet/3.0 and jsr356/WebSocket API
+20:51:36,189  INFO o.a.c.AtmosphereFramework:588 - Atmosphere Framework 2.4.30.vaadin1 started.
+20:51:36,209  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor  Track Message Size Interceptor using | with priority BEFORE_DEFAULT 
+20:51:36,305  INFO o.xnio:104 - XNIO version 3.3.8.Final
+20:51:36,366  INFO o.x.nio:55 - XNIO NIO Implementation Version 3.3.8.Final
+20:51:36,719  INFO o.s.b.w.e.u.UndertowServletWebServer:148 - Undertow started on port(s) 60000 (http) with context path ''
+20:51:36,730  INFO c.a.s.DefaultServerRunner:59 - Started DefaultServerRunner in 50.482 seconds (JVM running for 57.182)
+20:52:42,434  WARN c.v.s.DefaultDeploymentConfiguration:274 - 
+=================================================================
+Vaadin is running in DEBUG MODE.
+Add productionMode=true to web.xml to disable debug features.
+To show debug window, add ?debug to your application URL.
+=================================================================
+20:52:42,448  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler mapped to context-path: /*
+20:52:42,448  INFO o.a.c.AtmosphereFramework:588 - Installed the following AtmosphereInterceptor mapped to AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler
+20:52:42,476  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using org.atmosphere.util.VoidAnnotationProcessor for processing annotation
+20:52:42,498  INFO o.a.u.ForkJoinPool:588 - Using ForkJoinPool  java.util.concurrent.ForkJoinPool. Set the org.atmosphere.cpr.broadcaster.maxAsyncWriteThreads to -1 to fully use its power.
+20:52:42,506  INFO o.a.c.AtmosphereFramework:588 - Installed WebSocketProtocol org.atmosphere.websocket.protocol.SimpleHttpProtocol 
+20:52:42,517  WARN o.a.u.IOUtils:588 - More than one Servlet Mapping defined. WebSocket may not work io.undertow.servlet.spec.ServletRegistrationImpl@68fb5dde
+20:52:42,518  INFO o.a.c.JSR356AsyncSupport:588 - JSR 356 Mapping path /vaadinServlet
+20:52:42,539  WARN o.a.c.DefaultAsyncSupportResolver:588 - Failed to create AsyncSupport class: class org.atmosphere.container.JSR356AsyncSupport, error: java.lang.reflect.InvocationTargetException
+20:52:42,566 ERROR o.a.c.DefaultAsyncSupportResolver:588 - Real error: UT003017: Cannot add endpoint after deployment
+java.lang.IllegalStateException: UT003017: Cannot add endpoint after deployment
+	at io.undertow.websockets.jsr.ServerWebSocketContainer.addEndpoint(ServerWebSocketContainer.java:745)
+	at org.atmosphere.container.JSR356AsyncSupport.<init>(JSR356AsyncSupport.java:99)
+	at org.atmosphere.container.JSR356AsyncSupport.<init>(JSR356AsyncSupport.java:42)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.atmosphere.cpr.DefaultAsyncSupportResolver.newCometSupport(DefaultAsyncSupportResolver.java:237)
+	at org.atmosphere.cpr.DefaultAsyncSupportResolver.resolveWebSocket(DefaultAsyncSupportResolver.java:308)
+	at org.atmosphere.cpr.DefaultAsyncSupportResolver.resolve(DefaultAsyncSupportResolver.java:294)
+	at org.atmosphere.cpr.AtmosphereFramework.autoDetectContainer(AtmosphereFramework.java:2092)
+	at org.atmosphere.cpr.AtmosphereFramework.init(AtmosphereFramework.java:914)
+	at org.atmosphere.cpr.AtmosphereFramework.init(AtmosphereFramework.java:838)
+	at com.vaadin.server.communication.PushRequestHandler.initAtmosphere(PushRequestHandler.java:206)
+	at com.vaadin.server.communication.PushRequestHandler.<init>(PushRequestHandler.java:79)
+	at com.vaadin.server.VaadinServletService.createRequestHandlers(VaadinServletService.java:68)
+	at com.vaadin.spring.server.SpringVaadinServletService.createRequestHandlers(SpringVaadinServletService.java:63)
+	at com.vaadin.server.VaadinService.init(VaadinService.java:217)
+	at com.vaadin.spring.server.SpringVaadinServlet.createServletService(SpringVaadinServlet.java:151)
+	at com.vaadin.server.VaadinServlet.createServletService(VaadinServlet.java:377)
+	at com.vaadin.server.VaadinServlet.init(VaadinServlet.java:207)
+	at io.undertow.servlet.core.LifecyleInterceptorInvocation.proceed(LifecyleInterceptorInvocation.java:117)
+	at io.undertow.servlet.core.ManagedServlet$DefaultInstanceStrategy.start(ManagedServlet.java:303)
+	at io.undertow.servlet.core.ManagedServlet.forceInit(ManagedServlet.java:210)
+	at io.undertow.servlet.handlers.ServletChain.forceInit(ServletChain.java:130)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:63)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:364)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+20:52:42,637  INFO o.a.c.AtmosphereFramework:588 - Installing Default AtmosphereInterceptors
+20:52:42,638  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CorsInterceptor : CORS Interceptor Support
+20:52:42,639  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CacheHeadersInterceptor : Default Response's Headers Interceptor
+20:52:42,640  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.PaddingAtmosphereInterceptor : Browser Padding Interceptor Support
+20:52:42,641  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.AndroidAtmosphereInterceptor : Android Interceptor Support
+20:52:42,643  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.HeartbeatInterceptor : Heartbeat Interceptor Support
+20:52:42,644  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.SSEAtmosphereInterceptor : SSE Interceptor Support
+20:52:42,645  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JSONPAtmosphereInterceptor : JSONP Interceptor Support
+20:52:42,646  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JavaScriptProtocol : Atmosphere JavaScript Protocol
+20:52:42,647  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor : org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor
+20:52:42,655  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.OnDisconnectInterceptor : Browser disconnection detection
+20:52:42,656  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.IdleResourceInterceptor : org.atmosphere.interceptor.IdleResourceInterceptor
+20:52:42,656  INFO o.a.c.AtmosphereFramework:588 - Set org.atmosphere.cpr.AtmosphereInterceptor.disableDefaults to disable them.
+20:52:42,657  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor CORS Interceptor Support with priority FIRST_BEFORE_DEFAULT 
+20:52:42,658  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Default Response's Headers Interceptor with priority AFTER_DEFAULT 
+20:52:42,677  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser Padding Interceptor Support with priority AFTER_DEFAULT 
+20:52:42,783  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Android Interceptor Support with priority AFTER_DEFAULT 
+20:52:42,843  INFO o.a.i.HeartbeatInterceptor:588 - HeartbeatInterceptor configured with padding value 'X', client frequency 60 seconds and server frequency 0 seconds
+20:52:42,852  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Heartbeat Interceptor Support with priority AFTER_DEFAULT 
+20:52:42,853  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor SSE Interceptor Support with priority AFTER_DEFAULT 
+20:52:42,854  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor JSONP Interceptor Support with priority AFTER_DEFAULT 
+20:52:42,855  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Atmosphere JavaScript Protocol with priority AFTER_DEFAULT 
+20:52:42,856  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor with priority AFTER_DEFAULT 
+20:52:42,856  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser disconnection detection with priority AFTER_DEFAULT 
+20:52:42,857  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.IdleResourceInterceptor with priority BEFORE_DEFAULT 
+20:52:42,861  INFO o.a.c.AtmosphereFramework:588 - Using EndpointMapper class org.atmosphere.util.DefaultEndpointMapper
+20:52:42,878  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterCache: org.atmosphere.cache.UUIDBroadcasterCache
+20:52:42,881  INFO o.a.c.AtmosphereFramework:588 - Default Broadcaster Class: org.atmosphere.cpr.DefaultBroadcaster
+20:52:42,895  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Shared List Resources: false
+20:52:42,897  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Polling Wait Time 100
+20:52:42,901  INFO o.a.c.AtmosphereFramework:588 - Shared ExecutorService supported: true
+20:52:42,914  INFO o.a.c.AtmosphereFramework:588 - Messaging ExecutorService Pool Size unavailable - Not instance of ThreadPoolExecutor
+20:52:42,916  INFO o.a.c.AtmosphereFramework:588 - Async I/O Thread Pool Size: 200
+20:52:42,920  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterFactory: org.atmosphere.cpr.DefaultBroadcasterFactory
+20:52:42,921  INFO o.a.c.AtmosphereFramework:588 - Using AtmosphereResurceFactory: org.atmosphere.cpr.DefaultAtmosphereResourceFactory
+20:52:42,922  INFO o.a.c.AtmosphereFramework:588 - Using WebSocketProcessor: org.atmosphere.websocket.DefaultWebSocketProcessor
+20:52:42,943  INFO o.a.c.AtmosphereFramework:588 - Invoke AtmosphereInterceptor on WebSocket message true
+20:52:42,945  INFO o.a.c.AtmosphereFramework:588 - HttpSession supported: true
+20:52:42,946  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using DefaultAtmosphereObjectFactory for dependency injection and object creation
+20:52:42,946  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using async support: org.atmosphere.container.Servlet30CometSupport running under container: Undertow - 2.0.17.Final using javax.servlet/3.0
+20:52:42,947  INFO o.a.c.AtmosphereFramework:588 - Atmosphere Framework 2.4.30.vaadin1 started.
+20:52:42,956  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor  Track Message Size Interceptor using | with priority BEFORE_DEFAULT 
+20:52:43,063  INFO c.v.s.VaadinServlet:825 - Requested resource [/VAADIN/widgetsets/com.airback.widgetset.airbackWidgetSet/com.airback.widgetset.airbackWidgetSet.nocache.js] not found from filesystem or through class loader. Add widgetset and/or theme JAR to your classpath or add files to WebContent/VAADIN folder.
+20:52:43,418  INFO c.a.v.AppUI:59 - Load account info of sub-domain localhost from localhost
+20:52:43,448  INFO c.a.v.AppUI:65 - Billing account info 
+20:55:34,322  INFO c.v.s.VaadinServlet:825 - Requested resource [/VAADIN/widgetsets/com.airback.widgetset.airbackWidgetSet/com.airback.widgetset.airbackWidgetSet.nocache.js] not found from filesystem or through class loader. Add widgetset and/or theme JAR to your classpath or add files to WebContent/VAADIN folder.
+20:59:27,878  INFO o.a.j.c.c.ClusterNode:858 - Processing revision: 333
+20:59:27,963  INFO o.a.j.c.c.ClusterNode:858 - Processing revision: 334
+20:59:28,016  INFO o.a.j.c.c.ClusterNode:858 - Processing revision: 335
+20:59:28,040  INFO o.a.j.c.c.ClusterNode:858 - Processing revision: 336
+21:05:57,913  INFO o.q.c.QuartzScheduler:585 - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+21:05:57,920  INFO o.s.s.q.SchedulerFactoryBean:844 - Shutting down Quartz Scheduler
+21:05:57,921  INFO o.q.c.QuartzScheduler:666 - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+21:05:57,921  INFO o.q.c.QuartzScheduler:585 - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+21:05:57,922  INFO o.q.c.QuartzScheduler:740 - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+21:05:57,927  INFO o.s.s.c.ThreadPoolTaskExecutor:208 - Shutting down ExecutorService 'applicationTaskExecutor'
+21:05:57,941  INFO o.a.j.c.RepositoryImpl:1087 - Shutting down repository...
+21:05:57,943  INFO o.a.j.c.RepositoryImpl:2196 - shutting down workspace 'default2'...
+21:05:57,944  INFO o.a.j.c.o.ObservationDispatcher:121 - Notification of EventListeners stopped.
+21:05:57,952  INFO o.a.j.c.RepositoryImpl:2203 - workspace 'default2' has been shutdown
+21:05:57,952  INFO o.a.j.c.RepositoryImpl:2196 - shutting down workspace 'ecm'...
+21:05:57,953  INFO o.a.j.c.o.ObservationDispatcher:121 - Notification of EventListeners stopped.
+21:05:58,021 ERROR o.a.j.c.u.d.ConnectionHelper:556 - Failed to execute SQL (stacktrace on DEBUG log level): com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 4,368 milliseconds ago.  The last packet sent successfully to the server was 4,369 milliseconds ago.

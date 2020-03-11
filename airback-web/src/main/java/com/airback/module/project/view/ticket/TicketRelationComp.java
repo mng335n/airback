@@ -1,0 +1,101 @@
+/**
+ * Copyright © airback
+ * <p>
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * <p>
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * <p>
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+package com.airback.module.project.view.ticket;
+
+import com.hp.gagawa.java.elements.A;
+import com.airback.common.i18n.GenericI18Enum;
+import com.airback.common.i18n.OptionI18nEnum.StatusI18nEnum;
+import com.airback.module.project.CurrentProjectVariables;
+import com.airback.module.project.ProjectLinkGenerator;
+import com.airback.module.project.dao.TicketRelationMapper;
+import com.airback.module.project.domain.SimpleTicketRelation;
+import com.airback.module.project.domain.TicketRelationExample;
+import com.airback.module.project.i18n.TicketI18nEnum;
+import com.airback.module.project.ui.ProjectAssetsManager;
+import com.airback.spring.AppContextUtil;
+import com.airback.vaadin.AppUI;
+import com.airback.vaadin.TooltipHelper;
+import com.airback.vaadin.UserUIContext;
+import com.airback.vaadin.ui.ELabel;
+import com.airback.vaadin.ui.RemoveInlineComponentMarker;
+import com.airback.vaadin.ui.UIUtils;
+import com.airback.vaadin.web.ui.AbstractToggleSummaryField;
+import com.airback.vaadin.web.ui.ConfirmDialogExt;
+import com.airback.vaadin.web.ui.WebThemes;
+import com.vaadin.icons.VaadinIcons;
+import com.vaadin.ui.UI;
+import com.vaadin.ui.themes.ValoTheme;
+import org.vaadin.viritin.button.MButton;
+import org.vaadin.viritin.layouts.MHorizontalLayout;
+
+/**
+ * @author airback Ltd
+ * @since 5.2.12
+ */
+public class TicketRelationComp extends AbstractToggleSummaryField {
+
+    public TicketRelationComp(SimpleTicketRelation ticketRelation) {
+        buildTicketLink(ticketRelation);
+        this.addComponent(titleLinkLbl);
+        this.addStyleName("editable-field");
+        // TODO: may check the permission here?
+        buttonControls = new MHorizontalLayout().withStyleName("toggle").withSpacing(false);
+        MButton unlinkBtn = new MButton("", clickEvent -> {
+            ConfirmDialogExt.show(UI.getCurrent(), UserUIContext.getMessage(GenericI18Enum.DIALOG_DELETE_TITLE,
+                    AppUI.getSiteName()),
+                    UserUIContext.getMessage(GenericI18Enum.DIALOG_DELETE_SINGLE_ITEM_MESSAGE),
+                    UserUIContext.getMessage(GenericI18Enum.ACTION_YES),
+                    UserUIContext.getMessage(GenericI18Enum.ACTION_NO), confirmDialog -> {
+                        TicketRelationExample ex = new TicketRelationExample();
+                        ex.or().andTicketidEqualTo(ticketRelation.getTicketid()).andTickettypeEqualTo(ticketRelation.getTickettype());
+                        ex.or().andTicketidEqualTo(ticketRelation.getTypeid()).andTickettypeEqualTo(ticketRelation.getType());
+
+                        TicketRelationMapper ticketRelationMapper = AppContextUtil.getSpringBean(TicketRelationMapper.class);
+                        ticketRelationMapper.deleteByExample(ex);
+                        UIUtils.removeChildAssociate(TicketRelationComp.this, RemoveInlineComponentMarker.class);
+                    });
+        }).withIcon(VaadinIcons.UNLINK).withStyleName(ValoTheme.BUTTON_ICON_ALIGN_TOP, ValoTheme.BUTTON_ICON_ONLY)
+                .withDescription(UserUIContext.getMessage(TicketI18nEnum.OPT_REMOVE_RELATIONSHIP));
+        buttonControls.with(unlinkBtn);
+        this.addComponent(buttonControls);
+    }
+
+    private void buildTicketLink(SimpleTicketRelation ticketRelation) {
+        titleLinkLbl = ELabel.html("").withStyleName(WebThemes.LABEL_WORD_WRAP).withUndefinedWidth();
+        if (ticketRelation.getLtr()) {
+            A ticketLink = new A(ProjectLinkGenerator.generateProjectItemLink(CurrentProjectVariables.getShortName(),
+                    CurrentProjectVariables.getProjectId(), ticketRelation.getType(), ticketRelation.getTypeKey() + ""))
+                    .appendText(ProjectAssetsManager.getAsset(ticketRelation.getType()).getHtml() + " " + ticketRelation.getTypeName()).setId("tag" + TooltipHelper.TOOLTIP_ID);
+            ticketLink.setAttribute("onmouseover", TooltipHelper.projectHoverJsFunction(ticketRelation.getType(), "" + ticketRelation.getTypeid()));
+            ticketLink.setAttribute("onmouseleave", TooltipHelper.itemMouseLeaveJsFunction());
+            titleLinkLbl.setValue(ticketLink.write());
+            if (StatusI18nEnum.isClosedStatus(ticketRelation.getTypeStatus())) {
+                titleLinkLbl.addStyleName(WebThemes.LINK_COMPLETED);
+            }
+        } else {
+            A ticketLink = new A(ProjectLinkGenerator.generateProjectItemLink(CurrentProjectVariables.getShortName(),
+                    CurrentProjectVariables.getProjectId(), ticketRelation.getTickettype(), ticketRelation.getTicketKey() + ""))
+                    .appendText(ProjectAssetsManager.getAsset(ticketRelation.getTickettype()).getHtml() + " " + ticketRelation.getTicketName()).setId("tag" + TooltipHelper.TOOLTIP_ID);
+            ticketLink.setAttribute("onmouseover", TooltipHelper.projectHoverJsFunction(ticketRelation.getTickettype(), "" + ticketRelation.getTicketid()));
+            ticketLink.setAttribute("onmouseleave", TooltipHelper.itemMouseLeaveJsFunction());
+            titleLinkLbl.setValue(ticketLink.write());
+            if (StatusI18nEnum.isClosedStatus(ticketRelation.getTicketStatus())) {
+                titleLinkLbl.addStyleName(WebThemes.LINK_COMPLETED);
+            }
+        }
+    }
+}

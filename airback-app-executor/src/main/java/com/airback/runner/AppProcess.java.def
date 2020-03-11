@@ -1,0 +1,121 @@
+package com.airback.runner;
+
+import org.slf4j.LoggerFactory;
+import java.util.List;
+import java.util.concurrent.TimeoutException;
+import org.zeroturnaround.process.SystemProcess;
+import org.zeroturnaround.process.ProcessUtil;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.ExecutionException;
+import java.io.IOException;
+import org.zeroturnaround.exec.StartedProcess;
+import java.util.Iterator;
+import org.zeroturnaround.process.Processes;
+import java.io.OutputStream;
+import org.zeroturnaround.exec.ProcessExecutor;
+import java.util.Collection;
+import java.util.Arrays;
+import org.apache.commons.lang.SystemUtils;
+import java.util.ArrayList;
+import java.io.File;
+import org.zeroturnaround.process.JavaProcess;
+import org.slf4j.Logger;
+
+class AppProcess
+{
+    private static Logger LOG;
+    private String[] initialOptions;
+    private JavaProcess wrappedJavaProcess;
+
+    AppProcess(final String[] initialOptions) {
+        this.initialOptions = initialOptions;
+    }
+
+    void start() throws IOException, ExecutionException, InterruptedException {
+        final File workingDir;
+        final ArrayList<String> javaOptions;
+        final String javaHomePath;
+        final String javaPath;
+        File javaExecutableFile;
+        ArrayList<String> options;
+        File libDir;
+        final RuntimeException ex = null;
+        StringBuilder classPaths;
+        File[] listFiles;
+        File[] jarFiles;
+        int length;
+        int i = 0;
+        File subFile;
+        StringBuilder strBuilder;
+        final Iterator<String> iterator = null;
+        String option;
+        StartedProcess javaProcess;
+        new Thread(() -> {
+            try {
+                workingDir = new File(System.getProperty("airback_APP_HOME"));
+                javaOptions = new ArrayList<String>();
+                javaHomePath = System.getProperty("java.home");
+                if (SystemUtils.IS_OS_WINDOWS) {
+                    javaPath = javaHomePath + "/bin/javaw.exe";
+                }
+                else {
+                    javaPath = javaHomePath + "/bin/java";
+                }
+                javaExecutableFile = new File(javaPath);
+                if (javaExecutableFile.exists()) {
+                    javaOptions.add(javaExecutableFile.getAbsolutePath());
+                }
+                else {
+                    javaOptions.add("java");
+                }
+                if (this.initialOptions.length > 0) {
+                    options = new ArrayList<String>(Arrays.asList(this.initialOptions));
+                    if (options.contains("--start")) {
+                        options.remove("--start");
+                    }
+                    //javaOptions.addAll((Collection<?>)options);
+                    javaOptions.addAll(options);
+                }
+                libDir = new File(System.getProperty("airback_APP_HOME"), "lib");
+                if (!libDir.exists() || libDir.isFile()) {
+                    new RuntimeException("Can not find the library folder at " + libDir.getAbsolutePath());
+                    throw ex;
+                }
+                else {
+                    classPaths = new StringBuilder();
+                    jarFiles = (listFiles = libDir.listFiles(pathname -> pathname.isFile() && pathname.getName().endsWith("jar")));
+                    for (length = listFiles.length; i < length; ++i) {
+                        subFile = listFiles[i];
+                        classPaths.append(System.getProperty("path.separator"));
+                        classPaths.append("./lib/" + subFile.getName());
+                    }
+                    //javaOptions.addAll((Collection<?>)Arrays.asList("-cp", classPaths.toString(), "com.airback.server.DefaultServerRunner"));
+                    javaOptions.addAll(Arrays.asList("-cp", classPaths.toString(), "com.airback.server.DefaultServerRunner"));
+                    strBuilder = new StringBuilder();
+                    javaOptions.iterator();
+                    while (iterator.hasNext()) {
+                        option = iterator.next();
+                        strBuilder.append(option).append(" ");
+                    }
+                    AppProcess.LOG.info("airback options: " + strBuilder.toString());
+                    javaProcess = new ProcessExecutor().command((String[])javaOptions.toArray(new String[javaOptions.size()])).directory(workingDir).redirectOutput((OutputStream)System.out).readOutput(true).start();
+                    this.wrappedJavaProcess = Processes.newJavaProcess(javaProcess.getProcess());
+                    javaProcess.getFuture().get();
+                }
+            }
+            catch (Exception e) {
+                AppProcess.LOG.error("Error", (Throwable)e);
+            }
+        }).start();
+    }
+
+    void stop() throws InterruptedException, TimeoutException, IOException {
+        AppProcess.LOG.info("Stopping airback process");
+        ProcessUtil.destroyGracefullyOrForcefullyAndWait((SystemProcess)this.wrappedJavaProcess, 10L, TimeUnit.SECONDS, 10L, TimeUnit.SECONDS);
+        AppProcess.LOG.info("Stopped airback process successfully");
+    }
+
+    static {
+        AppProcess.LOG = LoggerFactory.getLogger((Class)AppProcess.class);
+    }
+}

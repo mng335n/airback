@@ -1,0 +1,156 @@
+/**
+ * Copyright © airback
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+package com.airback.module.ecm;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.extensions.jcr.JcrSessionFactory;
+
+import javax.jcr.PropertyType;
+import javax.jcr.RepositoryException;
+import javax.jcr.Session;
+import javax.jcr.nodetype.NodeType;
+import javax.jcr.nodetype.NodeTypeManager;
+import javax.jcr.nodetype.NodeTypeTemplate;
+import javax.jcr.nodetype.PropertyDefinitionTemplate;
+
+/**
+ * @author airback Ltd.
+ * @since 1.0
+ */
+public class ContentSessionFactory extends JcrSessionFactory {
+    private static final Logger LOG = LoggerFactory.getLogger(ContentSessionFactory.class);
+
+    @Override
+    protected void registerNodeTypes() throws Exception {
+        LOG.info("Register node types");
+        Session session = getSession();
+        final String[] jcrNamespaces = session.getWorkspace().getNamespaceRegistry().getPrefixes();
+        boolean createNamespace = true;
+        for (String jcrNamespace : jcrNamespaces) {
+            if (jcrNamespace.equals("airback")) {
+                createNamespace = false;
+                LOG.debug("Jackrabbit OCM namespace exists.");
+            }
+        }
+        if (createNamespace) {
+            session.getWorkspace().getNamespaceRegistry()
+                    .registerNamespace("airback", "http://www.airback.com/airback");
+            LOG.debug("Successfully created airback content namespace.");
+        }
+        if (session.getRootNode() == null) {
+            throw new ContentException("Jcr session setup not successful.");
+        }
+
+        NodeTypeManager manager = session.getWorkspace().getNodeTypeManager();
+        manager.registerNodeType(createairbackContentType(manager), true);
+        manager.registerNodeType(createairbackFolderType(manager), true);
+        session.logout();
+    }
+
+    private NodeTypeTemplate createairbackContentType(NodeTypeManager manager) throws RepositoryException {
+        LOG.info("Register airback content type");
+        NodeType hierachyNode = manager.getNodeType(NodeType.NT_HIERARCHY_NODE);
+        // Create content node type
+        NodeTypeTemplate contentTypeTemplate = manager.createNodeTypeTemplate(hierachyNode);
+
+        contentTypeTemplate.setAbstract(false);
+        contentTypeTemplate.setMixin(false);
+        contentTypeTemplate.setName("airback:content");
+        contentTypeTemplate.setPrimaryItemName("content");
+        contentTypeTemplate.setDeclaredSuperTypeNames(new String[]{NodeType.NT_HIERARCHY_NODE});
+        contentTypeTemplate.setQueryable(true);
+        contentTypeTemplate.setOrderableChildNodes(false);
+
+        PropertyDefinitionTemplate createdUserPropertyTemplate = manager
+                .createPropertyDefinitionTemplate();
+        createdUserPropertyTemplate.setMultiple(false);
+        createdUserPropertyTemplate.setName("airback:createdUser");
+        createdUserPropertyTemplate.setMandatory(true);
+        createdUserPropertyTemplate.setRequiredType(PropertyType.STRING);
+        contentTypeTemplate.getPropertyDefinitionTemplates().add(createdUserPropertyTemplate);
+
+        PropertyDefinitionTemplate contentPathPropertyTemplate = manager.createPropertyDefinitionTemplate();
+        contentPathPropertyTemplate.setMultiple(false);
+        contentPathPropertyTemplate.setName("airback:contentPath");
+        contentPathPropertyTemplate.setMandatory(false);
+        contentPathPropertyTemplate.setRequiredType(PropertyType.STRING);
+        contentTypeTemplate.getPropertyDefinitionTemplates().add(contentPathPropertyTemplate);
+
+        PropertyDefinitionTemplate thumbnailPathPropertyTemplate = manager.createPropertyDefinitionTemplate();
+        thumbnailPathPropertyTemplate.setMultiple(false);
+        thumbnailPathPropertyTemplate.setName("airback:thumbnailPath");
+        thumbnailPathPropertyTemplate.setMandatory(false);
+        thumbnailPathPropertyTemplate.setRequiredType(PropertyType.STRING);
+        contentTypeTemplate.getPropertyDefinitionTemplates().add(thumbnailPathPropertyTemplate);
+
+        PropertyDefinitionTemplate lastModifiedUserPropertyTemplate = manager.createPropertyDefinitionTemplate();
+        lastModifiedUserPropertyTemplate.setMultiple(false);
+        lastModifiedUserPropertyTemplate.setName("airback:lastModifiedUser");
+        lastModifiedUserPropertyTemplate.setMandatory(true);
+        lastModifiedUserPropertyTemplate.setRequiredType(PropertyType.STRING);
+        contentTypeTemplate.getPropertyDefinitionTemplates().add(lastModifiedUserPropertyTemplate);
+
+        PropertyDefinitionTemplate mimeTypePropertyTemplate = manager
+                .createPropertyDefinitionTemplate();
+        mimeTypePropertyTemplate.setMultiple(false);
+        mimeTypePropertyTemplate.setName("airback:mimeType");
+        mimeTypePropertyTemplate.setMandatory(false);
+        mimeTypePropertyTemplate.setRequiredType(PropertyType.STRING);
+        contentTypeTemplate.getPropertyDefinitionTemplates().add(mimeTypePropertyTemplate);
+
+        PropertyDefinitionTemplate sizePropertyTemplate = manager.createPropertyDefinitionTemplate();
+        sizePropertyTemplate.setMultiple(false);
+        sizePropertyTemplate.setName("airback:size");
+        sizePropertyTemplate.setMandatory(true);
+        sizePropertyTemplate.setRequiredType(PropertyType.LONG);
+        contentTypeTemplate.getPropertyDefinitionTemplates().add(sizePropertyTemplate);
+
+        return contentTypeTemplate;
+    }
+
+    private NodeTypeTemplate createairbackFolderType(NodeTypeManager manager) throws RepositoryException {
+        // Create content node type
+        NodeTypeTemplate contentTypeTemplate = manager.createNodeTypeTemplate();
+
+        contentTypeTemplate.setAbstract(false);
+        contentTypeTemplate.setMixin(false);
+        contentTypeTemplate.setName("airback:folder");
+        contentTypeTemplate.setPrimaryItemName("folder");
+        contentTypeTemplate.setDeclaredSuperTypeNames(new String[]{NodeType.NT_FOLDER});
+        contentTypeTemplate.setQueryable(true);
+        contentTypeTemplate.setOrderableChildNodes(false);
+
+        PropertyDefinitionTemplate createdPropertyTemplate = manager
+                .createPropertyDefinitionTemplate();
+        createdPropertyTemplate.setMultiple(false);
+        createdPropertyTemplate.setName("airback:createdUser");
+        createdPropertyTemplate.setMandatory(true);
+        createdPropertyTemplate.setRequiredType(PropertyType.STRING);
+        contentTypeTemplate.getPropertyDefinitionTemplates().add(createdPropertyTemplate);
+
+        PropertyDefinitionTemplate descPropertyTemplate = manager
+                .createPropertyDefinitionTemplate();
+        descPropertyTemplate.setMultiple(false);
+        descPropertyTemplate.setName("jcr:description");
+        descPropertyTemplate.setMandatory(false);
+        descPropertyTemplate.setRequiredType(PropertyType.STRING);
+        contentTypeTemplate.getPropertyDefinitionTemplates().add(descPropertyTemplate);
+
+        return contentTypeTemplate;
+    }
+}

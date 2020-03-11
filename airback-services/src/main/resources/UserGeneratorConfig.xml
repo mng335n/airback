@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+    <context id="MySQL" targetRuntime="MyBatis3">
+
+        <plugin type="com.airback.mybatis.plugin.airbackModelFilePlugin"/>
+        <plugin type="org.mybatis.generator.plugins.FluentBuilderMethodsPlugin" />
+        <plugin type="org.mybatis.generator.plugins.MapperAnnotationPlugin" />
+
+        <jdbcConnection connectionURL="jdbc:mysql://localhost:3306/airback?verifyServerCertificate=false"
+                        driverClass="com.mysql.cj.jdbc.Driver" password="airback123" userId="root"/>
+
+        <javaTypeResolver>
+            <property name="useJSR310Types" value="true"/>
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="com.airback.module.user.domain" targetProject="src/main/java">
+            <property name="rootClass" value="com.airback.core.arguments.ValuedBean"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="." targetProject="src/main/resources/sqlMap/user"/>
+
+        <javaClientGenerator targetPackage="com.airback.module.user.dao" targetProject="src/main/java" type="XMLMAPPER">
+            <property name="exampleMethodVisibility" value="public"/>
+            <property name="rootInterface" value="com.airback.db.persistence.ICrudGenericDAO"/>
+        </javaClientGenerator>
+
+        <table schema="airback" tableName="s_account" domainObjectName="BillingAccount"/>
+        <table schema="airback" tableName="s_billing_plan" domainObjectName="BillingPlan"/>
+        <table schema="airback" tableName="s_roles" domainObjectName="Role"/>
+        <table schema="airback" tableName="s_user" domainObjectName="User"/>
+        <table schema="airback" tableName="s_user_account" domainObjectName="UserAccount"/>
+        <table schema="airback" tableName="s_role_permission" domainObjectName="RolePermission"/>
+        <table schema="airback" tableName="s_user_permission" domainObjectName="UserPermission"/>
+        <table schema="airback" tableName="s_user_tracking" domainObjectName="UserTracking"/>
+        <table schema="airback" tableName="s_account_theme" domainObjectName="AccountTheme"/>
+    </context>
+
+</generatorConfiguration>

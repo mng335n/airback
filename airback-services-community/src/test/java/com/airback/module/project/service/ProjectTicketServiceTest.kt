@@ -1,0 +1,89 @@
+/**
+ * Copyright © airback
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+package com.airback.module.project.service
+
+import com.airback.db.arguments.*
+import com.airback.module.project.domain.ProjectTicket
+import com.airback.module.project.domain.criteria.ProjectTicketSearchCriteria
+import com.airback.test.DataSet
+import com.airback.test.rule.DbUnitInitializerRule
+import com.airback.test.spring.IntegrationServiceTest
+import org.assertj.core.api.Assertions.assertThat
+import org.assertj.core.api.Assertions.tuple
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.extension.ExtendWith
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.test.context.junit.jupiter.SpringExtension
+import java.time.LocalDate
+
+@ExtendWith(SpringExtension::class, DbUnitInitializerRule::class)
+class ProjectTicketServiceTest : IntegrationServiceTest() {
+    @Autowired
+    private lateinit var projectTicketService: ProjectTicketService
+
+    @DataSet
+    @Test
+    fun testGetAccountsHasOverdueAssignments() {
+        val criteria = ProjectTicketSearchCriteria()
+        criteria.saccountid = null
+        val now = LocalDate.now()
+        val rangeDateSearchField = RangeDateSearchField(now.minusDays(10000), now)
+        criteria.dateInRange = rangeDateSearchField
+        val accounts = projectTicketService.getAccountsHasOverdueAssignments(criteria)
+        assertThat(accounts).isNotEmpty.hasSize(2)
+        assertThat(accounts).extracting("subdomain", "id").contains(tuple("a", 1), tuple("b", 2))
+    }
+
+    @DataSet
+    @Test
+    fun testGetAssignments() {
+        val criteria = ProjectTicketSearchCriteria()
+        criteria.saccountid = NumberSearchField.equal(2)
+        criteria.projectIds = SetSearchField(3)
+        val tickets = projectTicketService.findTicketsByCriteria(BasicSearchRequest(criteria)) as List<ProjectTicket>
+        assertThat<ProjectTicket>(tickets).hasSize(3)
+        assertThat<ProjectTicket>(tickets).extracting("name", "assignUser", "assignUserFullName", "assignUserAvatarId", "type")
+                .contains(tuple("Task 4", "anhle", "Anh Le", "linh123", "Project-Task"),
+                        tuple("Bug 1", "anhminh79", "Anh Minh", null, "Project-Bug"),
+                        tuple("Risk 1", "anhminh79", "Anh Minh", null, "Project-Risk"))
+    }
+
+    @DataSet
+    @Test
+    fun testGetAssigneeSummary() {
+        val criteria = ProjectTicketSearchCriteria()
+        criteria.saccountid = NumberSearchField.equal(2)
+        criteria.projectIds = SetSearchField(3)
+        val groupItems = projectTicketService.getAssigneeSummary(criteria)
+        assertThat(groupItems).hasSize(2)
+        assertThat(groupItems).extracting("groupid", "value", "extraValue").contains(tuple("anhminh79", 2.0, null), tuple("linhduong", 1.0, "linh123"))
+    }
+
+    @DataSet
+    @Test
+    fun testFindOpenTicketsInRangeDate() {
+        val criteria = ProjectTicketSearchCriteria()
+        criteria.saccountid = NumberSearchField.equal(1)
+        criteria.projectIds = SetSearchField(1)
+        criteria.open = SearchField()
+        val from = LocalDate.of(2019, 1, 7)
+        val to = from.plusDays(7)
+        criteria.dateInRange = RangeDateSearchField(from, to)
+        val tickets = projectTicketService.findPageableListByCriteria(BasicSearchRequest(criteria))
+        assertThat(tickets.size).isEqualTo(1)
+    }
+}

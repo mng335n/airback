@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+    <context id="MySQL" targetRuntime="MyBatis3">
+        <plugin type="com.airback.mybatis.plugin.airbackModelFilePlugin" />
+        <plugin type="org.mybatis.generator.plugins.FluentBuilderMethodsPlugin" />
+        <plugin type="org.mybatis.generator.plugins.MapperAnnotationPlugin" />
+
+        <jdbcConnection connectionURL="jdbc:mysql://localhost:3306/airback?verifyServerCertificate=false"
+                        driverClass="com.mysql.cj.jdbc.Driver" password="airback123" userId="root" />
+
+        <javaTypeResolver>
+            <property name="useJSR310Types" value="true"/>
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="com.airback.module.project.domain" targetProject="src/main/java">
+            <property name="rootClass" value="com.airback.core.arguments.ValuedBean" />
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="." targetProject="src/main/resources/sqlMap/project" />
+
+        <javaClientGenerator targetPackage="com.airback.module.project.dao" targetProject="src/main/java" type="XMLMAPPER">
+            <property name="exampleMethodVisibility" value="public" />
+            <property name="rootInterface" value="com.airback.db.persistence.ICrudGenericDAO" />
+        </javaClientGenerator>
+
+
+        <table domainObjectName="ProjectCustomizeView" schema="airback" tableName="m_prj_customize_view" />
+        <table domainObjectName="Message" schema="airback" tableName="m_prj_message" />
+        <table domainObjectName="Milestone" schema="airback" tableName="m_prj_milestone" >
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table domainObjectName="Project" schema="airback" tableName="m_prj_project" />
+        <table domainObjectName="ProjectNotificationSetting" schema="airback" tableName="m_prj_notifications" />
+        <table domainObjectName="ProjectRole" schema="airback" tableName="m_prj_role" />
+        <table domainObjectName="ProjectRolePermission" schema="airback" tableName="m_prj_role_permission" />
+        <table domainObjectName="Task" schema="airback" tableName="m_prj_task" />
+        <table domainObjectName="ProjectMember" schema="airback" tableName="m_prj_member" />
+        <table domainObjectName="KanbanBoard" schema="airback" tableName="m_prj_kanban_board" />
+        <table domainObjectName="StandupReport" schema="airback" tableName="m_prj_standup" />
+        <table domainObjectName="Bug" schema="airback" tableName="m_prj_bug" />
+        <table domainObjectName="Component" schema="airback" tableName="m_prj_component" />
+        <table domainObjectName="Version" schema="airback" tableName="m_prj_version" />
+        <table domainObjectName="TicketRelation" schema="airback" tableName="m_prj_ticket_relation" />
+        <table domainObjectName="TicketKey" schema="airback" tableName="m_prj_ticket_key" />
+    </context>
+
+</generatorConfiguration>

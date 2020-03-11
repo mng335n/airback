@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><Workspace name="ecm">
+        <FileSystem class="com.airback.module.ecm.DbFileSystemExt">
+            <param name="schemaObjectPrefix" value="ecm_s_"/>
+        </FileSystem>
+
+        <PersistenceManager class="com.airback.module.ecm.BundleDbPersistenceManagerExt">
+            <param name="schemaObjectPrefix" value="ecm_p_workspace"/>
+        </PersistenceManager>
+    </Workspace>

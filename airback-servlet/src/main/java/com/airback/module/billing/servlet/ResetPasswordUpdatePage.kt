@@ -1,0 +1,73 @@
+/**
+ * Copyright © airback
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+package com.airback.module.billing.servlet
+
+import com.airback.common.UrlTokenizer
+import com.airback.configuration.IDeploymentMode
+import com.airback.core.airbackException
+import com.airback.core.ResourceNotFoundException
+import com.airback.module.user.service.UserService
+import com.airback.servlet.TemplateWebServletRequestHandler
+import org.springframework.beans.factory.annotation.Autowired
+import javax.servlet.annotation.WebServlet
+import javax.servlet.http.HttpServletRequest
+import javax.servlet.http.HttpServletResponse
+
+/**
+ * @author airback Ltd.
+ * @since 1.0
+ */
+@WebServlet(urlPatterns = ["/user/recoverypassword/*"], name = "recoverUserPasswordServlet")
+class ResetPasswordUpdatePage : TemplateWebServletRequestHandler() {
+
+    @Autowired
+    private lateinit var userService: UserService
+
+    @Autowired
+    private lateinit var deploymentMode: IDeploymentMode
+
+    override fun onHandleRequest(request: HttpServletRequest, response: HttpServletResponse) {
+        val pathInfo = request.pathInfo
+        try {
+            if (pathInfo != null) {
+                val urlTokenizer = UrlTokenizer(pathInfo)
+                val username = urlTokenizer.getString()
+                val user = userService.findUserByUserName(username)
+                if (user == null) {
+                    PageGeneratorUtil.responseUserNotExistPage(response, username, request.contextPath + "/")
+                } else {
+                    val loginURL = if (deploymentMode.isDemandEdition)
+                        "https://www.airback.com/sign-in?username=$username"
+                    else
+                        "${request.contextPath}/"
+
+                    val redirectURL = "${request.contextPath}/user/recoverypassword/action"
+                    val context = mapOf("username" to username,
+                            "loginURL" to loginURL,
+                            "redirectURL" to redirectURL)
+                    val html = generatePageByTemplate(response.locale, "pageUserRecoveryPassword.ftl", context)
+                    val out = response.writer
+                    out.print(html)
+                }
+            } else {
+                throw ResourceNotFoundException("Can not recover user password with context path is null")
+            }
+        } catch (e: Exception) {
+            throw airbackException(e)
+        }
+    }
+}

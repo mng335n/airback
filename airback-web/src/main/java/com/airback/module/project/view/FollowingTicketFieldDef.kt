@@ -1,0 +1,44 @@
+/**
+ * Copyright © airback
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+package com.airback.module.project.view
+
+import com.airback.common.TableViewField
+import com.airback.common.i18n.FollowerI18nEnum
+import com.airback.common.i18n.GenericI18Enum
+import com.airback.vaadin.web.ui.WebUIConstants
+
+/**
+ * @author airback Ltd.
+ * @since 1.0
+ */
+object FollowingTicketFieldDef {
+    @JvmField
+    val summary = TableViewField(FollowerI18nEnum.FORM_SUMMARY, "name",
+            WebUIConstants.TABLE_EX_LABEL_WIDTH)
+
+    @JvmField
+    val project = TableViewField(FollowerI18nEnum.FORM_PROJECT_NAME, "projectName",
+            (WebUIConstants.TABLE_EX_LABEL_WIDTH * 1.5).toInt())
+
+    @JvmField
+    val assignee = TableViewField(GenericI18Enum.FORM_ASSIGNEE, "assignUser",
+            WebUIConstants.TABLE_X_LABEL_WIDTH)
+
+    @JvmField
+    val createdTime = TableViewField(FollowerI18nEnum.OPT_FOLLOWER_CREATE_DATE,
+            "createdTime", WebUIConstants.TABLE_DATE_WIDTH)
+}

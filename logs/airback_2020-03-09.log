@@ -1,0 +1,728 @@
+11:37:05,964  INFO c.a.s.DefaultServerRunner:50 - Starting DefaultServerRunner on Mis-MacBook-Air.local with PID 20761 (/Users/robertnguyen/Workspace/airback-Release_8.0.8/airback-server-runner/target/classes started by robertnguyen in /Users/robertnguyen/Workspace/airback-Release_8.0.8)
+11:37:06,070  INFO c.a.s.DefaultServerRunner:675 - No active profile set, falling back to default profiles: default
+11:37:14,185  INFO o.s.c.a.ConfigurationClassPostProcessor:380 - Cannot enhance @Configuration bean definition 'com.vaadin.spring.VaadinConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+11:37:15,934  INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9de9b549] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+11:37:17,619  WARN i.u.w.jsr:68 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+11:37:17,772  INFO i.u.servlet:364 - Initializing Spring embedded WebApplicationContext
+11:37:17,773  INFO o.s.w.c.ContextLoader:296 - Root WebApplicationContext: initialization completed in 11401 ms
+11:37:17,993  INFO c.v.s.b.i.VaadinServletConfiguration:261 - Registering Vaadin servlet
+11:37:17,994  INFO c.v.s.b.i.VaadinServletConfiguration:263 - Servlet will be mapped to URLs [/vaadinServlet/*, /VAADIN/*]
+11:37:18,038  INFO c.v.s.b.i.VaadinServletConfiguration:282 - Setting servlet init parameters
+11:37:18,038  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [productionMode] = [false]
+11:37:18,039  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [resourceCacheTime] = [3600]
+11:37:18,039  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [heartbeatInterval] = [300]
+11:37:18,040  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [closeIdleSessions] = [false]
+11:37:19,248  INFO c.z.h.HikariDataSource:110 - HikariPool-1 - Starting...
+11:37:21,049  INFO c.z.h.HikariDataSource:123 - HikariPool-1 - Start completed.
+11:37:21,221  INFO o.f.c.i.l.VersionPrinter:49 - Flyway Community Edition 5.2.4 by Boxfuse
+11:37:21,342  INFO o.f.c.i.d.DatabaseFactory:49 - Database: jdbc:mysql://localhost:3306/airback (MySQL 8.0)
+11:37:22,205  INFO o.f.c.i.c.DbMigrate:49 - Current version of schema `airback`: 20190416.1
+11:37:22,206  WARN o.f.c.i.c.DbMigrate:53 - Schema `airback` has a version (20190416.1) that is newer than the latest available migration (20190406.1) !
+11:37:22,210  INFO o.f.c.i.c.DbMigrate:49 - Schema `airback` is up to date. No migration necessary.
+11:37:33,329  WARN o.a.j.c.u.RepositoryLock:134 - Existing lock file /Users/robertnguyen/Workspace/airback-Release_8.0.8/repo2/wiki-workspaces/.lock detected. Repository was not shut down properly.
+11:37:33,345  INFO o.a.j.c.RepositoryImpl:259 - Starting repository...
+11:37:34,687  INFO o.a.j.c.RepositoryImpl:2035 - initializing workspace 'wiki'...
+11:37:35,051  INFO o.a.j.c.RepositoryImpl:2039 - workspace 'wiki' initialized
+11:37:35,069  INFO o.a.j.c.RepositoryImpl:455 - SecurityManager = class org.apache.jackrabbit.core.security.simple.SimpleSecurityManager
+11:37:35,076  INFO o.a.j.c.s.s.SimpleSecurityManager:137 - init: using Repository LoginModule configuration for Jackrabbit
+11:37:35,096  INFO o.a.j.c.RepositoryImpl:367 - Repository started (1751ms)
+11:37:35,162  INFO c.a.m.p.PageSessionFactory:41 - Register node types
+11:37:35,255  INFO c.a.m.p.PageSessionFactory:66 - Register airback content type
+11:37:37,046  WARN o.a.j.c.u.RepositoryLock:134 - Existing lock file /Users/robertnguyen/Workspace/airback-Release_8.0.8/repo2/workspaces/.lock detected. Repository was not shut down properly.
+11:37:37,047  INFO o.a.j.c.RepositoryImpl:259 - Starting repository...
+11:37:37,188  INFO o.a.j.c.j.DatabaseJournal:374 - Initialized local revision to 340
+11:37:37,189  INFO o.a.j.c.j.DatabaseJournal:383 - Cluster revision janitor thread not started
+11:37:37,189  INFO o.a.j.c.j.DatabaseJournal:280 - DatabaseJournal initialized.
+11:37:37,221  INFO o.a.j.c.RepositoryImpl:2035 - initializing workspace 'ecm'...
+11:37:37,255  INFO o.a.j.c.RepositoryImpl:2039 - workspace 'ecm' initialized
+11:37:37,256  INFO o.a.j.c.RepositoryImpl:455 - SecurityManager = class org.apache.jackrabbit.core.security.simple.SimpleSecurityManager
+11:37:37,256  INFO o.a.j.c.RepositoryImpl:2035 - initializing workspace 'default2'...
+11:37:37,275  INFO o.a.j.c.RepositoryImpl:2039 - workspace 'default2' initialized
+11:37:37,276  INFO o.a.j.c.s.s.SimpleSecurityManager:137 - init: using Repository LoginModule configuration for Jackrabbit
+11:37:37,305  INFO o.a.j.c.c.ClusterNode:858 - Processing revision: 341
+11:37:37,328  INFO o.a.j.c.c.ClusterNode:858 - Processing revision: 342
+11:37:37,330  INFO o.a.j.c.c.ClusterNode:858 - Processing revision: 343
+11:37:37,353  INFO o.a.j.c.c.ClusterNode:858 - Processing revision: 344
+11:37:37,355  INFO o.a.j.c.c.ClusterNode:858 - Processing revision: 345
+11:37:37,373  INFO o.a.j.c.c.ClusterNode:858 - Processing revision: 346
+11:37:37,374  INFO o.a.j.c.c.ClusterNode:858 - Processing revision: 347
+11:37:37,390  INFO o.a.j.c.c.ClusterNode:858 - Processing revision: 348
+11:37:37,402  INFO o.a.j.c.RepositoryImpl:367 - Repository started (355ms)
+11:37:37,412  INFO c.a.m.e.ContentSessionFactory:40 - Register node types
+11:37:37,418  INFO c.a.m.e.ContentSessionFactory:66 - Register airback content type
+11:37:38,978  INFO c.a.v.m.s.ComponentScannerService:51 - Started resolving view and presenter classes
+11:37:43,341  INFO c.a.v.m.s.ComponentScannerService:61 - Resolved view and presenter classes com.airback.vaadin.mvp.service.ComponentScannerService@2e8eafb2 that has 65 view classes and 58 presenter classes
+11:37:45,339  INFO o.s.s.c.ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
+11:37:45,850  INFO c.v.s.b.i.VaadinServletConfiguration:121 - Checking the application context for Vaadin UI mappings
+11:37:45,861  INFO c.v.s.b.i.VaadinServletConfiguration:110 - Forwarding @SpringUI URLs from {}
+11:37:45,867  INFO c.v.s.b.i.VaadinServletConfiguration:206 - Registering Vaadin servlet of type [com.vaadin.spring.server.SpringVaadinServlet]
+11:37:46,767  INFO o.q.i.StdSchedulerFactory:1208 - Using default implementation for ThreadExecutor
+11:37:46,843  INFO o.q.c.SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+11:37:46,844  INFO o.q.c.QuartzScheduler:229 - Quartz Scheduler v.2.3.0 created.
+11:37:46,846  INFO o.q.s.RAMJobStore:155 - RAMJobStore initialized.
+11:37:46,848  INFO o.q.c.QuartzScheduler:294 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+11:37:46,848  INFO o.q.i.StdSchedulerFactory:1362 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+11:37:46,848  INFO o.q.i.StdSchedulerFactory:1366 - Quartz scheduler version: 2.3.0
+11:37:46,849  INFO o.q.c.QuartzScheduler:2287 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@56897de0
+11:37:47,180  INFO o.s.s.q.SchedulerFactoryBean:726 - Starting Quartz Scheduler now
+11:37:47,181  INFO o.q.c.QuartzScheduler:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+11:37:47,183  INFO c.a.s.ContextStartedListener:44 - airback is ready for usage
+11:37:47,692  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler mapped to context-path: /*
+11:37:47,693  INFO o.a.c.AtmosphereFramework:588 - Installed the following AtmosphereInterceptor mapped to AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler
+11:37:47,826  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using org.atmosphere.util.VoidAnnotationProcessor for processing annotation
+11:37:47,871  INFO o.a.u.ForkJoinPool:588 - Using ForkJoinPool  java.util.concurrent.ForkJoinPool. Set the org.atmosphere.cpr.broadcaster.maxAsyncWriteThreads to -1 to fully use its power.
+11:37:47,887  INFO o.a.c.AtmosphereFramework:588 - Installed WebSocketProtocol org.atmosphere.websocket.protocol.SimpleHttpProtocol 
+11:37:47,914  INFO o.a.c.JSR356AsyncSupport:588 - JSR 356 Mapping path 
+11:37:47,925  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /
+11:37:47,938  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}
+11:37:47,939  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}
+11:37:47,940  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}/{path2}
+11:37:47,940  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}/{path2}/{path3}
+11:37:47,940  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}/{path2}/{path3}/{path4}
+11:37:47,941  INFO o.a.c.AtmosphereFramework:588 - Installing Default AtmosphereInterceptors
+11:37:47,945  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CorsInterceptor : CORS Interceptor Support
+11:37:47,946  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CacheHeadersInterceptor : Default Response's Headers Interceptor
+11:37:47,948  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.PaddingAtmosphereInterceptor : Browser Padding Interceptor Support
+11:37:47,949  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.AndroidAtmosphereInterceptor : Android Interceptor Support
+11:37:47,951  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.HeartbeatInterceptor : Heartbeat Interceptor Support
+11:37:47,952  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.SSEAtmosphereInterceptor : SSE Interceptor Support
+11:37:47,954  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JSONPAtmosphereInterceptor : JSONP Interceptor Support
+11:37:47,957  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JavaScriptProtocol : Atmosphere JavaScript Protocol
+11:37:47,958  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor : org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor
+11:37:47,959  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.OnDisconnectInterceptor : Browser disconnection detection
+11:37:47,960  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.IdleResourceInterceptor : org.atmosphere.interceptor.IdleResourceInterceptor
+11:37:47,961  INFO o.a.c.AtmosphereFramework:588 - Set org.atmosphere.cpr.AtmosphereInterceptor.disableDefaults to disable them.
+11:37:47,963  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor CORS Interceptor Support with priority FIRST_BEFORE_DEFAULT 
+11:37:47,979  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Default Response's Headers Interceptor with priority AFTER_DEFAULT 
+11:37:47,982  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser Padding Interceptor Support with priority AFTER_DEFAULT 
+11:37:47,983  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Android Interceptor Support with priority AFTER_DEFAULT 
+11:37:47,983  INFO o.a.i.HeartbeatInterceptor:588 - HeartbeatInterceptor configured with padding value 'X', client frequency 60 seconds and server frequency 0 seconds
+11:37:47,984  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Heartbeat Interceptor Support with priority AFTER_DEFAULT 
+11:37:47,984  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor SSE Interceptor Support with priority AFTER_DEFAULT 
+11:37:47,985  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor JSONP Interceptor Support with priority AFTER_DEFAULT 
+11:37:47,985  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Atmosphere JavaScript Protocol with priority AFTER_DEFAULT 
+11:37:47,986  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor with priority AFTER_DEFAULT 
+11:37:47,986  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser disconnection detection with priority AFTER_DEFAULT 
+11:37:47,987  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.IdleResourceInterceptor with priority BEFORE_DEFAULT 
+11:37:47,988  INFO o.a.c.AtmosphereFramework:588 - Using EndpointMapper class org.atmosphere.util.DefaultEndpointMapper
+11:37:47,989  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterCache: org.atmosphere.cache.UUIDBroadcasterCache
+11:37:47,990  INFO o.a.c.AtmosphereFramework:588 - Default Broadcaster Class: org.atmosphere.cpr.DefaultBroadcaster
+11:37:47,990  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Shared List Resources: false
+11:37:47,991  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Polling Wait Time 100
+11:37:47,991  INFO o.a.c.AtmosphereFramework:588 - Shared ExecutorService supported: true
+11:37:47,991  INFO o.a.c.AtmosphereFramework:588 - Messaging ExecutorService Pool Size unavailable - Not instance of ThreadPoolExecutor
+11:37:47,992  INFO o.a.c.AtmosphereFramework:588 - Async I/O Thread Pool Size: 200
+11:37:47,992  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterFactory: org.atmosphere.cpr.DefaultBroadcasterFactory
+11:37:47,992  INFO o.a.c.AtmosphereFramework:588 - Using AtmosphereResurceFactory: org.atmosphere.cpr.DefaultAtmosphereResourceFactory
+11:37:47,993  INFO o.a.c.AtmosphereFramework:588 - Using WebSocketProcessor: org.atmosphere.websocket.DefaultWebSocketProcessor
+11:37:48,007  INFO o.a.c.AtmosphereFramework:588 - Invoke AtmosphereInterceptor on WebSocket message true
+11:37:48,008  INFO o.a.c.AtmosphereFramework:588 - HttpSession supported: true
+11:37:48,009  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using DefaultAtmosphereObjectFactory for dependency injection and object creation
+11:37:48,015  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using async support: org.atmosphere.container.JSR356AsyncSupport running under container: Undertow - 2.0.17.Final using javax.servlet/3.0 and jsr356/WebSocket API
+11:37:48,016  INFO o.a.c.AtmosphereFramework:588 - Atmosphere Framework 2.4.30.vaadin1 started.
+11:37:48,043  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor  Track Message Size Interceptor using | with priority BEFORE_DEFAULT 
+11:37:48,149  INFO o.xnio:104 - XNIO version 3.3.8.Final
+11:37:48,203  INFO o.x.nio:55 - XNIO NIO Implementation Version 3.3.8.Final
+11:37:48,543  INFO o.s.b.w.e.u.UndertowServletWebServer:148 - Undertow started on port(s) 60000 (http) with context path ''
+11:37:48,554  INFO c.a.s.DefaultServerRunner:59 - Started DefaultServerRunner in 45.605 seconds (JVM running for 51.938)
+12:10:54,613  INFO o.a.j.c.c.ClusterNode:858 - Processing revision: 353
+12:10:55,050  INFO o.a.j.c.c.ClusterNode:858 - Processing revision: 354
+12:10:55,076  INFO o.a.j.c.c.ClusterNode:858 - Processing revision: 355
+12:10:55,117  INFO o.a.j.c.c.ClusterNode:858 - Processing revision: 356
+12:38:03,090  WARN c.z.h.p.HikariPool:766 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m41s353ms).
+12:49:04,660 ERROR c.a.s.j.ProjectSendingRelayEmailNotificationJob:64 - Error while sending scheduler command
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'm_prj_task.parentTaskId' in 'field list'
+### The error may exist in file [/Users/robertnguyen/Workspace/airback-Release_8.0.8/airback-services/target/classes/sqlMap/project/TaskMapperExt.xml]
+### The error may involve com.airback.module.project.dao.TaskMapperExt.findTaskById-Inline
+### The error occurred while setting parameters
+### SQL: SELECT m_prj_task.id, m_prj_task.name, m_prj_task.percentagecomplete, m_prj_task.startDate, m_prj_task.endDate, m_prj_task.priority,                  m_prj_task.duration, m_prj_task.isestimated, m_prj_task.projectId, m_prj_task.dueDate, m_prj_task.description,                  m_prj_task.originalEstimate, m_prj_task.remainEstimate,                  m_prj_task.milestoneId, m_prj_task.createdTime, m_prj_task.lastUpdatedTime, m_prj_task.assignUser, m_prj_task.sAccountId, m_prj_task.parentTaskId,                  m_prj_milestone.name AS milestoneName, m_prj_project.name AS projectName, m_prj_project.shortname AS projectShortname, m_prj_task.status,                  m_prj_task.createdUser, m_prj_ticket_key.ticketKey AS ticketKey, s_user.avatarId AS assignUserAvatarId,                  concat(s_user.firstname, ' ', s_user.lastname) AS assignUserFullName,                  log_user.avatarId AS logByAvatarId, concat(log_user.firstname, ' ', log_user.lastname) AS logByFullName,                  affectedversion.id as affectedversion_id, affectedversion.projectId as affectedversion_projectid,                  affectedversion.description as affectedversion_description, affectedversion.duedate as affectedversion_duedate,                  affectedversion.name as affectedversion_name, affectedversion.createdUser as affectedversion_createdUser,                  affectedversion.createdTime as affectedversion_createdTime, affectedversion.lastUpdatedTime as affectedversion_lastUpdatedTime,                  component.id as component_id, component.projectId as component_projectid, component.name as component_name,                  component.userlead as component_userlead, component.description as component_description, component.createdUser as component_createdUser,                  component.createdTime as component_createdTime, component.lastUpdatedTime as component_lastUpdatedTime,                  parentTask.name AS parentTaskName, NULL AS parentTaskKey,                  (SELECT count(*)                     FROM m_comment                     WHERE m_comment.type='Project-Task' AND m_comment.typeId=m_prj_task.id) AS numComments,                  (SELECT count(*)                     FROM m_prj_task AS subtask_tbl                     WHERE subtask_tbl.parentTaskId = m_prj_task.id                  ) AS numSubTasks,                  (SELECT COALESCE(SUM(m_prj_time_logging.logValue), 0)                      FROM m_prj_time_logging                      WHERE m_prj_time_logging.projectId = m_prj_task.projectId                          AND m_prj_time_logging.type='Project-Task' AND m_prj_time_logging.typeId=m_prj_task.id AND m_prj_time_logging.isBillable = 1) AS billableHours,                  (SELECT COALESCE(SUM(m_prj_time_logging.logValue), 0)                      FROM m_prj_time_logging                      WHERE m_prj_time_logging.projectId = m_prj_task.projectId                          AND m_prj_time_logging.type='Project-Task' AND m_prj_time_logging.typeId=m_prj_task.id AND m_prj_time_logging.isBillable = 0) AS nonBillableHours,                  (SELECT COUNT(*)                      FROM m_monitor_item                      WHERE m_monitor_item.typeId = m_prj_task.id AND m_monitor_item.type = 'Project-Task') AS numFollowers             FROM m_prj_task               LEFT OUTER JOIN m_prj_project ON (m_prj_task.projectId = m_prj_project.id)               LEFT OUTER JOIN m_prj_milestone ON (m_prj_milestone.id = m_prj_task.milestoneId)               LEFT OUTER JOIN s_user ON (s_user.username = m_prj_task.assignUser)               LEFT OUTER JOIN s_user AS log_user ON (log_user.username = m_prj_task.createdUser)               LEFT OUTER JOIN m_prj_ticket_key ON (m_prj_task.id = m_prj_ticket_key.ticketId AND m_prj_ticket_key.ticketType = 'Project-Task')               LEFT OUTER JOIN m_prj_task AS parentTask ON (m_prj_task.parentTaskId = parentTask.id)               LEFT OUTER JOIN m_prj_ticket_relation AS relatedItem1 ON (relatedItem1.ticketId = m_prj_task.id AND relatedItem1.ticketType='Project-Task' AND relatedItem1.rel='AffVersion')               LEFT OUTER JOIN m_prj_version AS affectedversion ON (affectedversion.id = relatedItem1.typeId AND relatedItem1.type='Project-Version')               LEFT OUTER JOIN m_prj_ticket_relation AS relatedItem2 ON (relatedItem2.ticketId = m_prj_task.id AND relatedItem2.ticketType='Project-Task' AND relatedItem2.rel='Component')               LEFT OUTER JOIN m_prj_component AS component ON (component.id = relatedItem2.typeId AND relatedItem2.type = 'Project-Component')                       WHERE m_prj_task.id=?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'm_prj_task.parentTaskId' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'm_prj_task.parentTaskId' in 'field list'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:234)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy90.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:166)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy119.findTaskById(Unknown Source)
+	at com.airback.module.project.service.impl.TaskServiceImpl.findById(TaskServiceImpl.kt:77)
+	at com.airback.module.project.service.impl.TaskServiceImpl$$FastClassBySpringCGLIB$$b4c4bc12.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.airback.module.project.service.impl.TaskServiceImpl$$EnhancerBySpringCGLIB$$a6778d1f.findById(<generated>)
+	at com.airback.module.project.schedule.email.service.ProjectTaskRelayEmailNotificationActionImpl.getBeanInContext(ProjectTaskRelayEmailNotificationActionImpl.kt:97)
+	at com.airback.module.project.schedule.email.service.ProjectTaskRelayEmailNotificationActionImpl.getBeanInContext(ProjectTaskRelayEmailNotificationActionImpl.kt:64)
+	at com.airback.module.project.schedule.email.service.SendMailToFollowersAction.sendNotificationForCreateAction(SendMailToFollowersAction.kt:89)
+	at com.airback.schedule.jobs.ProjectSendingRelayEmailNotificationJob.executeJob(ProjectSendingRelayEmailNotificationJob.kt:59)
+	at com.airback.schedule.jobs.GenericQuartzJobBean.executeInternal(GenericQuartzJobBean.kt:41)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'm_prj_task.parentTaskId' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:970)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:387)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 25 common frames omitted
+12:50:00,341 ERROR c.a.s.j.ProjectSendingRelayEmailNotificationJob:64 - Error while sending scheduler command
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'm_prj_task.parentTaskId' in 'field list'
+### The error may exist in file [/Users/robertnguyen/Workspace/airback-Release_8.0.8/airback-services/target/classes/sqlMap/project/TaskMapperExt.xml]
+### The error may involve com.airback.module.project.dao.TaskMapperExt.findTaskById-Inline
+### The error occurred while setting parameters
+### SQL: SELECT m_prj_task.id, m_prj_task.name, m_prj_task.percentagecomplete, m_prj_task.startDate, m_prj_task.endDate, m_prj_task.priority,                  m_prj_task.duration, m_prj_task.isestimated, m_prj_task.projectId, m_prj_task.dueDate, m_prj_task.description,                  m_prj_task.originalEstimate, m_prj_task.remainEstimate,                  m_prj_task.milestoneId, m_prj_task.createdTime, m_prj_task.lastUpdatedTime, m_prj_task.assignUser, m_prj_task.sAccountId, m_prj_task.parentTaskId,                  m_prj_milestone.name AS milestoneName, m_prj_project.name AS projectName, m_prj_project.shortname AS projectShortname, m_prj_task.status,                  m_prj_task.createdUser, m_prj_ticket_key.ticketKey AS ticketKey, s_user.avatarId AS assignUserAvatarId,                  concat(s_user.firstname, ' ', s_user.lastname) AS assignUserFullName,                  log_user.avatarId AS logByAvatarId, concat(log_user.firstname, ' ', log_user.lastname) AS logByFullName,                  affectedversion.id as affectedversion_id, affectedversion.projectId as affectedversion_projectid,                  affectedversion.description as affectedversion_description, affectedversion.duedate as affectedversion_duedate,                  affectedversion.name as affectedversion_name, affectedversion.createdUser as affectedversion_createdUser,                  affectedversion.createdTime as affectedversion_createdTime, affectedversion.lastUpdatedTime as affectedversion_lastUpdatedTime,                  component.id as component_id, component.projectId as component_projectid, component.name as component_name,                  component.userlead as component_userlead, component.description as component_description, component.createdUser as component_createdUser,                  component.createdTime as component_createdTime, component.lastUpdatedTime as component_lastUpdatedTime,                  parentTask.name AS parentTaskName, NULL AS parentTaskKey,                  (SELECT count(*)                     FROM m_comment                     WHERE m_comment.type='Project-Task' AND m_comment.typeId=m_prj_task.id) AS numComments,                  (SELECT count(*)                     FROM m_prj_task AS subtask_tbl                     WHERE subtask_tbl.parentTaskId = m_prj_task.id                  ) AS numSubTasks,                  (SELECT COALESCE(SUM(m_prj_time_logging.logValue), 0)                      FROM m_prj_time_logging                      WHERE m_prj_time_logging.projectId = m_prj_task.projectId                          AND m_prj_time_logging.type='Project-Task' AND m_prj_time_logging.typeId=m_prj_task.id AND m_prj_time_logging.isBillable = 1) AS billableHours,                  (SELECT COALESCE(SUM(m_prj_time_logging.logValue), 0)                      FROM m_prj_time_logging                      WHERE m_prj_time_logging.projectId = m_prj_task.projectId                          AND m_prj_time_logging.type='Project-Task' AND m_prj_time_logging.typeId=m_prj_task.id AND m_prj_time_logging.isBillable = 0) AS nonBillableHours,                  (SELECT COUNT(*)                      FROM m_monitor_item                      WHERE m_monitor_item.typeId = m_prj_task.id AND m_monitor_item.type = 'Project-Task') AS numFollowers             FROM m_prj_task               LEFT OUTER JOIN m_prj_project ON (m_prj_task.projectId = m_prj_project.id)               LEFT OUTER JOIN m_prj_milestone ON (m_prj_milestone.id = m_prj_task.milestoneId)               LEFT OUTER JOIN s_user ON (s_user.username = m_prj_task.assignUser)               LEFT OUTER JOIN s_user AS log_user ON (log_user.username = m_prj_task.createdUser)               LEFT OUTER JOIN m_prj_ticket_key ON (m_prj_task.id = m_prj_ticket_key.ticketId AND m_prj_ticket_key.ticketType = 'Project-Task')               LEFT OUTER JOIN m_prj_task AS parentTask ON (m_prj_task.parentTaskId = parentTask.id)               LEFT OUTER JOIN m_prj_ticket_relation AS relatedItem1 ON (relatedItem1.ticketId = m_prj_task.id AND relatedItem1.ticketType='Project-Task' AND relatedItem1.rel='AffVersion')               LEFT OUTER JOIN m_prj_version AS affectedversion ON (affectedversion.id = relatedItem1.typeId AND relatedItem1.type='Project-Version')               LEFT OUTER JOIN m_prj_ticket_relation AS relatedItem2 ON (relatedItem2.ticketId = m_prj_task.id AND relatedItem2.ticketType='Project-Task' AND relatedItem2.rel='Component')               LEFT OUTER JOIN m_prj_component AS component ON (component.id = relatedItem2.typeId AND relatedItem2.type = 'Project-Component')                       WHERE m_prj_task.id=?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'm_prj_task.parentTaskId' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'm_prj_task.parentTaskId' in 'field list'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:234)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy90.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:166)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy119.findTaskById(Unknown Source)
+	at com.airback.module.project.service.impl.TaskServiceImpl.findById(TaskServiceImpl.kt:77)
+	at com.airback.module.project.service.impl.TaskServiceImpl$$FastClassBySpringCGLIB$$b4c4bc12.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.airback.module.project.service.impl.TaskServiceImpl$$EnhancerBySpringCGLIB$$a6778d1f.findById(<generated>)
+	at com.airback.module.project.schedule.email.service.ProjectTaskRelayEmailNotificationActionImpl.getBeanInContext(ProjectTaskRelayEmailNotificationActionImpl.kt:97)
+	at com.airback.module.project.schedule.email.service.ProjectTaskRelayEmailNotificationActionImpl.getBeanInContext(ProjectTaskRelayEmailNotificationActionImpl.kt:64)
+	at com.airback.module.project.schedule.email.service.SendMailToFollowersAction.sendNotificationForCreateAction(SendMailToFollowersAction.kt:89)
+	at com.airback.schedule.jobs.ProjectSendingRelayEmailNotificationJob.executeJob(ProjectSendingRelayEmailNotificationJob.kt:59)
+	at com.airback.schedule.jobs.GenericQuartzJobBean.executeInternal(GenericQuartzJobBean.kt:41)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'm_prj_task.parentTaskId' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:970)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:387)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 25 common frames omitted
+13:05:57,345  WARN c.z.h.p.HikariPool:766 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m23s958ms).
+13:09:00,391 ERROR c.a.s.j.ProjectSendingRelayEmailNotificationJob:64 - Error while sending scheduler command
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'm_prj_task.parentTaskId' in 'field list'
+### The error may exist in file [/Users/robertnguyen/Workspace/airback-Release_8.0.8/airback-services/target/classes/sqlMap/project/TaskMapperExt.xml]
+### The error may involve com.airback.module.project.dao.TaskMapperExt.findTaskById-Inline
+### The error occurred while setting parameters
+### SQL: SELECT m_prj_task.id, m_prj_task.name, m_prj_task.percentagecomplete, m_prj_task.startDate, m_prj_task.endDate, m_prj_task.priority,                  m_prj_task.duration, m_prj_task.isestimated, m_prj_task.projectId, m_prj_task.dueDate, m_prj_task.description,                  m_prj_task.originalEstimate, m_prj_task.remainEstimate,                  m_prj_task.milestoneId, m_prj_task.createdTime, m_prj_task.lastUpdatedTime, m_prj_task.assignUser, m_prj_task.sAccountId, m_prj_task.parentTaskId,                  m_prj_milestone.name AS milestoneName, m_prj_project.name AS projectName, m_prj_project.shortname AS projectShortname, m_prj_task.status,                  m_prj_task.createdUser, m_prj_ticket_key.ticketKey AS ticketKey, s_user.avatarId AS assignUserAvatarId,                  concat(s_user.firstname, ' ', s_user.lastname) AS assignUserFullName,                  log_user.avatarId AS logByAvatarId, concat(log_user.firstname, ' ', log_user.lastname) AS logByFullName,                  affectedversion.id as affectedversion_id, affectedversion.projectId as affectedversion_projectid,                  affectedversion.description as affectedversion_description, affectedversion.duedate as affectedversion_duedate,                  affectedversion.name as affectedversion_name, affectedversion.createdUser as affectedversion_createdUser,                  affectedversion.createdTime as affectedversion_createdTime, affectedversion.lastUpdatedTime as affectedversion_lastUpdatedTime,                  component.id as component_id, component.projectId as component_projectid, component.name as component_name,                  component.userlead as component_userlead, component.description as component_description, component.createdUser as component_createdUser,                  component.createdTime as component_createdTime, component.lastUpdatedTime as component_lastUpdatedTime,                  parentTask.name AS parentTaskName, NULL AS parentTaskKey,                  (SELECT count(*)                     FROM m_comment                     WHERE m_comment.type='Project-Task' AND m_comment.typeId=m_prj_task.id) AS numComments,                  (SELECT count(*)                     FROM m_prj_task AS subtask_tbl                     WHERE subtask_tbl.parentTaskId = m_prj_task.id                  ) AS numSubTasks,                  (SELECT COALESCE(SUM(m_prj_time_logging.logValue), 0)                      FROM m_prj_time_logging                      WHERE m_prj_time_logging.projectId = m_prj_task.projectId                          AND m_prj_time_logging.type='Project-Task' AND m_prj_time_logging.typeId=m_prj_task.id AND m_prj_time_logging.isBillable = 1) AS billableHours,                  (SELECT COALESCE(SUM(m_prj_time_logging.logValue), 0)                      FROM m_prj_time_logging                      WHERE m_prj_time_logging.projectId = m_prj_task.projectId                          AND m_prj_time_logging.type='Project-Task' AND m_prj_time_logging.typeId=m_prj_task.id AND m_prj_time_logging.isBillable = 0) AS nonBillableHours,                  (SELECT COUNT(*)                      FROM m_monitor_item                      WHERE m_monitor_item.typeId = m_prj_task.id AND m_monitor_item.type = 'Project-Task') AS numFollowers             FROM m_prj_task               LEFT OUTER JOIN m_prj_project ON (m_prj_task.projectId = m_prj_project.id)               LEFT OUTER JOIN m_prj_milestone ON (m_prj_milestone.id = m_prj_task.milestoneId)               LEFT OUTER JOIN s_user ON (s_user.username = m_prj_task.assignUser)               LEFT OUTER JOIN s_user AS log_user ON (log_user.username = m_prj_task.createdUser)               LEFT OUTER JOIN m_prj_ticket_key ON (m_prj_task.id = m_prj_ticket_key.ticketId AND m_prj_ticket_key.ticketType = 'Project-Task')               LEFT OUTER JOIN m_prj_task AS parentTask ON (m_prj_task.parentTaskId = parentTask.id)               LEFT OUTER JOIN m_prj_ticket_relation AS relatedItem1 ON (relatedItem1.ticketId = m_prj_task.id AND relatedItem1.ticketType='Project-Task' AND relatedItem1.rel='AffVersion')               LEFT OUTER JOIN m_prj_version AS affectedversion ON (affectedversion.id = relatedItem1.typeId AND relatedItem1.type='Project-Version')               LEFT OUTER JOIN m_prj_ticket_relation AS relatedItem2 ON (relatedItem2.ticketId = m_prj_task.id AND relatedItem2.ticketType='Project-Task' AND relatedItem2.rel='Component')               LEFT OUTER JOIN m_prj_component AS component ON (component.id = relatedItem2.typeId AND relatedItem2.type = 'Project-Component')                       WHERE m_prj_task.id=?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'm_prj_task.parentTaskId' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'm_prj_task.parentTaskId' in 'field list'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:234)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy90.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:166)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy119.findTaskById(Unknown Source)
+	at com.airback.module.project.service.impl.TaskServiceImpl.findById(TaskServiceImpl.kt:77)
+	at com.airback.module.project.service.impl.TaskServiceImpl$$FastClassBySpringCGLIB$$b4c4bc12.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.airback.module.project.service.impl.TaskServiceImpl$$EnhancerBySpringCGLIB$$a6778d1f.findById(<generated>)
+	at com.airback.module.project.schedule.email.service.ProjectTaskRelayEmailNotificationActionImpl.getBeanInContext(ProjectTaskRelayEmailNotificationActionImpl.kt:97)
+	at com.airback.module.project.schedule.email.service.ProjectTaskRelayEmailNotificationActionImpl.getBeanInContext(ProjectTaskRelayEmailNotificationActionImpl.kt:64)
+	at com.airback.module.project.schedule.email.service.SendMailToFollowersAction.sendNotificationForCreateAction(SendMailToFollowersAction.kt:89)
+	at com.airback.schedule.jobs.ProjectSendingRelayEmailNotificationJob.executeJob(ProjectSendingRelayEmailNotificationJob.kt:59)
+	at com.airback.schedule.jobs.GenericQuartzJobBean.executeInternal(GenericQuartzJobBean.kt:41)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'm_prj_task.parentTaskId' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:970)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:387)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 25 common frames omitted
+13:20:06,189 ERROR o.a.j.c.u.d.ConnectionHelper:556 - Failed to execute SQL (stacktrace on DEBUG log level): com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 5,038 milliseconds ago.  The last packet sent successfully to the server was 5,039 milliseconds ago.
+13:20:06,339  INFO o.q.c.QuartzScheduler:585 - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+13:20:06,341  INFO o.s.s.q.SchedulerFactoryBean:844 - Shutting down Quartz Scheduler
+13:20:06,342  INFO o.q.c.QuartzScheduler:666 - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+13:20:06,342  INFO o.q.c.QuartzScheduler:585 - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+13:20:06,344  INFO o.q.c.QuartzScheduler:740 - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+13:20:06,381  INFO o.s.s.c.ThreadPoolTaskExecutor:208 - Shutting down ExecutorService 'applicationTaskExecutor'
+13:20:06,424  INFO o.a.j.c.RepositoryImpl:1087 - Shutting down repository...
+14:44:33,291  INFO c.a.s.DefaultServerRunner:50 - Starting DefaultServerRunner on Mis-MacBook-Air.local with PID 2010 (/Users/robertnguyen/Workspace/airback-Release_8.0.8/airback-server-runner/target/classes started by robertnguyen in /Users/robertnguyen/Workspace/airback-Release_8.0.8)
+14:44:33,319  INFO c.a.s.DefaultServerRunner:675 - No active profile set, falling back to default profiles: default
+14:44:49,258  INFO o.s.c.a.ConfigurationClassPostProcessor:380 - Cannot enhance @Configuration bean definition 'com.vaadin.spring.VaadinConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+14:44:55,911  INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$41e6945b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:44:59,582  WARN i.u.w.jsr:68 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+14:44:59,881  INFO i.u.servlet:364 - Initializing Spring embedded WebApplicationContext
+14:44:59,883  INFO o.s.w.c.ContextLoader:296 - Root WebApplicationContext: initialization completed in 26161 ms
+14:45:00,337  INFO c.v.s.b.i.VaadinServletConfiguration:261 - Registering Vaadin servlet
+14:45:00,337  INFO c.v.s.b.i.VaadinServletConfiguration:263 - Servlet will be mapped to URLs [/vaadinServlet/*, /VAADIN/*]
+14:45:00,465  INFO c.v.s.b.i.VaadinServletConfiguration:282 - Setting servlet init parameters
+14:45:00,466  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [productionMode] = [false]
+14:45:00,468  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [resourceCacheTime] = [3600]
+14:45:00,469  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [heartbeatInterval] = [300]
+14:45:00,470  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [closeIdleSessions] = [false]
+14:45:02,354  INFO c.z.h.HikariDataSource:110 - HikariPool-1 - Starting...
+14:45:05,171  INFO c.z.h.HikariDataSource:123 - HikariPool-1 - Start completed.
+14:45:05,485  INFO o.f.c.i.l.VersionPrinter:49 - Flyway Community Edition 5.2.4 by Boxfuse
+14:45:05,546  INFO o.f.c.i.d.DatabaseFactory:49 - Database: jdbc:mysql://localhost:3306/airback (MySQL 8.0)
+14:45:06,733  INFO o.f.c.i.c.DbMigrate:49 - Current version of schema `airback`: 20190416.1
+14:45:06,735  WARN o.f.c.i.c.DbMigrate:53 - Schema `airback` has a version (20190416.1) that is newer than the latest available migration (20190406.1) !
+14:45:06,739  INFO o.f.c.i.c.DbMigrate:49 - Schema `airback` is up to date. No migration necessary.
+14:45:21,188  WARN o.a.j.c.u.RepositoryLock:134 - Existing lock file /Users/robertnguyen/Workspace/airback-Release_8.0.8/repo2/wiki-workspaces/.lock detected. Repository was not shut down properly.
+14:45:21,199  INFO o.a.j.c.RepositoryImpl:259 - Starting repository...
+14:45:22,150  INFO o.a.j.c.RepositoryImpl:2035 - initializing workspace 'wiki'...
+14:45:22,454  INFO o.a.j.c.RepositoryImpl:2039 - workspace 'wiki' initialized
+14:45:22,473  INFO o.a.j.c.RepositoryImpl:455 - SecurityManager = class org.apache.jackrabbit.core.security.simple.SimpleSecurityManager
+14:45:22,481  INFO o.a.j.c.s.s.SimpleSecurityManager:137 - init: using Repository LoginModule configuration for Jackrabbit
+14:45:22,503  INFO o.a.j.c.RepositoryImpl:367 - Repository started (1304ms)
+14:45:22,584  INFO c.a.m.p.PageSessionFactory:41 - Register node types
+14:45:22,776  INFO c.a.m.p.PageSessionFactory:66 - Register airback content type
+14:45:24,074  WARN o.a.j.c.u.RepositoryLock:134 - Existing lock file /Users/robertnguyen/Workspace/airback-Release_8.0.8/repo2/workspaces/.lock detected. Repository was not shut down properly.
+14:45:24,077  INFO o.a.j.c.RepositoryImpl:259 - Starting repository...
+14:45:24,245  INFO o.a.j.c.j.DatabaseJournal:374 - Initialized local revision to 356
+14:45:24,246  INFO o.a.j.c.j.DatabaseJournal:383 - Cluster revision janitor thread not started
+14:45:24,247  INFO o.a.j.c.j.DatabaseJournal:280 - DatabaseJournal initialized.
+14:45:24,304  INFO o.a.j.c.RepositoryImpl:2035 - initializing workspace 'ecm'...
+14:45:24,371  INFO o.a.j.c.RepositoryImpl:2039 - workspace 'ecm' initialized
+14:45:24,371  INFO o.a.j.c.RepositoryImpl:455 - SecurityManager = class org.apache.jackrabbit.core.security.simple.SimpleSecurityManager
+14:45:24,372  INFO o.a.j.c.RepositoryImpl:2035 - initializing workspace 'default2'...
+14:45:24,396  INFO o.a.j.c.RepositoryImpl:2039 - workspace 'default2' initialized
+14:45:24,397  INFO o.a.j.c.s.s.SimpleSecurityManager:137 - init: using Repository LoginModule configuration for Jackrabbit
+14:45:24,419  INFO o.a.j.c.RepositoryImpl:367 - Repository started (342ms)
+14:45:24,423  INFO c.a.m.e.ContentSessionFactory:40 - Register node types
+14:45:24,434  INFO c.a.m.e.ContentSessionFactory:66 - Register airback content type
+14:45:26,620  INFO c.a.v.m.s.ComponentScannerService:51 - Started resolving view and presenter classes
+14:45:31,430  INFO c.a.v.m.s.ComponentScannerService:61 - Resolved view and presenter classes com.airback.vaadin.mvp.service.ComponentScannerService@26a004ed that has 65 view classes and 58 presenter classes
+14:45:34,874  INFO o.s.s.c.ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
+14:45:35,930  INFO c.v.s.b.i.VaadinServletConfiguration:121 - Checking the application context for Vaadin UI mappings
+14:45:35,945  INFO c.v.s.b.i.VaadinServletConfiguration:110 - Forwarding @SpringUI URLs from {}
+14:45:35,952  INFO c.v.s.b.i.VaadinServletConfiguration:206 - Registering Vaadin servlet of type [com.vaadin.spring.server.SpringVaadinServlet]
+14:45:37,151  INFO o.q.i.StdSchedulerFactory:1208 - Using default implementation for ThreadExecutor
+14:45:37,229  INFO o.q.c.SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+14:45:37,230  INFO o.q.c.QuartzScheduler:229 - Quartz Scheduler v.2.3.0 created.
+14:45:37,233  INFO o.q.s.RAMJobStore:155 - RAMJobStore initialized.
+14:45:37,250  INFO o.q.c.QuartzScheduler:294 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+14:45:37,251  INFO o.q.i.StdSchedulerFactory:1362 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+14:45:37,251  INFO o.q.i.StdSchedulerFactory:1366 - Quartz scheduler version: 2.3.0
+14:45:37,252  INFO o.q.c.QuartzScheduler:2287 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@3e2ee637
+14:45:37,822  INFO o.s.s.q.SchedulerFactoryBean:726 - Starting Quartz Scheduler now
+14:45:37,824  INFO o.q.c.QuartzScheduler:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+14:45:37,827  INFO c.a.s.ContextStartedListener:44 - airback is ready for usage
+14:45:38,365  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler mapped to context-path: /*
+14:45:38,366  INFO o.a.c.AtmosphereFramework:588 - Installed the following AtmosphereInterceptor mapped to AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler
+14:45:38,511  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using org.atmosphere.util.VoidAnnotationProcessor for processing annotation
+14:45:38,555  INFO o.a.u.ForkJoinPool:588 - Using ForkJoinPool  java.util.concurrent.ForkJoinPool. Set the org.atmosphere.cpr.broadcaster.maxAsyncWriteThreads to -1 to fully use its power.
+14:45:38,571  INFO o.a.c.AtmosphereFramework:588 - Installed WebSocketProtocol org.atmosphere.websocket.protocol.SimpleHttpProtocol 
+14:45:38,608  INFO o.a.c.JSR356AsyncSupport:588 - JSR 356 Mapping path 
+14:45:38,629  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /
+14:45:38,651  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}
+14:45:38,655  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}
+14:45:38,656  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}/{path2}
+14:45:38,656  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}/{path2}/{path3}
+14:45:38,657  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}/{path2}/{path3}/{path4}
+14:45:38,658  INFO o.a.c.AtmosphereFramework:588 - Installing Default AtmosphereInterceptors
+14:45:38,670  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CorsInterceptor : CORS Interceptor Support
+14:45:38,673  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CacheHeadersInterceptor : Default Response's Headers Interceptor
+14:45:38,676  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.PaddingAtmosphereInterceptor : Browser Padding Interceptor Support
+14:45:38,678  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.AndroidAtmosphereInterceptor : Android Interceptor Support
+14:45:38,680  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.HeartbeatInterceptor : Heartbeat Interceptor Support
+14:45:38,688  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.SSEAtmosphereInterceptor : SSE Interceptor Support
+14:45:38,689  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JSONPAtmosphereInterceptor : JSONP Interceptor Support
+14:45:38,694  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JavaScriptProtocol : Atmosphere JavaScript Protocol
+14:45:38,695  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor : org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor
+14:45:38,704  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.OnDisconnectInterceptor : Browser disconnection detection
+14:45:38,707  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.IdleResourceInterceptor : org.atmosphere.interceptor.IdleResourceInterceptor
+14:45:38,707  INFO o.a.c.AtmosphereFramework:588 - Set org.atmosphere.cpr.AtmosphereInterceptor.disableDefaults to disable them.
+14:45:38,710  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor CORS Interceptor Support with priority FIRST_BEFORE_DEFAULT 
+14:45:38,741  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Default Response's Headers Interceptor with priority AFTER_DEFAULT 
+14:45:38,743  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser Padding Interceptor Support with priority AFTER_DEFAULT 
+14:45:38,744  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Android Interceptor Support with priority AFTER_DEFAULT 
+14:45:38,745  INFO o.a.i.HeartbeatInterceptor:588 - HeartbeatInterceptor configured with padding value 'X', client frequency 60 seconds and server frequency 0 seconds
+14:45:38,745  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Heartbeat Interceptor Support with priority AFTER_DEFAULT 
+14:45:38,746  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor SSE Interceptor Support with priority AFTER_DEFAULT 
+14:45:38,746  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor JSONP Interceptor Support with priority AFTER_DEFAULT 
+14:45:38,747  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Atmosphere JavaScript Protocol with priority AFTER_DEFAULT 
+14:45:38,747  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor with priority AFTER_DEFAULT 
+14:45:38,748  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser disconnection detection with priority AFTER_DEFAULT 
+14:45:38,750  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.IdleResourceInterceptor with priority BEFORE_DEFAULT 
+14:45:38,751  INFO o.a.c.AtmosphereFramework:588 - Using EndpointMapper class org.atmosphere.util.DefaultEndpointMapper
+14:45:38,752  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterCache: org.atmosphere.cache.UUIDBroadcasterCache
+14:45:38,753  INFO o.a.c.AtmosphereFramework:588 - Default Broadcaster Class: org.atmosphere.cpr.DefaultBroadcaster
+14:45:38,754  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Shared List Resources: false
+14:45:38,754  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Polling Wait Time 100
+14:45:38,755  INFO o.a.c.AtmosphereFramework:588 - Shared ExecutorService supported: true
+14:45:38,756  INFO o.a.c.AtmosphereFramework:588 - Messaging ExecutorService Pool Size unavailable - Not instance of ThreadPoolExecutor
+14:45:38,756  INFO o.a.c.AtmosphereFramework:588 - Async I/O Thread Pool Size: 200
+14:45:38,757  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterFactory: org.atmosphere.cpr.DefaultBroadcasterFactory
+14:45:38,757  INFO o.a.c.AtmosphereFramework:588 - Using AtmosphereResurceFactory: org.atmosphere.cpr.DefaultAtmosphereResourceFactory
+14:45:38,758  INFO o.a.c.AtmosphereFramework:588 - Using WebSocketProcessor: org.atmosphere.websocket.DefaultWebSocketProcessor
+14:45:38,773  INFO o.a.c.AtmosphereFramework:588 - Invoke AtmosphereInterceptor on WebSocket message true
+14:45:38,773  INFO o.a.c.AtmosphereFramework:588 - HttpSession supported: true
+14:45:38,774  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using DefaultAtmosphereObjectFactory for dependency injection and object creation
+14:45:38,786  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using async support: org.atmosphere.container.JSR356AsyncSupport running under container: Undertow - 2.0.17.Final using javax.servlet/3.0 and jsr356/WebSocket API
+14:45:38,787  INFO o.a.c.AtmosphereFramework:588 - Atmosphere Framework 2.4.30.vaadin1 started.
+14:45:38,826  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor  Track Message Size Interceptor using | with priority BEFORE_DEFAULT 
+14:45:39,005  INFO o.xnio:104 - XNIO version 3.3.8.Final
+14:45:39,118  INFO o.x.nio:55 - XNIO NIO Implementation Version 3.3.8.Final
+14:45:39,497  INFO o.s.b.w.e.u.UndertowServletWebServer:148 - Undertow started on port(s) 60000 (http) with context path ''
+14:45:39,511  INFO c.a.s.DefaultServerRunner:59 - Started DefaultServerRunner in 70.472 seconds (JVM running for 79.137)
+14:46:56,349  WARN c.v.s.DefaultDeploymentConfiguration:274 - 
+=================================================================
+Vaadin is running in DEBUG MODE.
+Add productionMode=true to web.xml to disable debug features.
+To show debug window, add ?debug to your application URL.
+=================================================================
+14:46:56,427  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler mapped to context-path: /*
+14:46:56,428  INFO o.a.c.AtmosphereFramework:588 - Installed the following AtmosphereInterceptor mapped to AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler
+14:46:56,453  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using org.atmosphere.util.VoidAnnotationProcessor for processing annotation
+14:46:56,464  INFO o.a.u.ForkJoinPool:588 - Using ForkJoinPool  java.util.concurrent.ForkJoinPool. Set the org.atmosphere.cpr.broadcaster.maxAsyncWriteThreads to -1 to fully use its power.
+14:46:56,467  INFO o.a.c.AtmosphereFramework:588 - Installed WebSocketProtocol org.atmosphere.websocket.protocol.SimpleHttpProtocol 
+14:46:56,468  WARN o.a.u.IOUtils:588 - More than one Servlet Mapping defined. WebSocket may not work io.undertow.servlet.spec.ServletRegistrationImpl@34a7d5b8
+14:46:56,481  INFO o.a.c.JSR356AsyncSupport:588 - JSR 356 Mapping path /vaadinServlet
+14:46:56,507  WARN o.a.c.DefaultAsyncSupportResolver:588 - Failed to create AsyncSupport class: class org.atmosphere.container.JSR356AsyncSupport, error: java.lang.reflect.InvocationTargetException
+14:46:56,604 ERROR o.a.c.DefaultAsyncSupportResolver:588 - Real error: UT003017: Cannot add endpoint after deployment
+java.lang.IllegalStateException: UT003017: Cannot add endpoint after deployment
+	at io.undertow.websockets.jsr.ServerWebSocketContainer.addEndpoint(ServerWebSocketContainer.java:745)
+	at org.atmosphere.container.JSR356AsyncSupport.<init>(JSR356AsyncSupport.java:99)
+	at org.atmosphere.container.JSR356AsyncSupport.<init>(JSR356AsyncSupport.java:42)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.atmosphere.cpr.DefaultAsyncSupportResolver.newCometSupport(DefaultAsyncSupportResolver.java:237)
+	at org.atmosphere.cpr.DefaultAsyncSupportResolver.resolveWebSocket(DefaultAsyncSupportResolver.java:308)
+	at org.atmosphere.cpr.DefaultAsyncSupportResolver.resolve(DefaultAsyncSupportResolver.java:294)
+	at org.atmosphere.cpr.AtmosphereFramework.autoDetectContainer(AtmosphereFramework.java:2092)
+	at org.atmosphere.cpr.AtmosphereFramework.init(AtmosphereFramework.java:914)
+	at org.atmosphere.cpr.AtmosphereFramework.init(AtmosphereFramework.java:838)
+	at com.vaadin.server.communication.PushRequestHandler.initAtmosphere(PushRequestHandler.java:206)
+	at com.vaadin.server.communication.PushRequestHandler.<init>(PushRequestHandler.java:79)
+	at com.vaadin.server.VaadinServletService.createRequestHandlers(VaadinServletService.java:68)
+	at com.vaadin.spring.server.SpringVaadinServletService.createRequestHandlers(SpringVaadinServletService.java:63)
+	at com.vaadin.server.VaadinService.init(VaadinService.java:217)
+	at com.vaadin.spring.server.SpringVaadinServlet.createServletService(SpringVaadinServlet.java:151)
+	at com.vaadin.server.VaadinServlet.createServletService(VaadinServlet.java:377)
+	at com.vaadin.server.VaadinServlet.init(VaadinServlet.java:207)
+	at io.undertow.servlet.core.LifecyleInterceptorInvocation.proceed(LifecyleInterceptorInvocation.java:117)
+	at io.undertow.servlet.core.ManagedServlet$DefaultInstanceStrategy.start(ManagedServlet.java:303)
+	at io.undertow.servlet.core.ManagedServlet.forceInit(ManagedServlet.java:210)
+	at io.undertow.servlet.handlers.ServletChain.forceInit(ServletChain.java:130)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:63)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:364)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+14:46:56,745  INFO o.a.c.AtmosphereFramework:588 - Installing Default AtmosphereInterceptors
+14:46:56,746  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CorsInterceptor : CORS Interceptor Support
+14:46:56,750  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CacheHeadersInterceptor : Default Response's Headers Interceptor
+14:46:56,752  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.PaddingAtmosphereInterceptor : Browser Padding Interceptor Support
+14:46:56,753  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.AndroidAtmosphereInterceptor : Android Interceptor Support
+14:46:56,754  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.HeartbeatInterceptor : Heartbeat Interceptor Support
+14:46:56,757  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.SSEAtmosphereInterceptor : SSE Interceptor Support
+14:46:56,758  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JSONPAtmosphereInterceptor : JSONP Interceptor Support
+14:46:56,759  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JavaScriptProtocol : Atmosphere JavaScript Protocol
+14:46:56,760  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor : org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor
+14:46:56,760  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.OnDisconnectInterceptor : Browser disconnection detection
+14:46:56,761  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.IdleResourceInterceptor : org.atmosphere.interceptor.IdleResourceInterceptor
+14:46:56,762  INFO o.a.c.AtmosphereFramework:588 - Set org.atmosphere.cpr.AtmosphereInterceptor.disableDefaults to disable them.
+14:46:56,765  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor CORS Interceptor Support with priority FIRST_BEFORE_DEFAULT 
+14:46:56,766  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Default Response's Headers Interceptor with priority AFTER_DEFAULT 
+14:46:56,766  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser Padding Interceptor Support with priority AFTER_DEFAULT 
+14:46:56,767  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Android Interceptor Support with priority AFTER_DEFAULT 
+14:46:56,829  INFO o.a.i.HeartbeatInterceptor:588 - HeartbeatInterceptor configured with padding value 'X', client frequency 60 seconds and server frequency 0 seconds
+14:46:56,830  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Heartbeat Interceptor Support with priority AFTER_DEFAULT 
+14:46:56,830  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor SSE Interceptor Support with priority AFTER_DEFAULT 
+14:46:56,831  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor JSONP Interceptor Support with priority AFTER_DEFAULT 
+14:46:56,832  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Atmosphere JavaScript Protocol with priority AFTER_DEFAULT 
+14:46:56,833  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor with priority AFTER_DEFAULT 
+14:46:56,833  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser disconnection detection with priority AFTER_DEFAULT 
+14:46:56,834  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.IdleResourceInterceptor with priority BEFORE_DEFAULT 
+14:46:56,835  INFO o.a.c.AtmosphereFramework:588 - Using EndpointMapper class org.atmosphere.util.DefaultEndpointMapper
+14:46:56,836  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterCache: org.atmosphere.cache.UUIDBroadcasterCache
+14:46:56,838  INFO o.a.c.AtmosphereFramework:588 - Default Broadcaster Class: org.atmosphere.cpr.DefaultBroadcaster
+14:46:56,849  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Shared List Resources: false
+14:46:56,849  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Polling Wait Time 100
+14:46:56,850  INFO o.a.c.AtmosphereFramework:588 - Shared ExecutorService supported: true
+14:46:56,851  INFO o.a.c.AtmosphereFramework:588 - Messaging ExecutorService Pool Size unavailable - Not instance of ThreadPoolExecutor
+14:46:56,853  INFO o.a.c.AtmosphereFramework:588 - Async I/O Thread Pool Size: 200
+14:46:56,854  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterFactory: org.atmosphere.cpr.DefaultBroadcasterFactory
+14:46:56,855  INFO o.a.c.AtmosphereFramework:588 - Using AtmosphereResurceFactory: org.atmosphere.cpr.DefaultAtmosphereResourceFactory
+14:46:56,859  INFO o.a.c.AtmosphereFramework:588 - Using WebSocketProcessor: org.atmosphere.websocket.DefaultWebSocketProcessor
+14:46:56,865  INFO o.a.c.AtmosphereFramework:588 - Invoke AtmosphereInterceptor on WebSocket message true
+14:46:56,866  INFO o.a.c.AtmosphereFramework:588 - HttpSession supported: true
+14:46:56,871  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using DefaultAtmosphereObjectFactory for dependency injection and object creation
+14:46:56,872  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using async support: org.atmosphere.container.Servlet30CometSupport running under container: Undertow - 2.0.17.Final using javax.servlet/3.0
+14:46:56,873  INFO o.a.c.AtmosphereFramework:588 - Atmosphere Framework 2.4.30.vaadin1 started.
+14:46:56,874  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor  Track Message Size Interceptor using | with priority BEFORE_DEFAULT 
+14:46:57,408  INFO c.v.s.VaadinServlet:825 - Requested resource [/VAADIN/widgetsets/com.airback.widgetset.airbackWidgetSet/com.airback.widgetset.airbackWidgetSet.nocache.js] not found from filesystem or through class loader. Add widgetset and/or theme JAR to your classpath or add files to WebContent/VAADIN folder.
+14:46:58,256  INFO c.a.v.AppUI:59 - Load account info of sub-domain localhost from localhost
+14:46:58,281  INFO c.a.v.AppUI:65 - Billing account info 
+16:03:57,727  INFO c.v.s.VaadinServlet:825 - Requested resource [/VAADIN/widgetsets/com.airback.widgetset.airbackWidgetSet/com.airback.widgetset.airbackWidgetSet.nocache.js] not found from filesystem or through class loader. Add widgetset and/or theme JAR to your classpath or add files to WebContent/VAADIN folder.
+16:04:21,141  INFO c.v.s.VaadinServlet:825 - Requested resource [/VAADIN/widgetsets/com.airback.widgetset.airbackWidgetSet/com.airback.widgetset.airbackWidgetSet.nocache.js] not found from filesystem or through class loader. Add widgetset and/or theme JAR to your classpath or add files to WebContent/VAADIN folder.
+16:04:21,213  INFO c.a.v.AppUI:59 - Load account info of sub-domain localhost from localhost
+16:04:21,218  INFO c.a.v.AppUI:65 - Billing account info 
+16:44:33,133 ERROR o.a.j.c.u.d.ConnectionHelper:556 - Failed to execute SQL (stacktrace on DEBUG log level): com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 5,085 milliseconds ago.  The last packet sent successfully to the server was 5,086 milliseconds ago.
+16:44:33,369  INFO o.q.c.QuartzScheduler:585 - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+16:44:33,372  INFO o.s.s.q.SchedulerFactoryBean:844 - Shutting down Quartz Scheduler
+16:44:33,377  INFO o.q.c.QuartzScheduler:666 - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+16:44:33,378  INFO o.q.c.QuartzScheduler:585 - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+16:44:33,380  INFO o.q.c.QuartzScheduler:740 - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+16:44:33,398  INFO o.s.s.c.ThreadPoolTaskExecutor:208 - Shutting down ExecutorService 'applicationTaskExecutor'
+16:44:33,429  INFO o.a.j.c.RepositoryImpl:1087 - Shutting down repository...
+19:52:20,339  INFO c.a.s.DefaultServerRunner:50 - Starting DefaultServerRunner on Mis-MacBook-Air.local with PID 4529 (/Users/robertnguyen/Workspace/airback-Release_8.0.8/airback-server-runner/target/classes started by robertnguyen in /Users/robertnguyen/Workspace/airback-Release_8.0.8)
+19:52:20,350  INFO c.a.s.DefaultServerRunner:675 - No active profile set, falling back to default profiles: default
+19:52:29,895  INFO o.s.c.a.ConfigurationClassPostProcessor:380 - Cannot enhance @Configuration bean definition 'com.vaadin.spring.VaadinConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+19:52:32,973  INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2a7b734e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+19:52:34,755  WARN i.u.w.jsr:68 - UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+19:52:34,901  INFO i.u.servlet:364 - Initializing Spring embedded WebApplicationContext
+19:52:34,902  INFO o.s.w.c.ContextLoader:296 - Root WebApplicationContext: initialization completed in 14278 ms
+19:52:35,210  INFO c.v.s.b.i.VaadinServletConfiguration:261 - Registering Vaadin servlet
+19:52:35,214  INFO c.v.s.b.i.VaadinServletConfiguration:263 - Servlet will be mapped to URLs [/vaadinServlet/*, /VAADIN/*]
+19:52:35,271  INFO c.v.s.b.i.VaadinServletConfiguration:282 - Setting servlet init parameters
+19:52:35,272  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [productionMode] = [false]
+19:52:35,273  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [resourceCacheTime] = [3600]
+19:52:35,274  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [heartbeatInterval] = [300]
+19:52:35,274  INFO c.v.s.b.i.VaadinServletConfiguration:306 - Set servlet init parameter [closeIdleSessions] = [false]
+19:52:36,556  INFO c.z.h.HikariDataSource:110 - HikariPool-1 - Starting...
+19:52:38,664  INFO c.z.h.HikariDataSource:123 - HikariPool-1 - Start completed.
+19:52:38,960  INFO o.f.c.i.l.VersionPrinter:49 - Flyway Community Edition 5.2.4 by Boxfuse
+19:52:39,119  INFO o.f.c.i.d.DatabaseFactory:49 - Database: jdbc:mysql://localhost:3306/airback (MySQL 8.0)
+19:52:40,265  INFO o.f.c.i.c.DbMigrate:49 - Current version of schema `airback`: 20190416.1
+19:52:40,266  WARN o.f.c.i.c.DbMigrate:53 - Schema `airback` has a version (20190416.1) that is newer than the latest available migration (20190406.1) !
+19:52:40,268  INFO o.f.c.i.c.DbMigrate:49 - Schema `airback` is up to date. No migration necessary.
+19:52:53,800  WARN o.a.j.c.u.RepositoryLock:134 - Existing lock file /Users/robertnguyen/Workspace/airback-Release_8.0.8/repo2/wiki-workspaces/.lock detected. Repository was not shut down properly.
+19:52:53,810  INFO o.a.j.c.RepositoryImpl:259 - Starting repository...
+19:52:54,943  INFO o.a.j.c.RepositoryImpl:2035 - initializing workspace 'wiki'...
+19:52:55,337  INFO o.a.j.c.RepositoryImpl:2039 - workspace 'wiki' initialized
+19:52:55,360  INFO o.a.j.c.RepositoryImpl:455 - SecurityManager = class org.apache.jackrabbit.core.security.simple.SimpleSecurityManager
+19:52:55,371  INFO o.a.j.c.s.s.SimpleSecurityManager:137 - init: using Repository LoginModule configuration for Jackrabbit
+19:52:55,401  INFO o.a.j.c.RepositoryImpl:367 - Repository started (1591ms)
+19:52:55,500  INFO c.a.m.p.PageSessionFactory:41 - Register node types
+19:52:55,603  INFO c.a.m.p.PageSessionFactory:66 - Register airback content type
+19:52:57,042  WARN o.a.j.c.u.RepositoryLock:134 - Existing lock file /Users/robertnguyen/Workspace/airback-Release_8.0.8/repo2/workspaces/.lock detected. Repository was not shut down properly.
+19:52:57,043  INFO o.a.j.c.RepositoryImpl:259 - Starting repository...
+19:52:57,197  INFO o.a.j.c.j.DatabaseJournal:374 - Initialized local revision to 360
+19:52:57,198  INFO o.a.j.c.j.DatabaseJournal:383 - Cluster revision janitor thread not started
+19:52:57,199  INFO o.a.j.c.j.DatabaseJournal:280 - DatabaseJournal initialized.
+19:52:57,235  INFO o.a.j.c.RepositoryImpl:2035 - initializing workspace 'ecm'...
+19:52:57,270  INFO o.a.j.c.RepositoryImpl:2039 - workspace 'ecm' initialized
+19:52:57,271  INFO o.a.j.c.RepositoryImpl:455 - SecurityManager = class org.apache.jackrabbit.core.security.simple.SimpleSecurityManager
+19:52:57,272  INFO o.a.j.c.RepositoryImpl:2035 - initializing workspace 'default2'...
+19:52:57,289  INFO o.a.j.c.RepositoryImpl:2039 - workspace 'default2' initialized
+19:52:57,290  INFO o.a.j.c.s.s.SimpleSecurityManager:137 - init: using Repository LoginModule configuration for Jackrabbit
+19:52:57,307  INFO o.a.j.c.RepositoryImpl:367 - Repository started (264ms)
+19:52:57,310  INFO c.a.m.e.ContentSessionFactory:40 - Register node types
+19:52:57,318  INFO c.a.m.e.ContentSessionFactory:66 - Register airback content type
+19:52:59,440  INFO c.a.v.m.s.ComponentScannerService:51 - Started resolving view and presenter classes
+19:53:06,558  INFO c.a.v.m.s.ComponentScannerService:61 - Resolved view and presenter classes com.airback.vaadin.mvp.service.ComponentScannerService@53813f01 that has 65 view classes and 58 presenter classes
+19:53:10,871  INFO o.s.s.c.ThreadPoolTaskExecutor:171 - Initializing ExecutorService 'applicationTaskExecutor'
+19:53:12,247  INFO c.v.s.b.i.VaadinServletConfiguration:121 - Checking the application context for Vaadin UI mappings
+19:53:12,276  INFO c.v.s.b.i.VaadinServletConfiguration:110 - Forwarding @SpringUI URLs from {}
+19:53:12,281  INFO c.v.s.b.i.VaadinServletConfiguration:206 - Registering Vaadin servlet of type [com.vaadin.spring.server.SpringVaadinServlet]
+19:53:13,920  INFO o.q.i.StdSchedulerFactory:1208 - Using default implementation for ThreadExecutor
+19:53:14,042  INFO o.q.c.SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+19:53:14,046  INFO o.q.c.QuartzScheduler:229 - Quartz Scheduler v.2.3.0 created.
+19:53:14,052  INFO o.q.s.RAMJobStore:155 - RAMJobStore initialized.
+19:53:14,072  INFO o.q.c.QuartzScheduler:294 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+19:53:14,073  INFO o.q.i.StdSchedulerFactory:1362 - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+19:53:14,073  INFO o.q.i.StdSchedulerFactory:1366 - Quartz scheduler version: 2.3.0
+19:53:14,074  INFO o.q.c.QuartzScheduler:2287 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@78762e87
+19:53:14,656  INFO o.s.s.q.SchedulerFactoryBean:726 - Starting Quartz Scheduler now
+19:53:14,657  INFO o.q.c.QuartzScheduler:547 - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+19:53:14,663  INFO c.a.s.ContextStartedListener:44 - airback is ready for usage
+19:53:15,270  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler mapped to context-path: /*
+19:53:15,279  INFO o.a.c.AtmosphereFramework:588 - Installed the following AtmosphereInterceptor mapped to AtmosphereHandler com.vaadin.server.communication.PushAtmosphereHandler
+19:53:15,432  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using org.atmosphere.util.VoidAnnotationProcessor for processing annotation
+19:53:15,477  INFO o.a.u.ForkJoinPool:588 - Using ForkJoinPool  java.util.concurrent.ForkJoinPool. Set the org.atmosphere.cpr.broadcaster.maxAsyncWriteThreads to -1 to fully use its power.
+19:53:15,507  INFO o.a.c.AtmosphereFramework:588 - Installed WebSocketProtocol org.atmosphere.websocket.protocol.SimpleHttpProtocol 
+19:53:15,543  INFO o.a.c.JSR356AsyncSupport:588 - JSR 356 Mapping path 
+19:53:15,559  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /
+19:53:15,574  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}
+19:53:15,576  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}
+19:53:15,577  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}/{path2}
+19:53:15,578  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}/{path2}/{path3}
+19:53:15,578  INFO i.u.w.jsr:747 - UT026005: Adding programmatic server endpoint class org.atmosphere.container.JSR356Endpoint for path /{path0}/{path1}/{path2}/{path3}/{path4}
+19:53:15,579  INFO o.a.c.AtmosphereFramework:588 - Installing Default AtmosphereInterceptors
+19:53:15,584  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CorsInterceptor : CORS Interceptor Support
+19:53:15,585  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.CacheHeadersInterceptor : Default Response's Headers Interceptor
+19:53:15,587  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.PaddingAtmosphereInterceptor : Browser Padding Interceptor Support
+19:53:15,589  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.AndroidAtmosphereInterceptor : Android Interceptor Support
+19:53:15,591  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.HeartbeatInterceptor : Heartbeat Interceptor Support
+19:53:15,593  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.SSEAtmosphereInterceptor : SSE Interceptor Support
+19:53:15,599  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JSONPAtmosphereInterceptor : JSONP Interceptor Support
+19:53:15,605  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.JavaScriptProtocol : Atmosphere JavaScript Protocol
+19:53:15,606  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor : org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor
+19:53:15,609  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.OnDisconnectInterceptor : Browser disconnection detection
+19:53:15,611  INFO o.a.c.AtmosphereFramework:588 - 	org.atmosphere.interceptor.IdleResourceInterceptor : org.atmosphere.interceptor.IdleResourceInterceptor
+19:53:15,613  INFO o.a.c.AtmosphereFramework:588 - Set org.atmosphere.cpr.AtmosphereInterceptor.disableDefaults to disable them.
+19:53:15,618  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor CORS Interceptor Support with priority FIRST_BEFORE_DEFAULT 
+19:53:15,644  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Default Response's Headers Interceptor with priority AFTER_DEFAULT 
+19:53:15,646  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser Padding Interceptor Support with priority AFTER_DEFAULT 
+19:53:15,647  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Android Interceptor Support with priority AFTER_DEFAULT 
+19:53:15,647  INFO o.a.i.HeartbeatInterceptor:588 - HeartbeatInterceptor configured with padding value 'X', client frequency 60 seconds and server frequency 0 seconds
+19:53:15,648  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Heartbeat Interceptor Support with priority AFTER_DEFAULT 
+19:53:15,648  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor SSE Interceptor Support with priority AFTER_DEFAULT 
+19:53:15,649  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor JSONP Interceptor Support with priority AFTER_DEFAULT 
+19:53:15,649  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Atmosphere JavaScript Protocol with priority AFTER_DEFAULT 
+19:53:15,650  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor with priority AFTER_DEFAULT 
+19:53:15,651  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor Browser disconnection detection with priority AFTER_DEFAULT 
+19:53:15,651  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor org.atmosphere.interceptor.IdleResourceInterceptor with priority BEFORE_DEFAULT 
+19:53:15,652  INFO o.a.c.AtmosphereFramework:588 - Using EndpointMapper class org.atmosphere.util.DefaultEndpointMapper
+19:53:15,653  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterCache: org.atmosphere.cache.UUIDBroadcasterCache
+19:53:15,653  INFO o.a.c.AtmosphereFramework:588 - Default Broadcaster Class: org.atmosphere.cpr.DefaultBroadcaster
+19:53:15,654  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Shared List Resources: false
+19:53:15,654  INFO o.a.c.AtmosphereFramework:588 - Broadcaster Polling Wait Time 100
+19:53:15,655  INFO o.a.c.AtmosphereFramework:588 - Shared ExecutorService supported: true
+19:53:15,655  INFO o.a.c.AtmosphereFramework:588 - Messaging ExecutorService Pool Size unavailable - Not instance of ThreadPoolExecutor
+19:53:15,656  INFO o.a.c.AtmosphereFramework:588 - Async I/O Thread Pool Size: 200
+19:53:15,656  INFO o.a.c.AtmosphereFramework:588 - Using BroadcasterFactory: org.atmosphere.cpr.DefaultBroadcasterFactory
+19:53:15,657  INFO o.a.c.AtmosphereFramework:588 - Using AtmosphereResurceFactory: org.atmosphere.cpr.DefaultAtmosphereResourceFactory
+19:53:15,657  INFO o.a.c.AtmosphereFramework:588 - Using WebSocketProcessor: org.atmosphere.websocket.DefaultWebSocketProcessor
+19:53:15,673  INFO o.a.c.AtmosphereFramework:588 - Invoke AtmosphereInterceptor on WebSocket message true
+19:53:15,673  INFO o.a.c.AtmosphereFramework:588 - HttpSession supported: true
+19:53:15,674  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using DefaultAtmosphereObjectFactory for dependency injection and object creation
+19:53:15,679  INFO o.a.c.AtmosphereFramework:588 - Atmosphere is using async support: org.atmosphere.container.JSR356AsyncSupport running under container: Undertow - 2.0.17.Final using javax.servlet/3.0 and jsr356/WebSocket API
+19:53:15,679  INFO o.a.c.AtmosphereFramework:588 - Atmosphere Framework 2.4.30.vaadin1 started.
+19:53:15,703  INFO o.a.c.AtmosphereFramework:588 - Installed AtmosphereInterceptor  Track Message Size Interceptor using | with priority BEFORE_DEFAULT 
+19:53:15,895  INFO o.xnio:104 - XNIO version 3.3.8.Final
+19:53:15,980  INFO o.x.nio:55 - XNIO NIO Implementation Version 3.3.8.Final
+19:53:16,342  INFO o.s.b.w.e.u.UndertowServletWebServer:148 - Undertow started on port(s) 60000 (http) with context path ''
+19:53:16,352  INFO c.a.s.DefaultServerRunner:59 - Started DefaultServerRunner in 59.273 seconds (JVM running for 66.053)
+20:02:43,035  INFO o.a.j.c.c.ClusterNode:858 - Processing revision: 365
+20:02:43,134  INFO o.a.j.c.c.ClusterNode:858 - Processing revision: 366
+20:02:43,147  INFO o.a.j.c.c.ClusterNode:858 - Processing revision: 367
+20:02:43,171  INFO o.a.j.c.c.ClusterNode:858 - Processing revision: 368
+21:03:11,912 ERROR o.a.j.c.u.d.ConnectionHelper:556 - Failed to execute SQL (stacktrace on DEBUG log level): com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 5,096 milliseconds ago.  The last packet sent successfully to the server was 5,096 milliseconds ago.
+21:03:12,804  INFO o.q.c.QuartzScheduler:585 - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+21:03:12,810  INFO o.s.s.q.SchedulerFactoryBean:844 - Shutting down Quartz Scheduler
+21:03:12,811  INFO o.q.c.QuartzScheduler:666 - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+21:03:12,812  INFO o.q.c.QuartzScheduler:585 - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+21:03:12,815  INFO o.q.c.QuartzScheduler:740 - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+21:03:12,845  INFO o.s.s.c.ThreadPoolTaskExecutor:208 - Shutting down ExecutorService 'applicationTaskExecutor'
+21:03:12,912  INFO o.a.j.c.RepositoryImpl:1087 - Shutting down repository...

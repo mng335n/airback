@@ -1,0 +1,135 @@
+/**
+ * Copyright © airback
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http:></http:>//www.gnu.org/licenses/>.
+ */
+package com.airback.servlet
+
+import com.google.common.base.MoreObjects
+import com.airback.core.utils.TimezoneVal
+import com.airback.i18n.LocalizationHelper
+import com.airback.module.project.ProjectTooltipGenerator
+import com.airback.module.project.ProjectTypeConstants
+import com.airback.module.project.service.*
+import com.airback.module.project.service.BugService
+import com.airback.module.project.service.ComponentService
+import com.airback.module.project.service.VersionService
+import com.airback.module.user.AdminTypeConstants
+import com.airback.module.user.CommonTooltipGenerator
+import com.airback.module.user.service.UserService
+import com.airback.spring.AppContextUtil
+import org.slf4j.LoggerFactory
+import java.io.IOException
+import javax.servlet.ServletException
+import javax.servlet.annotation.WebServlet
+import javax.servlet.http.HttpServletRequest
+import javax.servlet.http.HttpServletResponse
+
+/**
+ * @author airback Ltd.
+ * @since 1.0
+ */
+@WebServlet(urlPatterns = ["/tooltip/*"], name = "tooltipGeneratorServlet")
+class TooltipGeneratorServletRequestHandler : GenericHttpServlet() {
+
+    @Throws(ServletException::class, IOException::class)
+    override fun onHandleRequest(request: HttpServletRequest, response: HttpServletResponse) {
+        try {
+            val type = request.getParameter("type")
+            val typeId = request.getParameter("typeId")
+            val sAccountId = Integer.parseInt(request.getParameter("sAccountId"))
+            val siteURL = request.getParameter("siteURL")
+            val timeZoneId = request.getParameter("timeZone")
+            val timeZone = TimezoneVal.valueOf(timeZoneId)
+            val username = request.getParameter("username")
+            val localeParam = request.getParameter("locale")
+            val locale = LocalizationHelper.getLocaleInstance(localeParam)
+            val dateFormat = MoreObjects.firstNonNull(request.getParameter("dateFormat"), "MM/dd/yyyy")
+
+            var html: String? = ""
+            when (type) {
+                ProjectTypeConstants.PROJECT -> {
+                    val service = AppContextUtil.getSpringBean(ProjectService::class.java)
+                    val project = service.findById(Integer.parseInt(typeId), sAccountId)
+                    html = ProjectTooltipGenerator.generateToolTipProject(locale, dateFormat, project, siteURL, timeZone)
+                }
+                ProjectTypeConstants.MESSAGE -> {
+                    val service = AppContextUtil.getSpringBean(MessageService::class.java)
+                    val message = service.findById(Integer.parseInt(typeId), sAccountId)
+                    html = ProjectTooltipGenerator.generateToolTipMessage(locale, message, siteURL, timeZone)
+                }
+                ProjectTypeConstants.MILESTONE -> {
+                    val service = AppContextUtil.getSpringBean(MilestoneService::class.java)
+                    val mileStone = service.findById(Integer.parseInt(typeId), sAccountId)
+                    html = ProjectTooltipGenerator.generateToolTipMilestone(locale, dateFormat, mileStone, siteURL, timeZone, false)
+                }
+                ProjectTypeConstants.BUG -> {
+                    val service = AppContextUtil.getSpringBean(BugService::class.java)
+                    val bug = service.findById(Integer.parseInt(typeId), sAccountId)
+                    html = ProjectTooltipGenerator.generateToolTipBug(locale, dateFormat, bug, siteURL, timeZone, false)
+                }
+                ProjectTypeConstants.TASK -> {
+                    val service = AppContextUtil.getSpringBean(TaskService::class.java)
+                    val task = service.findById(Integer.parseInt(typeId), sAccountId)
+                    html = ProjectTooltipGenerator.generateToolTipTask(locale, dateFormat, task, siteURL, timeZone, false)
+                }
+                ProjectTypeConstants.RISK -> {
+                    val service = AppContextUtil.getSpringBean(RiskService::class.java)
+                    val risk = service.findById(Integer.parseInt(typeId), sAccountId)
+                    html = ProjectTooltipGenerator.generateToolTipRisk(locale, dateFormat, risk, siteURL, timeZone, false)
+                }
+                ProjectTypeConstants.VERSION -> {
+                    val service = AppContextUtil.getSpringBean(VersionService::class.java)
+                    val version = service.findById(Integer.parseInt(typeId), sAccountId)
+                    html = ProjectTooltipGenerator.generateToolTipVersion(locale, dateFormat, version, siteURL, timeZone)
+                }
+                ProjectTypeConstants.COMPONENT -> {
+                    val service = AppContextUtil.getSpringBean(ComponentService::class.java)
+                    val component = service.findById(Integer.parseInt(typeId), sAccountId)
+                    html = ProjectTooltipGenerator.generateToolTipComponent(locale, component, siteURL, timeZone)
+                }
+                ProjectTypeConstants.PAGE -> {
+                    val pageService = AppContextUtil.getSpringBean(ProjectPageService::class.java)
+                    val page = pageService.getPage(typeId, username)
+                    html = ProjectTooltipGenerator.generateToolTipPage(locale, page, siteURL, timeZone)
+                }
+                ProjectTypeConstants.STANDUP -> {
+                    val service = AppContextUtil.getSpringBean(StandupReportService::class.java)
+                    val standup = service.findById(Integer.parseInt(typeId), sAccountId)
+                    html = ProjectTooltipGenerator.generateToolTipStandUp(locale, dateFormat, standup, siteURL, timeZone)
+                }
+                AdminTypeConstants.USER -> {
+                    val service = AppContextUtil.getSpringBean(UserService::class.java)
+                    val user = service.findUserByUserNameInAccount(username, sAccountId)
+                    html = CommonTooltipGenerator.generateTooltipUser(locale, user, siteURL, timeZone)
+                }
+                else -> LOG.error("Can not generate tooltip for item has type $type")
+            }
+
+            response.characterEncoding = "UTF-8"
+            response.contentType = "text/html;charset=UTF-8"
+            val out = response.writer
+            out.println(html)
+        } catch (e: Exception) {
+            LOG.error("Error while get html tooltip attachForm TooltipGeneratorServletRequestHandler", e)
+            val out = response.writer
+            out.println("")
+        }
+
+    }
+
+    companion object {
+        private val LOG = LoggerFactory.getLogger(TooltipGeneratorServletRequestHandler::class.java)
+    }
+}

@@ -1,0 +1,107 @@
+/**
+ * Copyright © airback
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+package com.airback.module.project.view.settings;
+
+import com.airback.core.SecureAccessException;
+import com.airback.module.project.view.ProjectView;
+import com.airback.vaadin.EventBusFactory;
+import com.airback.module.project.CurrentProjectVariables;
+import com.airback.module.project.ProjectRolePermissionCollections;
+import com.airback.module.project.domain.ProjectRole;
+import com.airback.module.project.domain.SimpleProject;
+import com.airback.module.project.event.ProjectRoleEvent;
+import com.airback.module.project.service.ProjectRoleService;
+import com.airback.module.project.view.ProjectBreadcrumb;
+import com.airback.spring.AppContextUtil;
+import com.airback.vaadin.AppUI;
+import com.airback.vaadin.UserUIContext;
+import com.airback.vaadin.event.IEditFormHandler;
+import com.airback.vaadin.mvp.ScreenData;
+import com.airback.vaadin.mvp.ViewManager;
+import com.airback.vaadin.web.ui.AbstractPresenter;
+import com.vaadin.ui.HasComponents;
+
+/**
+ * @author airback Ltd.
+ * @since 1.0
+ */
+public class ProjectRoleAddPresenter extends AbstractPresenter<ProjectRoleAddView> {
+    private static final long serialVersionUID = 1L;
+
+    public ProjectRoleAddPresenter() {
+        super(ProjectRoleAddView.class);
+    }
+
+    @Override
+    protected void postInitView() {
+        view.getEditFormHandlers().addFormHandler(new IEditFormHandler<ProjectRole>() {
+            private static final long serialVersionUID = 1L;
+
+            @Override
+            public void onSave(final ProjectRole item) {
+                save(item);
+                EventBusFactory.getInstance().post(new ProjectRoleEvent.GotoList(this, null));
+            }
+
+            @Override
+            public void onCancel() {
+                EventBusFactory.getInstance().post(new ProjectRoleEvent.GotoList(this, null));
+            }
+
+            @Override
+            public void onSaveAndNew(ProjectRole item) {
+                save(item);
+                EventBusFactory.getInstance().post(new ProjectRoleEvent.GotoAdd(this, null));
+            }
+        });
+    }
+
+    public void save(ProjectRole item) {
+        ProjectRoleService roleService = AppContextUtil.getSpringBean(ProjectRoleService.class);
+        SimpleProject project = CurrentProjectVariables.getProject();
+
+        if (item.getId() == null) {
+            roleService.saveWithSession(item, UserUIContext.getUsername());
+        } else {
+            roleService.updateWithSession(item, UserUIContext.getUsername());
+        }
+
+        roleService.savePermission(project.getId(), item.getId(), view.getPermissionMap(), AppUI.getAccountId());
+
+    }
+
+    @Override
+    protected void onGo(HasComponents container, ScreenData<?> data) {
+        if (CurrentProjectVariables.canWrite(ProjectRolePermissionCollections.ROLES)) {
+            ProjectView projectView = (ProjectView) container;
+            projectView.gotoSubView(ProjectView.ROLE_ENTRY, view);
+
+            ProjectRole role = (ProjectRole) data.getParams();
+            ProjectBreadcrumb breadcrumb = ViewManager.getCacheComponent(ProjectBreadcrumb.class);
+            if (role.getId() == null) {
+                role.setSaccountid(AppUI.getAccountId());
+                role.setProjectid(CurrentProjectVariables.getProject().getId());
+                breadcrumb.gotoRoleAdd();
+            } else {
+                breadcrumb.gotoRoleEdit(role);
+            }
+            view.editItem(role);
+        } else {
+            throw new SecureAccessException();
+        }
+    }
+}

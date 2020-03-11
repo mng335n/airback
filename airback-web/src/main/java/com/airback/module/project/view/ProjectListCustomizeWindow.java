@@ -1,0 +1,47 @@
+/**
+ * Copyright © airback
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+package com.airback.module.project.view;
+
+import com.airback.common.TableViewField;
+import com.airback.module.project.ProjectTypeConstants;
+import com.airback.module.project.fielddef.ProjectTableFieldDef;
+import com.airback.vaadin.web.ui.table.AbstractPagedBeanTable;
+import com.airback.vaadin.web.ui.table.CustomizedTableWindow;
+
+import java.util.Arrays;
+import java.util.Collection;
+
+/**
+ * @author airback Ltd
+ * @since 5.2.12
+ */
+class ProjectListCustomizeWindow extends CustomizedTableWindow {
+    private static final long serialVersionUID = 1L;
+
+    ProjectListCustomizeWindow(AbstractPagedBeanTable table) {
+        super(ProjectTypeConstants.PROJECT, table);
+    }
+
+    @Override
+    protected Collection<TableViewField> getAvailableColumns() {
+        return Arrays.asList(ProjectTableFieldDef.projectName, ProjectTableFieldDef.client,
+                ProjectTableFieldDef.lead, ProjectTableFieldDef.startDate, ProjectTableFieldDef.status,
+                ProjectTableFieldDef.homePage, ProjectTableFieldDef.budget, ProjectTableFieldDef.endDate,
+                ProjectTableFieldDef.createdDate, ProjectTableFieldDef.rate, ProjectTableFieldDef.overtimeRate,
+                ProjectTableFieldDef.budget, ProjectTableFieldDef.actualBudget);
+    }
+}

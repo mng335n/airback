@@ -1,0 +1,37 @@
+<!DOCTYPE dataset PUBLIC "-//airback/airback Database Schema//EN" "http://www.airback.com/airback.dtd">
+<dataset>
+    <s_account id="1" createdTime="2013-04-10 13:29:23"
+               paymentMethod="Credit Card" status="Active"/>
+
+    <s_user username="anhminh" firstname="Anh Minh" lastname=""
+            email="anhminh@airback.com"/>
+
+    <s_user username="dieuha" firstname="Dieu Ha" lastname=""
+            email="dieuha@airback.com"/>
+
+    <m_prj_project id="1" name="A" priority="1" shortName="ddd"
+                   status="Open" sAccountId="1"/>
+
+    <m_prj_member status="Active" projectId="1"
+                  sAccountId="1" createdTime="2013-03-13 15:59:44" username="anhminh"
+                  id="1"/>
+
+    <m_prj_member status="Active" projectId="1"
+                  sAccountId="1" createdTime="2013-03-13 15:59:44" username="dieuha"
+                  id="2"/>
+
+    <m_prj_standup id="1" lastUpdatedTime="2013-03-13 15:59:44"
+                   projectId="1" forday="2013-03-13 15:59:44" logBy="anhminh"
+                   createdTime="2013-03-13 15:59:44" sAccountId="1" whatlastday="a"
+                   whatproblem="a" whattoday="a"/>
+
+    <m_prj_standup id="2" lastUpdatedTime="2013-03-14 15:59:44"
+                   projectId="1" forday="2013-03-14 15:59:44" logBy="anhminh"
+                   createdTime="2013-03-14 15:59:44" sAccountId="1" whatlastday="b"
+                   whatproblem="b" whattoday="b"/>
+
+    <m_prj_standup id="3" lastUpdatedTime="2013-03-14 15:59:44"
+                   projectId="1" forday="2013-03-14 15:59:44" logBy="dieuha"
+                   createdTime="2013-03-14 15:59:44" sAccountId="1" whatlastday="b"
+                   whatproblem="b" whattoday="b"/>
+</dataset>

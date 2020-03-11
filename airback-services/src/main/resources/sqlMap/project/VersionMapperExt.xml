@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.airback.module.project.dao.VersionMapperExt">
+
+    <resultMap type="com.airback.module.project.domain.SimpleVersion"
+               extends="com.airback.module.project.dao.VersionMapper.ResultMapWithBLOBs" id="SimpleVersionResult">
+        <result column="numOpenBugs" jdbcType="INTEGER" property="numOpenBugs" />
+        <result column="numOpenTasks" jdbcType="INTEGER" property="numOpenTasks" />
+        <result column="numBugs" jdbcType="INTEGER" property="numBugs" />
+        <result column="numTasks" jdbcType="INTEGER" property="numTasks" />
+        <result column="projectName" jdbcType="VARCHAR" property="projectName" />
+        <result column="projectShortName" jdbcType="VARCHAR" property="projectShortName" />
+    </resultMap>
+
+    <sql id="querySearchCriteria">
+        <![CDATA[
+        #set($searchCriteria = $_parameter.searchCriteria)
+        
+        #ifnotnull($searchCriteria.id)
+            ${searchCriteria.id.operation} m_prj_version.id ${searchCriteria.id.compareOperator} @{searchCriteria.id.value,jdbcType=NUMERIC}
+        #end
+        
+        #ifnotnull($searchCriteria.status)
+            ${searchCriteria.status.operation} m_prj_version.status = @{searchCriteria.status.value}
+        #end
+        
+        #ifnotnull($searchCriteria.versionname)
+            ${searchCriteria.versionname.operation} m_prj_version.name like '%${searchCriteria.versionname.value}%'
+        #end
+        
+        #ifnotnull($searchCriteria.projectId)
+            ${searchCriteria.projectId.operation} m_prj_version.projectId = @{searchCriteria.projectId.value,jdbcType=NUMERIC}
+        #end
+        ]]>
+    </sql>
+
+    <sql id="selectVersion">
+    <![CDATA[
+        SELECT  m_prj_version.id, m_prj_version.projectId, m_prj_version.description,
+                m_prj_version.duedate, m_prj_version.name, m_prj_version.createdUser,
+                m_prj_version.sAccountId, m_prj_version.lastUpdatedTime,
+                m_prj_version.createdTime, m_prj_version.status,
+                (SELECT COUNT(DISTINCT m_prj_bug.id)
+                        FROM m_prj_bug, m_prj_ticket_relation
+                        WHERE m_prj_bug.id = m_prj_ticket_relation.ticketId
+                            AND m_prj_ticket_relation.ticketType = 'Project-Bug'
+                            AND m_prj_ticket_relation.type = 'Project-Version'
+                            AND m_prj_ticket_relation.rel IN ('AffVersion','FixVersion')
+                            AND m_prj_ticket_relation.typeId = m_prj_version.id) AS numBugs,
+                (SELECT COUNT(DISTINCT m_prj_bug.id)
+                        FROM m_prj_bug, m_prj_ticket_relation
+                        WHERE m_prj_bug.id = m_prj_ticket_relation.ticketId
+                            AND m_prj_ticket_relation.ticketType = 'Project-Bug'
+                            AND m_prj_bug.status IN ('Open', 'InProgress', 'Reopenned')
+                            AND m_prj_ticket_relation.type = 'Project-Version'
+                            AND m_prj_ticket_relation.rel IN ('AffVersion','FixVersion')
+                            AND m_prj_ticket_relation.typeId = m_prj_version.id) AS numOpenBugs,
+                (SELECT COUNT(DISTINCT m_prj_task.id)
+                        FROM m_prj_task, m_prj_ticket_relation
+                        WHERE m_prj_task.id = m_prj_ticket_relation.ticketId
+                            AND m_prj_ticket_relation.typeId = m_prj_version.id
+                            AND m_prj_ticket_relation.ticketType = 'Project-Task'
+                            AND m_prj_ticket_relation.type = 'Project-Version'
+                            AND m_prj_ticket_relation.rel IN ('AffVersion')) AS numTasks,
+                (SELECT COUNT(DISTINCT m_prj_task.id)
+                        FROM m_prj_task, m_prj_ticket_relation
+                        WHERE m_prj_task.id = m_prj_ticket_relation.ticketId
+                            AND m_prj_ticket_relation.ticketType = 'Project-Task'
+                            AND m_prj_task.status IN ('Open')
+                            AND m_prj_ticket_relation.type = 'Project-Version'
+                            AND m_prj_ticket_relation.rel IN ('AffVersion')
+                            AND m_prj_ticket_relation.typeId = m_prj_version.id) AS numOpenTasks,
+                m_prj_project.name AS projectName, m_prj_project.shortName AS projectShortName
+        FROM m_prj_version
+            INNER JOIN m_prj_project ON (m_prj_version.projectId = m_prj_project.id)
+    ]]>
+    </sql>
+
+    <sql id="orderStatement">
+        ORDER BY
+        #ifnotnull($_parameter.searchCriteria.orderFields)
+            #repeat(${_parameter.searchCriteria.orderFields} $orderField "" "" "")
+                ${orderField.field} ${orderField.direction},
+            #end
+        #end
+        m_prj_version.lastUpdatedTime DESC
+    </sql>
+
+    <select id="getTotalCount" resultType="int" parameterType="com.airback.module.project.domain.criteria.VersionSearchCriteria" lang="velocity">
+        SELECT count(*) as totalCount FROM m_prj_version
+        #ifnotnull($_parameter.searchCriteria)
+            #trimext("WHERE" "AND|OR")
+                <include refid="querySearchCriteria" />
+            #end
+        #end
+    </select>
+
+    <select id="findPageableListByCriteria" resultMap="SimpleVersionResult" parameterType="com.airback.module.project.domain.criteria.VersionSearchCriteria" lang="velocity">
+        <include refid="selectVersion" />
+        #ifnotnull($_parameter.searchCriteria)
+            #trimext("WHERE" "AND|OR")
+                <include refid="querySearchCriteria" />
+            #end
+        #end
+        <include refid="orderStatement" />
+    </select>
+
+    <select id="findVersionById" parameterType="java.lang.Integer" resultMap="SimpleVersionResult" lang="velocity">
+        <include refid="selectVersion" />
+        WHERE m_prj_version.id=@{versionId, jdbcType=NUMERIC}
+    </select>
+
+    <select id="getNextItemKey" parameterType="map" resultType="java.lang.Integer" lang="velocity">
+        SELECT MIN(id) FROM m_prj_version
+        #trimext("WHERE" "AND|OR")
+            <include refid="querySearchCriteria" />
+        #end
+    </select>
+
+    <select id="getPreviousItemKey" parameterType="map" resultType="java.lang.Integer" lang="velocity">
+        SELECT MAX(id) FROM m_prj_version
+        #trimext("WHERE" "AND|OR")
+            <include refid="querySearchCriteria" />
+        #end
+    </select>
+
+    <select id="getTotalBillableHours" parameterType="int" resultType="double" lang="velocity">
+        SELECT COALESCE(SUM(timeTable.logValue), 0)
+        FROM
+        ((SELECT DISTINCT m_prj_bug.id AS id, m_prj_time_logging.logValue AS logValue
+            FROM m_prj_version, m_prj_bug, m_prj_ticket_relation, m_prj_time_logging
+            WHERE m_prj_version.id = @{versionid}
+                AND m_prj_version.id = m_prj_ticket_relation.typeId
+                AND m_prj_ticket_relation.type = 'Project-Version'
+                AND m_prj_ticket_relation.ticketType='Project-Bug'
+                AND m_prj_ticket_relation.rel IN ('FixVersion', 'AffVersion')
+                AND m_prj_ticket_relation.ticketId = m_prj_bug.id
+                AND m_prj_time_logging.typeId = m_prj_bug.id
+                AND m_prj_time_logging.type = 'Project-Bug'
+                AND m_prj_time_logging.isBillable = '1')
+        UNION
+        (SELECT DISTINCT m_prj_task.id AS id, m_prj_time_logging.logValue AS logValue
+            FROM m_prj_version, m_prj_task, m_prj_ticket_relation, m_prj_time_logging
+            WHERE m_prj_version.id = @{versionid}
+                AND m_prj_version.id = m_prj_ticket_relation.typeId
+                AND m_prj_ticket_relation.type = 'Project-Version'
+                AND m_prj_ticket_relation.ticketType = 'Project-Task'
+                AND m_prj_ticket_relation.rel IN ('AffVersion')
+                AND m_prj_ticket_relation.ticketId = m_prj_task.id
+                AND m_prj_time_logging.typeId = m_prj_task.id
+                AND m_prj_time_logging.type = 'Project-Task'
+                AND m_prj_time_logging.isBillable = '1')) AS timeTable
+    </select>
+
+    <select id="getTotalNonBillableHours" parameterType="int"
+            resultType="double" lang="velocity">
+        SELECT COALESCE(SUM(timeTable.logValue), 0)
+        FROM
+        ((SELECT DISTINCT m_prj_bug.id AS id, m_prj_time_logging.logValue AS logValue
+            FROM m_prj_version, m_prj_bug, m_prj_ticket_relation, m_prj_time_logging
+            WHERE m_prj_version.id = @{versionid}
+                AND m_prj_version.id = m_prj_ticket_relation.typeId
+                AND m_prj_ticket_relation.type = 'Project-Version'
+                AND m_prj_ticket_relation.ticketType='Project-Bug'
+                AND m_prj_ticket_relation.rel IN ('FixVersion', 'AffVersion')
+                AND m_prj_ticket_relation.ticketId = m_prj_bug.id
+                AND m_prj_time_logging.typeId = m_prj_bug.id
+                AND m_prj_time_logging.type = 'Project-Bug'
+                AND m_prj_time_logging.isBillable = '0')
+        UNION
+        (SELECT DISTINCT m_prj_task.id AS id, m_prj_time_logging.logValue AS logValue
+            FROM m_prj_version, m_prj_task, m_prj_ticket_relation, m_prj_time_logging
+            WHERE m_prj_version.id = @{versionid}
+                AND m_prj_version.id = m_prj_ticket_relation.typeId
+                AND m_prj_ticket_relation.type = 'Project-Version'
+                AND m_prj_ticket_relation.ticketType = 'Project-Task'
+                AND m_prj_ticket_relation.rel IN ('AffVersion')
+                AND m_prj_ticket_relation.ticketId = m_prj_task.id
+                AND m_prj_time_logging.typeId = m_prj_task.id
+                AND m_prj_time_logging.type = 'Project-Task'
+                AND m_prj_time_logging.isBillable = '0'
+        )) AS timeTable
+    </select>
+
+    <select id="getRemainHours" parameterType="int" resultType="double" lang="velocity">
+        SELECT COALESCE(SUM(timeTable.remainEstimate), 0)
+        FROM
+        ((SELECT m_prj_bug.remainEstimate
+            FROM m_prj_bug, m_prj_ticket_relation
+            WHERE m_prj_ticket_relation.typeId = @{versionid}
+                AND m_prj_ticket_relation.type = 'Project-Version'
+                AND m_prj_ticket_relation.ticketType='Project-Bug'
+                AND m_prj_ticket_relation.rel IN ('FixVersion', 'AffVersion')
+                AND m_prj_ticket_relation.ticketId = m_prj_bug.id)
+        UNION
+        (SELECT m_prj_task.remainEstimate
+            FROM m_prj_task, m_prj_ticket_relation
+            WHERE m_prj_ticket_relation.typeId = @{versionid}
+                AND m_prj_ticket_relation.type = 'Project-Version'
+                AND m_prj_ticket_relation.ticketType='Project-Task'
+                AND m_prj_ticket_relation.rel IN ('AffVersion')
+                AND m_prj_ticket_relation.ticketId = m_prj_task.id
+        )) AS timeTable
+    </select>
+</mapper>
