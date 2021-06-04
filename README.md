@@ -1,4 +1,4 @@
-Airback application uses Vaddin UI for front-end and factitious product 
+Airback application uses Vaddin UI for front-end, quartz for scheduling, spring boot for frame the application, esb for service execution and factitious components
 # How to install and bring to the world</br>
 1) How to compile the application and brint it to the world :: </br>
 cd airback-deployer-community</br>
